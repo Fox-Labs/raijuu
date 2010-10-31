@@ -1,0 +1,324 @@
+
+shift_register.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000112  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .debug_aranges 00000020  00000000  00000000  00000166  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  2 .debug_pubnames 0000004c  00000000  00000000  00000186  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info   00000293  00000000  00000000  000001d2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 0000013b  00000000  00000000  00000465  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_line   0000024d  00000000  00000000  000005a0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_frame  00000060  00000000  00000000  000007f0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    000000f2  00000000  00000000  00000850  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    0000006f  00000000  00000000  00000942  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_ranges 00000090  00000000  00000000  000009b1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	12 c0       	rjmp	.+36     	; 0x26 <__ctors_end>
+   2:	2c c0       	rjmp	.+88     	; 0x5c <__bad_interrupt>
+   4:	2b c0       	rjmp	.+86     	; 0x5c <__bad_interrupt>
+   6:	2a c0       	rjmp	.+84     	; 0x5c <__bad_interrupt>
+   8:	29 c0       	rjmp	.+82     	; 0x5c <__bad_interrupt>
+   a:	28 c0       	rjmp	.+80     	; 0x5c <__bad_interrupt>
+   c:	27 c0       	rjmp	.+78     	; 0x5c <__bad_interrupt>
+   e:	26 c0       	rjmp	.+76     	; 0x5c <__bad_interrupt>
+  10:	25 c0       	rjmp	.+74     	; 0x5c <__bad_interrupt>
+  12:	24 c0       	rjmp	.+72     	; 0x5c <__bad_interrupt>
+  14:	23 c0       	rjmp	.+70     	; 0x5c <__bad_interrupt>
+  16:	22 c0       	rjmp	.+68     	; 0x5c <__bad_interrupt>
+  18:	21 c0       	rjmp	.+66     	; 0x5c <__bad_interrupt>
+  1a:	20 c0       	rjmp	.+64     	; 0x5c <__bad_interrupt>
+  1c:	1f c0       	rjmp	.+62     	; 0x5c <__bad_interrupt>
+  1e:	1e c0       	rjmp	.+60     	; 0x5c <__bad_interrupt>
+  20:	1d c0       	rjmp	.+58     	; 0x5c <__bad_interrupt>
+  22:	1c c0       	rjmp	.+56     	; 0x5c <__bad_interrupt>
+  24:	1b c0       	rjmp	.+54     	; 0x5c <__bad_interrupt>
+
+00000026 <__ctors_end>:
+  26:	11 24       	eor	r1, r1
+  28:	1f be       	out	0x3f, r1	; 63
+  2a:	cf e5       	ldi	r28, 0x5F	; 95
+  2c:	d4 e0       	ldi	r29, 0x04	; 4
+  2e:	de bf       	out	0x3e, r29	; 62
+  30:	cd bf       	out	0x3d, r28	; 61
+
+00000032 <__do_copy_data>:
+  32:	10 e0       	ldi	r17, 0x00	; 0
+  34:	a0 e6       	ldi	r26, 0x60	; 96
+  36:	b0 e0       	ldi	r27, 0x00	; 0
+  38:	e2 e1       	ldi	r30, 0x12	; 18
+  3a:	f1 e0       	ldi	r31, 0x01	; 1
+  3c:	02 c0       	rjmp	.+4      	; 0x42 <.do_copy_data_start>
+
+0000003e <.do_copy_data_loop>:
+  3e:	05 90       	lpm	r0, Z+
+  40:	0d 92       	st	X+, r0
+
+00000042 <.do_copy_data_start>:
+  42:	a0 36       	cpi	r26, 0x60	; 96
+  44:	b1 07       	cpc	r27, r17
+  46:	d9 f7       	brne	.-10     	; 0x3e <__SP_H__>
+
+00000048 <__do_clear_bss>:
+  48:	10 e0       	ldi	r17, 0x00	; 0
+  4a:	a0 e6       	ldi	r26, 0x60	; 96
+  4c:	b0 e0       	ldi	r27, 0x00	; 0
+  4e:	01 c0       	rjmp	.+2      	; 0x52 <.do_clear_bss_start>
+
+00000050 <.do_clear_bss_loop>:
+  50:	1d 92       	st	X+, r1
+
+00000052 <.do_clear_bss_start>:
+  52:	a0 36       	cpi	r26, 0x60	; 96
+  54:	b1 07       	cpc	r27, r17
+  56:	e1 f7       	brne	.-8      	; 0x50 <.do_clear_bss_loop>
+  58:	37 d0       	rcall	.+110    	; 0xc8 <main>
+  5a:	59 c0       	rjmp	.+178    	; 0x10e <_exit>
+
+0000005c <__bad_interrupt>:
+  5c:	d1 cf       	rjmp	.-94     	; 0x0 <__heap_end>
+
+0000005e <Wait>:
+#define SHIFT_PORT PORTD
+#define SHIFT_DDR DDRD
+
+
+void Wait()
+{
+  5e:	20 e0       	ldi	r18, 0x00	; 0
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+  60:	40 e0       	ldi	r20, 0x00	; 0
+  62:	50 e0       	ldi	r21, 0x00	; 0
+  64:	ca 01       	movw	r24, r20
+  66:	01 97       	sbiw	r24, 0x01	; 1
+  68:	f1 f7       	brne	.-4      	; 0x66 <Wait+0x8>
+   uint8_t i;
+   for(i=0;i<50;i++)
+  6a:	2f 5f       	subi	r18, 0xFF	; 255
+  6c:	22 33       	cpi	r18, 0x32	; 50
+  6e:	d1 f7       	brne	.-12     	; 0x64 <Wait+0x6>
+   {
+      _delay_loop_2(0);
+   }
+}
+  70:	08 95       	ret
+
+00000072 <delay_595>:
+
+
+void delay_595()
+{
+  72:	85 e0       	ldi	r24, 0x05	; 5
+  74:	8a 95       	dec	r24
+  76:	f1 f7       	brne	.-4      	; 0x74 <delay_595+0x2>
+   _delay_loop_1(5);
+}
+  78:	08 95       	ret
+
+0000007a <clock_595>:
+
+void clock_595()
+{
+  7a:	91 9a       	sbi	0x12, 1	; 18
+    can be achieved.
+*/
+void
+_delay_loop_1(uint8_t __count)
+{
+	__asm__ volatile (
+  7c:	85 e0       	ldi	r24, 0x05	; 5
+  7e:	8a 95       	dec	r24
+  80:	f1 f7       	brne	.-4      	; 0x7e <clock_595+0x4>
+   PORTD |= _BV(PD1);
+   delay_595();
+   PORTD &= ~(_BV(PD1));
+  82:	91 98       	cbi	0x12, 1	; 18
+}
+  84:	08 95       	ret
+
+00000086 <out_595>:
+
+void out_595(uint8_t i)
+{
+  86:	58 2f       	mov	r21, r24
+  88:	40 e8       	ldi	r20, 0x80	; 128
+  8a:	28 e0       	ldi	r18, 0x08	; 8
+  8c:	30 e0       	ldi	r19, 0x00	; 0
+  8e:	f5 e0       	ldi	r31, 0x05	; 5
+   uint8_t k;
+   k = 0b10000000;
+   while (k>0b00000000)
+   {
+	  PORTD = i/k;   //Coloca o digito mais significativo (atualmente) na porta de dado
+  90:	85 2f       	mov	r24, r21
+  92:	64 2f       	mov	r22, r20
+  94:	30 d0       	rcall	.+96     	; 0xf6 <__udivmodqi4>
+  96:	82 bb       	out	0x12, r24	; 18
+   _delay_loop_1(5);
+}
+
+void clock_595()
+{
+   PORTD |= _BV(PD1);
+  98:	91 9a       	sbi	0x12, 1	; 18
+  9a:	e5 e0       	ldi	r30, 0x05	; 5
+  9c:	8f 2f       	mov	r24, r31
+  9e:	8a 95       	dec	r24
+  a0:	f1 f7       	brne	.-4      	; 0x9e <out_595+0x18>
+   delay_595();
+   PORTD &= ~(_BV(PD1));
+  a2:	91 98       	cbi	0x12, 1	; 18
+   k = 0b10000000;
+   while (k>0b00000000)
+   {
+	  PORTD = i/k;   //Coloca o digito mais significativo (atualmente) na porta de dado
+      clock_595();
+	  i = i%k;
+  a4:	85 2f       	mov	r24, r21
+  a6:	27 d0       	rcall	.+78     	; 0xf6 <__udivmodqi4>
+  a8:	59 2f       	mov	r21, r25
+	  k>>=1;
+  aa:	46 95       	lsr	r20
+  ac:	21 50       	subi	r18, 0x01	; 1
+  ae:	30 40       	sbci	r19, 0x00	; 0
+
+void out_595(uint8_t i)
+{
+   uint8_t k;
+   k = 0b10000000;
+   while (k>0b00000000)
+  b0:	79 f7       	brne	.-34     	; 0x90 <out_595+0xa>
+  b2:	8e 2f       	mov	r24, r30
+  b4:	8a 95       	dec	r24
+  b6:	f1 f7       	brne	.-4      	; 0xb4 <out_595+0x2e>
+      clock_595();
+	  i = i%k;
+	  k>>=1;
+   }
+   delay_595();   //Espera de novo
+   PORTD |= _BV(PD2);
+  b8:	92 9a       	sbi	0x12, 2	; 18
+   _delay_loop_1(5);
+}
+
+void clock_595()
+{
+   PORTD |= _BV(PD1);
+  ba:	91 9a       	sbi	0x12, 1	; 18
+  bc:	8e 2f       	mov	r24, r30
+  be:	8a 95       	dec	r24
+  c0:	f1 f7       	brne	.-4      	; 0xbe <out_595+0x38>
+   delay_595();
+   PORTD &= ~(_BV(PD1));
+  c2:	91 98       	cbi	0x12, 1	; 18
+	  k>>=1;
+   }
+   delay_595();   //Espera de novo
+   PORTD |= _BV(PD2);
+   clock_595();
+   PORTD = 0x00;
+  c4:	12 ba       	out	0x12, r1	; 18
+}
+  c6:	08 95       	ret
+
+000000c8 <main>:
+
+
+void main()
+{
+  c8:	1f 93       	push	r17
+  ca:	cf 93       	push	r28
+  cc:	df 93       	push	r29
+
+   uint8_t i=0;
+
+   //Port D
+   SHIFT_DDR=0xFF; //Porta D totalmente como saida.
+  ce:	8f ef       	ldi	r24, 0xFF	; 255
+  d0:	81 bb       	out	0x11, r24	; 17
+   
+   //Porta D zerada
+   SHIFT_PORT=0x00;
+  d2:	12 ba       	out	0x12, r1	; 18
+  d4:	10 e0       	ldi	r17, 0x00	; 0
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+  d6:	c0 e0       	ldi	r28, 0x00	; 0
+  d8:	d0 e0       	ldi	r29, 0x00	; 0
+
+   //Infinite loop
+   while(1)
+   {
+	  i++;
+  da:	1f 5f       	subi	r17, 0xFF	; 255
+	  if (i==16) i=1;
+  dc:	10 31       	cpi	r17, 0x10	; 16
+  de:	09 f4       	brne	.+2      	; 0xe2 <main+0x1a>
+  e0:	11 e0       	ldi	r17, 0x01	; 1
+  e2:	20 e0       	ldi	r18, 0x00	; 0
+  e4:	ce 01       	movw	r24, r28
+  e6:	01 97       	sbiw	r24, 0x01	; 1
+  e8:	f1 f7       	brne	.-4      	; 0xe6 <main+0x1e>
+
+
+void Wait()
+{
+   uint8_t i;
+   for(i=0;i<50;i++)
+  ea:	2f 5f       	subi	r18, 0xFF	; 255
+  ec:	22 33       	cpi	r18, 0x32	; 50
+  ee:	d1 f7       	brne	.-12     	; 0xe4 <main+0x1c>
+   while(1)
+   {
+	  i++;
+	  if (i==16) i=1;
+      Wait();
+	  out_595(i);
+  f0:	81 2f       	mov	r24, r17
+  f2:	c9 df       	rcall	.-110    	; 0x86 <out_595>
+  f4:	f2 cf       	rjmp	.-28     	; 0xda <main+0x12>
+
+000000f6 <__udivmodqi4>:
+  f6:	99 1b       	sub	r25, r25
+  f8:	79 e0       	ldi	r23, 0x09	; 9
+  fa:	04 c0       	rjmp	.+8      	; 0x104 <__udivmodqi4_ep>
+
+000000fc <__udivmodqi4_loop>:
+  fc:	99 1f       	adc	r25, r25
+  fe:	96 17       	cp	r25, r22
+ 100:	08 f0       	brcs	.+2      	; 0x104 <__udivmodqi4_ep>
+ 102:	96 1b       	sub	r25, r22
+
+00000104 <__udivmodqi4_ep>:
+ 104:	88 1f       	adc	r24, r24
+ 106:	7a 95       	dec	r23
+ 108:	c9 f7       	brne	.-14     	; 0xfc <__udivmodqi4_loop>
+ 10a:	80 95       	com	r24
+ 10c:	08 95       	ret
+
+0000010e <_exit>:
+ 10e:	f8 94       	cli
+
+00000110 <__stop_program>:
+ 110:	ff cf       	rjmp	.-2      	; 0x110 <__stop_program>
