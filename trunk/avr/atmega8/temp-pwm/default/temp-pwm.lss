@@ -1,0 +1,284 @@
+
+temp-pwm.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000104  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .debug_aranges 00000020  00000000  00000000  00000158  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  2 .debug_pubnames 0000003f  00000000  00000000  00000178  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info   00000181  00000000  00000000  000001b7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 00000112  00000000  00000000  00000338  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_line   000001fd  00000000  00000000  0000044a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_frame  00000050  00000000  00000000  00000648  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    000000d9  00000000  00000000  00000698  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    00000043  00000000  00000000  00000771  2**0
+                  CONTENTS, READONLY, DEBUGGING
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	12 c0       	rjmp	.+36     	; 0x26 <__ctors_end>
+   2:	2c c0       	rjmp	.+88     	; 0x5c <__bad_interrupt>
+   4:	2b c0       	rjmp	.+86     	; 0x5c <__bad_interrupt>
+   6:	2a c0       	rjmp	.+84     	; 0x5c <__bad_interrupt>
+   8:	29 c0       	rjmp	.+82     	; 0x5c <__bad_interrupt>
+   a:	28 c0       	rjmp	.+80     	; 0x5c <__bad_interrupt>
+   c:	27 c0       	rjmp	.+78     	; 0x5c <__bad_interrupt>
+   e:	26 c0       	rjmp	.+76     	; 0x5c <__bad_interrupt>
+  10:	25 c0       	rjmp	.+74     	; 0x5c <__bad_interrupt>
+  12:	24 c0       	rjmp	.+72     	; 0x5c <__bad_interrupt>
+  14:	23 c0       	rjmp	.+70     	; 0x5c <__bad_interrupt>
+  16:	22 c0       	rjmp	.+68     	; 0x5c <__bad_interrupt>
+  18:	21 c0       	rjmp	.+66     	; 0x5c <__bad_interrupt>
+  1a:	20 c0       	rjmp	.+64     	; 0x5c <__bad_interrupt>
+  1c:	1f c0       	rjmp	.+62     	; 0x5c <__bad_interrupt>
+  1e:	1e c0       	rjmp	.+60     	; 0x5c <__bad_interrupt>
+  20:	1d c0       	rjmp	.+58     	; 0x5c <__bad_interrupt>
+  22:	1c c0       	rjmp	.+56     	; 0x5c <__bad_interrupt>
+  24:	1b c0       	rjmp	.+54     	; 0x5c <__bad_interrupt>
+
+00000026 <__ctors_end>:
+  26:	11 24       	eor	r1, r1
+  28:	1f be       	out	0x3f, r1	; 63
+  2a:	cf e5       	ldi	r28, 0x5F	; 95
+  2c:	d4 e0       	ldi	r29, 0x04	; 4
+  2e:	de bf       	out	0x3e, r29	; 62
+  30:	cd bf       	out	0x3d, r28	; 61
+
+00000032 <__do_copy_data>:
+  32:	10 e0       	ldi	r17, 0x00	; 0
+  34:	a0 e6       	ldi	r26, 0x60	; 96
+  36:	b0 e0       	ldi	r27, 0x00	; 0
+  38:	e4 e0       	ldi	r30, 0x04	; 4
+  3a:	f1 e0       	ldi	r31, 0x01	; 1
+  3c:	02 c0       	rjmp	.+4      	; 0x42 <.do_copy_data_start>
+
+0000003e <.do_copy_data_loop>:
+  3e:	05 90       	lpm	r0, Z+
+  40:	0d 92       	st	X+, r0
+
+00000042 <.do_copy_data_start>:
+  42:	a0 36       	cpi	r26, 0x60	; 96
+  44:	b1 07       	cpc	r27, r17
+  46:	d9 f7       	brne	.-10     	; 0x3e <__SP_H__>
+
+00000048 <__do_clear_bss>:
+  48:	10 e0       	ldi	r17, 0x00	; 0
+  4a:	a0 e6       	ldi	r26, 0x60	; 96
+  4c:	b0 e0       	ldi	r27, 0x00	; 0
+  4e:	01 c0       	rjmp	.+2      	; 0x52 <.do_clear_bss_start>
+
+00000050 <.do_clear_bss_loop>:
+  50:	1d 92       	st	X+, r1
+
+00000052 <.do_clear_bss_start>:
+  52:	a0 36       	cpi	r26, 0x60	; 96
+  54:	b1 07       	cpc	r27, r17
+  56:	e1 f7       	brne	.-8      	; 0x50 <.do_clear_bss_loop>
+  58:	21 d0       	rcall	.+66     	; 0x9c <main>
+  5a:	52 c0       	rjmp	.+164    	; 0x100 <_exit>
+
+0000005c <__bad_interrupt>:
+  5c:	d1 cf       	rjmp	.-94     	; 0x0 <__heap_end>
+
+0000005e <initADC>:
+void initADC();   //initializes ADC
+void initPWM();   //initializes ADC
+uint16_t readADC(uint8_t ch); //reades ADC
+
+void initADC()
+{
+  5e:	80 e4       	ldi	r24, 0x40	; 64
+  60:	87 b9       	out	0x07, r24	; 7
+   ADMUX=(1<<REFS0);// For Aref=AVcc;
+   ADCSRA=(1<<ADEN)|(7<<ADPS0);
+  62:	87 e8       	ldi	r24, 0x87	; 135
+  64:	86 b9       	out	0x06, r24	; 6
+}
+  66:	08 95       	ret
+
+00000068 <initPWM>:
+
+void initPWM()
+{
+  68:	87 b3       	in	r24, 0x17	; 23
+  6a:	86 60       	ori	r24, 0x06	; 6
+  6c:	87 bb       	out	0x17, r24	; 23
+   //set up 2 PWM channels on PB1 and PB2 using Timer1
+   DDRB |= _BV(1) |  _BV(2);   //set PB1 and PB2 as outputs
+   OCR1A = OCR1B = 0;   //PWM set to zero
+  6e:	19 bc       	out	0x29, r1	; 41
+  70:	18 bc       	out	0x28, r1	; 40
+  72:	88 b5       	in	r24, 0x28	; 40
+  74:	99 b5       	in	r25, 0x29	; 41
+  76:	9b bd       	out	0x2b, r25	; 43
+  78:	8a bd       	out	0x2a, r24	; 42
+   //timer 1 - 8 bit Fast PWM - no pre-scaler - non-inverting
+   TCCR1B = (0 << WGM13) | (1<<WGM12) | (0 << CS12) | (0 << CS11) | (1 << CS10);
+  7a:	89 e0       	ldi	r24, 0x09	; 9
+  7c:	8e bd       	out	0x2e, r24	; 46
+   TCCR1A = (0 << WGM11) | (1<<WGM10) | (1 << COM1A1) | (0 << COM1A0) | (1 << COM1B1) | (0 << COM1B0);
+  7e:	81 ea       	ldi	r24, 0xA1	; 161
+  80:	8f bd       	out	0x2f, r24	; 47
+}
+  82:	08 95       	ret
+
+00000084 <readADC>:
+
+uint16_t readADC(uint8_t ch)
+{
+  84:	97 b1       	in	r25, 0x07	; 7
+  86:	87 70       	andi	r24, 0x07	; 7
+  88:	89 2b       	or	r24, r25
+  8a:	87 b9       	out	0x07, r24	; 7
+   //Select ADC Channel ch must be 0-7
+   ch=ch&0b00000111;
+   ADMUX|=ch;
+   
+   //Start Single conversion
+   ADCSRA|=(1<<ADSC);
+  8c:	36 9a       	sbi	0x06, 6	; 6
+
+   //Wait for conversion to complete
+   while(!(ADCSRA & (1<<ADIF)));
+  8e:	34 9b       	sbis	0x06, 4	; 6
+  90:	fe cf       	rjmp	.-4      	; 0x8e <readADC+0xa>
+
+   //Clear ADIF by writing one to it
+   ADCSRA|=(1<<ADIF);
+  92:	34 9a       	sbi	0x06, 4	; 6
+
+   return(ADC);
+  94:	24 b1       	in	r18, 0x04	; 4
+  96:	35 b1       	in	r19, 0x05	; 5
+}
+  98:	c9 01       	movw	r24, r18
+  9a:	08 95       	ret
+
+0000009c <main>:
+
+int main()
+{
+  9c:	80 e4       	ldi	r24, 0x40	; 64
+  9e:	87 b9       	out	0x07, r24	; 7
+uint16_t readADC(uint8_t ch); //reades ADC
+
+void initADC()
+{
+   ADMUX=(1<<REFS0);// For Aref=AVcc;
+   ADCSRA=(1<<ADEN)|(7<<ADPS0);
+  a0:	87 e8       	ldi	r24, 0x87	; 135
+  a2:	86 b9       	out	0x06, r24	; 6
+}
+
+void initPWM()
+{
+   //set up 2 PWM channels on PB1 and PB2 using Timer1
+   DDRB |= _BV(1) |  _BV(2);   //set PB1 and PB2 as outputs
+  a4:	87 b3       	in	r24, 0x17	; 23
+  a6:	86 60       	ori	r24, 0x06	; 6
+  a8:	87 bb       	out	0x17, r24	; 23
+   OCR1A = OCR1B = 0;   //PWM set to zero
+  aa:	19 bc       	out	0x29, r1	; 41
+  ac:	18 bc       	out	0x28, r1	; 40
+  ae:	88 b5       	in	r24, 0x28	; 40
+  b0:	99 b5       	in	r25, 0x29	; 41
+  b2:	9b bd       	out	0x2b, r25	; 43
+  b4:	8a bd       	out	0x2a, r24	; 42
+   //timer 1 - 8 bit Fast PWM - no pre-scaler - non-inverting
+   TCCR1B = (0 << WGM13) | (1<<WGM12) | (0 << CS12) | (0 << CS11) | (1 << CS10);
+  b6:	89 e0       	ldi	r24, 0x09	; 9
+  b8:	8e bd       	out	0x2e, r24	; 46
+   TCCR1A = (0 << WGM11) | (1<<WGM10) | (1 << COM1A1) | (0 << COM1A0) | (1 << COM1B1) | (0 << COM1B0);
+  ba:	81 ea       	ldi	r24, 0xA1	; 161
+  bc:	8f bd       	out	0x2f, r24	; 47
+
+   //Enable PWM
+   initPWM();
+   
+   //Blink the two leds on start up
+   OCR1A = 255;
+  be:	8f ef       	ldi	r24, 0xFF	; 255
+  c0:	90 e0       	ldi	r25, 0x00	; 0
+  c2:	9b bd       	out	0x2b, r25	; 43
+  c4:	8a bd       	out	0x2a, r24	; 42
+   OCR1B = 255;
+  c6:	99 bd       	out	0x29, r25	; 41
+  c8:	88 bd       	out	0x28, r24	; 40
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+  ca:	80 e0       	ldi	r24, 0x00	; 0
+  cc:	90 e0       	ldi	r25, 0x00	; 0
+  ce:	01 97       	sbiw	r24, 0x01	; 1
+  d0:	f1 f7       	brne	.-4      	; 0xce <main+0x32>
+      //Read ADC
+      adc_value = readADC(0);
+
+      //Convert to degree Centrigrade
+      t = adc_value / 2;
+	  OCR1A = 5 + ( 10 * (t - 20) );
+  d2:	4a e0       	ldi	r20, 0x0A	; 10
+      OCR1B = 30;
+  d4:	2e e1       	ldi	r18, 0x1E	; 30
+  d6:	30 e0       	ldi	r19, 0x00	; 0
+
+uint16_t readADC(uint8_t ch)
+{
+   //Select ADC Channel ch must be 0-7
+   ch=ch&0b00000111;
+   ADMUX|=ch;
+  d8:	87 b1       	in	r24, 0x07	; 7
+  da:	87 b9       	out	0x07, r24	; 7
+   
+   //Start Single conversion
+   ADCSRA|=(1<<ADSC);
+  dc:	36 9a       	sbi	0x06, 6	; 6
+
+   //Wait for conversion to complete
+   while(!(ADCSRA & (1<<ADIF)));
+  de:	34 9b       	sbis	0x06, 4	; 6
+  e0:	fe cf       	rjmp	.-4      	; 0xde <main+0x42>
+
+   //Clear ADIF by writing one to it
+   ADCSRA|=(1<<ADIF);
+  e2:	34 9a       	sbi	0x06, 4	; 6
+
+   return(ADC);
+  e4:	84 b1       	in	r24, 0x04	; 4
+  e6:	95 b1       	in	r25, 0x05	; 5
+      //Read ADC
+      adc_value = readADC(0);
+
+      //Convert to degree Centrigrade
+      t = adc_value / 2;
+	  OCR1A = 5 + ( 10 * (t - 20) );
+  e8:	96 95       	lsr	r25
+  ea:	87 95       	ror	r24
+  ec:	84 9f       	mul	r24, r20
+  ee:	c0 01       	movw	r24, r0
+  f0:	11 24       	eor	r1, r1
+  f2:	83 5c       	subi	r24, 0xC3	; 195
+  f4:	90 40       	sbci	r25, 0x00	; 0
+  f6:	9b bd       	out	0x2b, r25	; 43
+  f8:	8a bd       	out	0x2a, r24	; 42
+      OCR1B = 30;
+  fa:	39 bd       	out	0x29, r19	; 41
+  fc:	28 bd       	out	0x28, r18	; 40
+  fe:	ec cf       	rjmp	.-40     	; 0xd8 <main+0x3c>
+
+00000100 <_exit>:
+ 100:	f8 94       	cli
+
+00000102 <__stop_program>:
+ 102:	ff cf       	rjmp	.-2      	; 0x102 <__stop_program>

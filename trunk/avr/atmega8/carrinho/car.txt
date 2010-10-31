@@ -1,0 +1,12 @@
+e = setpoint - measured_location.
+
+Proportional control: P is a constant that you detirmine through testing.
+
+control_output = P*e.
+
+Derivative control: You can aproximate the derivative by calculating the difference between the newest error sample and the previous error sample. derivative(e) = e - previous_e.
+D is another constant that you detirmine through testing.
+
+PD controller:
+control_output = P*e + D*derivative(e)
+
