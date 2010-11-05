@@ -15,9 +15,8 @@
 void initusart();   //initializes USART
 static int uart_putchar(char c, FILE *stream);
 uint8_t uart_getchar();
-void initPWM();   //initializes ADC
-uint8_t hex(char hez);
-
+void initPWM();   //initializes PWM
+uint8_t hex(char hex);
 static FILE mystdout = FDEV_SETUP_STREAM(uart_putchar, NULL, _FDEV_SETUP_WRITE);
 
 void initusart(){
@@ -48,8 +47,7 @@ uint8_t uart_getchar(){
    return(UDR0);
 }
 
-void initPWM()
-{
+void initPWM(){
    //set up 3 PWM channels on PB1, PB2 and PB3
    DDRB |= 0b00001110 ;   //set PB1, PB2 and PB3 as outputs
    BLUE = GREEN = RED = 0;   //PWMs set to zero
