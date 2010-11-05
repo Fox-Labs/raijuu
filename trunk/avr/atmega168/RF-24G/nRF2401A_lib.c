@@ -47,15 +47,17 @@
 	4) 1Mbps shock burst
 */
 
+#include <util/delay_basic.h>
+
 #define _01A_PORT	PORTD
 #define _01A_PORT_DD	DDRD
 #define _01A_PORT_PIN PIND
 
-#define _01A_DR	6
-#define _01A_CLK  5
-#define _01A_CS   2
-#define _01A_CE   1
-#define _01A_DATA 7
+#define _01A_DR	3
+#define _01A_CLK 4
+#define _01A_CS 2
+#define _01A_CE 6
+#define _01A_DATA 5
 
 #define RF_DELAY	50
 
@@ -77,7 +79,7 @@ void rx_data_nRF2401A(void)
 	
 	temp = 0;
 	
-	cbi(PORTB, _01A_CE);//Power down RF Front end
+	cbi(_01A_PORT, _01A_CE);//Power down RF Front end
 
     //Clock in data, we are setup for 32-bit payloads
     for(i = 0 ; i < 4 ; i++) //4 bytes
@@ -85,17 +87,17 @@ void rx_data_nRF2401A(void)
         for(j = 0 ; j < 8 ; j++) //8 bits each
         {
             temp <<= 1;
-			if(PIND & (1<<_01A_DATA)) temp |= 1;
+			if(_01A_PORT_PIN & (1<<_01A_DATA)) temp |= 1;
 
-			sbi(PORTB, _01A_CLK);
+			sbi(_01A_PORT, _01A_CLK);
 
-			cbi(PORTB, _01A_CLK);
+			cbi(_01A_PORT, _01A_CLK);
         }
 
         rf_rx_array[i] = temp; //Store this byte
     }
 
-    sbi(PORTB, _01A_CE); //Power up RF Front end
+    sbi(_01A_PORT, _01A_CE); //Power up RF Front end
 }
 
 //This sends out the data stored in the data_array
@@ -104,8 +106,8 @@ void tx_data_nRF2401A(void)
 {
     uint8_t i, j, temp, rf_address;
 
-    sbi(PORTB, _01A_CE); //_01A_CE = 1;
-    delay_us(RF_DELAY);
+    sbi(_01A_PORT, _01A_CE); //_01A_CE = 1;
+    _delay_loop_1(RF_DELAY);
 
     //Clock in address
 	for (j = 0; j < 5; j++)
@@ -115,13 +117,13 @@ void tx_data_nRF2401A(void)
 		for(i = 0 ; i < 8 ; i++)
 		{
 			if(rf_address & 0x80)
-				sbi(PORTD, _01A_DATA);
+				sbi(_01A_PORT, _01A_DATA);
 			else
-				cbi(PORTD, _01A_DATA);
+				cbi(_01A_PORT, _01A_DATA);
 	
-			sbi(PORTB, _01A_CLK); //_01A_CLK = 1; 
-			delay_us(RF_DELAY);
-			cbi(PORTB, _01A_CLK); //_01A_CLK = 0;
+			sbi(_01A_PORT, _01A_CLK); //_01A_CLK = 1; 
+			_delay_loop_1(RF_DELAY);
+			cbi(_01A_PORT, _01A_CLK); //_01A_CLK = 0;
 			
 			rf_address <<= 1;
 		}
@@ -135,19 +137,19 @@ void tx_data_nRF2401A(void)
         for(j = 0 ; j < 8 ; j++) //One bit at a time
         {
 			if(temp & 0x80)
-				sbi(PORTD, _01A_DATA);
+				sbi(_01A_PORT, _01A_DATA);
 			else
-				cbi(PORTD, _01A_DATA);
+				cbi(_01A_PORT, _01A_DATA);
 			
-			sbi(PORTB, _01A_CLK); //_01A_CLK = 1; 
-			delay_us(RF_DELAY);
-			cbi(PORTB, _01A_CLK); //_01A_CLK = 0;
+			sbi(_01A_PORT, _01A_CLK); //_01A_CLK = 1; 
+			_delay_loop_1(RF_DELAY);
+			cbi(_01A_PORT, _01A_CLK); //_01A_CLK = 0;
 	
             temp <<= 1;
         }
     }
     
-	cbi(PORTB, _01A_CE); //_01A_CE = 0; //Start transmission   
+	cbi(_01A_PORT, _01A_CE); //_01A_CE = 0; //Start transmission   
 }
 
 //2.4G Configuration - Receiver
@@ -162,12 +164,12 @@ void config_rx_nRF2401A(void)
     _01A_PORT_DD |= (1<<_01A_DATA);  //(_01A_DR is input) (_01A_DATA is output)
 
     //Config Mode
-    cbi(PORTB, _01A_CE); //_01A_CE = 0; _01A_CS = 1;
-    delay_us(RF_DELAY);
-	sbi(PORTB, _01A_CS);
+    cbi(_01A_PORT, _01A_CE); //_01A_CE = 0; _01A_CS = 1;
+    _delay_loop_1(RF_DELAY);
+	sbi(_01A_PORT, _01A_CS);
     
     //Delay of 5us from CS to Data (page 30) is taken care of by the for loop
-    delay_us(RF_DELAY);
+    _delay_loop_1(RF_DELAY);
 	
     //Setup configuration bank	
 	//Channel 1 40-bit (5-byte) address setup
@@ -182,9 +184,9 @@ void config_rx_nRF2401A(void)
 			else
 				cbi(_01A_PORT, _01A_DATA);
 
-			sbi(PORTB, _01A_CLK);
-			delay_us(RF_DELAY);
-			cbi(PORTB, _01A_CLK);
+			sbi(_01A_PORT, _01A_CLK);
+			_delay_loop_1(RF_DELAY);
+			cbi(_01A_PORT, _01A_CLK);
 			
 			config_setup <<= 1;
 		}
@@ -203,27 +205,27 @@ void config_rx_nRF2401A(void)
 		else
 			cbi(_01A_PORT, _01A_DATA);
 
-		sbi(PORTB, _01A_CLK);
-		delay_us(RF_DELAY);
-		cbi(PORTB, _01A_CLK);
+		sbi(_01A_PORT, _01A_CLK);
+		_delay_loop_1(RF_DELAY);
+		cbi(_01A_PORT, _01A_CLK);
         
         config_setup <<= 1;
     }
     
     //Configuration is actived on falling edge of CS (page 10)
-    cbi(PORTB, _01A_CE); //_01A_CE = 0; _01A_CS = 0;
-    delay_us(RF_DELAY);
-	cbi(PORTB, _01A_CS);
-    delay_us(RF_DELAY);
+    cbi(_01A_PORT, _01A_CE); //_01A_CE = 0; _01A_CS = 0;
+    _delay_loop_1(RF_DELAY);
+	cbi(_01A_PORT, _01A_CS);
+    _delay_loop_1(RF_DELAY);
     
     //After configuration of the receiver, we need _01A_DATA as an input
     //1 = output, 0 = input
     _01A_PORT_DD &= ~((1<<_01A_DR)|(1<<_01A_DATA));  //(_01A_DR is input) (_01A_DATA is input)
 
     //Start monitoring the air
-    sbi(PORTB, _01A_CE); //_01A_CE = 1; _01A_CS = 0;
-    delay_us(RF_DELAY);
-	cbi(PORTB, _01A_CS);
+    sbi(_01A_PORT, _01A_CE); //_01A_CE = 1; _01A_CS = 0;
+    _delay_loop_1(RF_DELAY);
+	cbi(_01A_PORT, _01A_CS);
 }    
 
 //2.4G Configuration - Transmitter
@@ -236,12 +238,12 @@ void config_tx_nRF2401A(void)
 	_01A_PORT_DD |= (1<<_01A_DATA);
 
     //Config Mode
-    cbi(PORTB, _01A_CE); //_01A_CE = 0; 
-    delay_us(RF_DELAY);
-	sbi(PORTB, _01A_CS); //_01A_CS = 1;
+    cbi(_01A_PORT, _01A_CE); //_01A_CE = 0; 
+    _delay_loop_1(RF_DELAY);
+	sbi(_01A_PORT, _01A_CS); //_01A_CS = 1;
     
     //Delay of 5us from CS to Data (page 30) is taken care of by the for loop
-    delay_us(RF_DELAY);
+    _delay_loop_1(RF_DELAY);
 	
 	config_setup = 0xA36E04;
     //Setup configuration word
@@ -254,16 +256,16 @@ void config_tx_nRF2401A(void)
 		else
 			cbi(_01A_PORT, _01A_DATA);
 		
-		sbi(PORTB, _01A_CLK); //_01A_CLK = 1;
-		delay_us(RF_DELAY);
-		cbi(PORTB, _01A_CLK); //_01A_CLK = 0; 
+		sbi(_01A_PORT, _01A_CLK); //_01A_CLK = 1;
+		_delay_loop_1(RF_DELAY);
+		cbi(_01A_PORT, _01A_CLK); //_01A_CLK = 0; 
 
         config_setup <<= 1;
     }
     
     //Configuration is actived on falling edge of CS (page 10)
-    cbi(PORTB, _01A_CE); //_01A_CE = 0; 
-    delay_us(RF_DELAY);
-	cbi(PORTB, _01A_CS); //_01A_CS = 0;
+    cbi(_01A_PORT, _01A_CE); //_01A_CE = 0; 
+    _delay_loop_1(RF_DELAY);
+	cbi(_01A_PORT, _01A_CS); //_01A_CS = 0;
 }
 

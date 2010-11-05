@@ -122,7 +122,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x3a4
+.text           0x00000000      0x408
  *(.vectors)
  .vectors       0x00000000       0x68 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
                 0x00000000                __vectors
@@ -201,30 +201,28 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x0000008c                __vector_10
                 0x0000008c                __vector_16
                 0x0000008c                __vector_20
- .text          0x00000090      0x310 nRF_USB2Serial.o
+ .text          0x00000090      0x374 nRF_USB2Serial.o
                 0x00000090                rx_data_nRF2401A
-                0x00000376                uart_getchar
+                0x000003e6                uart_getchar
                 0x000001c8                config_tx_nRF2401A
-                0x00000286                ioinit
-                0x0000038a                delay_us
+                0x000002ae                ioinit
                 0x000000bc                tx_data_nRF2401A
-                0x000002ac                main
-                0x00000384                delay_ms
+                0x000002ce                main
                 0x00000276                initPWM
                 0x00000216                __vector_18
                 0x00000128                config_rx_nRF2401A
-                0x00000390                put_char
- .text          0x000003a0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text          0x000003a0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
-                0x000003a0                . = ALIGN (0x2)
+                0x000003f4                put_char
+ .text          0x00000404        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000404        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000404                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x000003a0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x000003a0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
-                0x000003a0                . = ALIGN (0x2)
+ .text.libgcc   0x00000404        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000404        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000404                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000003a0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000003a0                exit
-                0x000003a0                _exit
+ .fini9         0x00000404        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000404                exit
+                0x00000404                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -243,11 +241,11 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000003a0        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000404        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000003a4                _etext = .
+                0x00000408                _etext = .
 
-.data           0x00800100        0x0 load address 0x000003a4
+.data           0x00800100        0x0 load address 0x00000408
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
@@ -275,8 +273,8 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00800100                rf_rx_array
                 0x00800104                rf_tx_array
                 0x00800108                PROVIDE (__bss_end, .)
-                0x000003a4                __data_load_start = LOADADDR (.data)
-                0x000003a4                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000408                __data_load_start = LOADADDR (.data)
+                0x00000408                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800108        0x0
                 0x00800108                PROVIDE (__noinit_start, .)
@@ -340,44 +338,44 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00000000       0x20 nRF_USB2Serial.o
 
 .debug_pubnames
-                0x00000000       0xf2
+                0x00000000       0xd8
  *(.debug_pubnames)
  .debug_pubnames
-                0x00000000       0xf2 nRF_USB2Serial.o
+                0x00000000       0xd8 nRF_USB2Serial.o
 
-.debug_info     0x00000000      0x5a7
+.debug_info     0x00000000      0x3fe
  *(.debug_info)
- .debug_info    0x00000000      0x5a7 nRF_USB2Serial.o
+ .debug_info    0x00000000      0x3fe nRF_USB2Serial.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev   0x00000000      0x21c
+.debug_abbrev   0x00000000      0x1bb
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x21c nRF_USB2Serial.o
+ .debug_abbrev  0x00000000      0x1bb nRF_USB2Serial.o
 
-.debug_line     0x00000000      0x637
+.debug_line     0x00000000      0x65a
  *(.debug_line)
- .debug_line    0x00000000      0x637 nRF_USB2Serial.o
+ .debug_line    0x00000000      0x65a nRF_USB2Serial.o
 
-.debug_frame    0x00000000       0xd0
+.debug_frame    0x00000000       0xb0
  *(.debug_frame)
- .debug_frame   0x00000000       0xd0 nRF_USB2Serial.o
+ .debug_frame   0x00000000       0xb0 nRF_USB2Serial.o
 
-.debug_str      0x00000000      0x18e
+.debug_str      0x00000000      0x17b
  *(.debug_str)
- .debug_str     0x00000000      0x18e nRF_USB2Serial.o
-                                0x1c7 (size before relaxing)
+ .debug_str     0x00000000      0x17b nRF_USB2Serial.o
+                                0x1b4 (size before relaxing)
 
-.debug_loc      0x00000000      0x1d1
+.debug_loc      0x00000000      0x1a6
  *(.debug_loc)
- .debug_loc     0x00000000      0x1d1 nRF_USB2Serial.o
+ .debug_loc     0x00000000      0x1a6 nRF_USB2Serial.o
 
 .debug_macinfo
  *(.debug_macinfo)
 OUTPUT(nRF_USB2Serial.elf elf32-avr)
 LOAD linker stubs
 
-.debug_ranges   0x00000000       0xf0
- .debug_ranges  0x00000000       0xf0 nRF_USB2Serial.o
+.debug_ranges   0x00000000       0x78
+ .debug_ranges  0x00000000       0x78 nRF_USB2Serial.o
 
 Cross Reference Table
 
@@ -421,8 +419,6 @@ __vectors                                         c:/winavr-20100110/bin/../lib/
 _exit                                             c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
 config_rx_nRF2401A                                nRF_USB2Serial.o
 config_tx_nRF2401A                                nRF_USB2Serial.o
-delay_ms                                          nRF_USB2Serial.o
-delay_us                                          nRF_USB2Serial.o
 exit                                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
                                                   c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
 initPWM                                           nRF_USB2Serial.o
