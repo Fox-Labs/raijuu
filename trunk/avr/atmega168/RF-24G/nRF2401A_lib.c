@@ -29,21 +29,21 @@
     9: 1 RF Output Power (-5dBm)
     8: 0 RF Output Power
 
-    7: 0 Channel select (channel 2)
+    7: 0 Channel select (channel 16)
     6: 0
-    5: 0
+    5: 1
     4: 0
     3: 0
-    2: 1
+    2: 0
     1: 0
     0: 1 Receive mode
 
-    config_setup = 0x00A36E05; //0b.1010.0011. 0110.1110. 0000.0101; //Look at pages 13-15 for more bit info
+    config_setup = 0x00A36E21; //0b.1010.0011. 0110.1110. 0010.0001; //Look at pages 13-15 for more bit info
 
 	This config setup is designed to work with nRF24L01 ICs (though we've had some diffuculty actually getting it to work)
 	1) 40-bit adddresses
 	2) 16-bit CRC
-	3) Default address: 0xE7E7E7E7E7 (5 bytes)
+	3) Default address: 0xE7 (5 bytes)
 	4) 1Mbps shock burst
 */
 
@@ -195,8 +195,8 @@ void config_rx_nRF2401A(void)
 	
 	//Lower 24 bit setup
     //Set last bit for receive mode
-	//config_setup = 0x00A36E05; //0b.1010.0011. 0110.1110. 0000.0101; 
-	config_setup = 0xA36E05;
+	//config_setup = 0x00A36E21; //0b.1010.0011. 0110.1110. 0010.0001;
+	config_setup = 0xA36E21;
 
     for(i = 0 ; i < 24 ; i++)
     {
@@ -245,9 +245,9 @@ void config_tx_nRF2401A(void)
     //Delay of 5us from CS to Data (page 30) is taken care of by the for loop
     _delay_loop_1(RF_DELAY);
 	
-	config_setup = 0xA36E04;
+	config_setup = 0xA36E20;
     //Setup configuration word
-    //config_setup = 0x00A36E04; //0b.0010.0011.0110.1110.0000.0100; //Look at pages 13-15 for more bit info
+	//config_setup = 0x00A36E20; //0b.1010.0011. 0110.1110. 0010.0000; //Look at pages 13-15 for more bit info
 
     for(i = 0 ; i < 24 ; i++)
     {
