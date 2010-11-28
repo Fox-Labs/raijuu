@@ -1,8 +1,16 @@
+//Bibliotecas
+//======================
 #include <stdio.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay_basic.h>
 
+#include <nRF2401A_lib.c>
+
+//======================
+
+//Defines
+//======================
 #define FOSC 16000000
 #define BAUD 9600
 #define MYUBRR (FOSC/16/BAUD-1)
@@ -11,6 +19,13 @@
 #define BLUE OCR1A
 #define GREEN OCR1B
 
+//======================
+
+//Variaveis Globais
+//======================
+volatile char buff[4];
+
+//======================
 
 //Funcoes
 //======================
@@ -18,10 +33,10 @@ void ioinit(void);
 uint8_t uart_getchar(void);
 void put_char(char byte);
 void initPWM(void);
-
-#include <nRF2401A_lib.c>
+uint8_t hex_to_dec(char hex);
 
 //======================
+
 
 
 
@@ -34,7 +49,9 @@ ISR (SIG_USART_RECV)//USART
 	config_tx_nRF2401A();
 	tx_data_nRF2401A();
 	config_rx_nRF2401A();
-	
+    
+    put_char(rf_tx_array[1]);
+
 	sei();//Habilita Interrupcoes
 	
 }
@@ -42,7 +59,6 @@ ISR (SIG_USART_RECV)//USART
 int main(void)
 {
 	int x=0;
-	int lum=0;
 	
 	ioinit();
 	initPWM();
@@ -63,59 +79,32 @@ int main(void)
 	
 	for(;;)
 	{	
-		if (_01A_PORT_PIN & (1<<_01A_DR))
+		if (_01A_PORT_PIN & (1<<_01A_DR)) //Recebeu algumna coisa
 		{
 			rx_data_nRF2401A();
 			
-			if (rf_rx_array[0] == 59 && rf_rx_array[1] == rf_rx_array[2] && rf_rx_array[3] == 42)
+			if (rf_rx_array[0] == 59 && rf_rx_array[1] == rf_rx_array[2] && rf_rx_array[3] == 42) //Msg Valida
 			{
-				put_char(rf_rx_array[1]);
+                //Joga dado no buff FIFO
+				for(x = 0; x < 3; x++){
+                    buff[x] = buff[x+1];
+                }
+                buff[x] = rf_rx_array[1];
+                printf("%c",buff[x]);
+                
+                //Se string no buff bate com o esperado, muda valor do PWM do led especificado
+                if ( (buff[0] == 'R' || buff[0] == 'r') && buff[3] == ';'){
+                    RED = hex_to_dec(buff[1])*16 + hex_to_dec(buff[2]);
+                }
+                if ( (buff[0] == 'G' || buff[0] == 'g') && buff[3] == ';'){
+                    GREEN = hex_to_dec(buff[1])*16 + hex_to_dec(buff[2]);
+                }
+                if ( (buff[0] == 'B' || buff[0] == 'b') && buff[3] == ';'){
+                    BLUE = hex_to_dec(buff[1])*16 + hex_to_dec(buff[2]);
+                }
+                
 			}
 		}
-		
-		if ( (PINC & 0b00000001) == 0b00000000 ){
-			lum++;
-			if(lum > 5){
-				lum = 0;
-			}
-			rf_tx_array[1] = rf_tx_array[2] = (48 + lum);
-			
-			config_tx_nRF2401A();
-			tx_data_nRF2401A();
-			config_rx_nRF2401A();
-			
-			//Rotina de Debounce
-			while ( (PINC & 0b00000001) == 0b00000000 ){
-				//Faz nada
-			}
-			
-			_delay_loop_2(0);
-			
-		}
-		
-		if(rf_rx_array[1] >= 48 && rf_rx_array[1] <= 55){
-			if(rf_rx_array[1] == 48) {//0
-				RED = 0;
-			}
-			if(rf_rx_array[1] == 49) {//1
-				RED = 16;
-			}
-			if(rf_rx_array[1] == 50) {//2
-				RED = 32;
-			}
-			if(rf_rx_array[1] == 51) {//3
-				RED = 64;
-			}
-			if(rf_rx_array[1] == 52) {//4
-				RED = 128;
-			}
-			if(rf_rx_array[1] == 53) {//5
-				RED = 255;
-			}
-			
-		}
-		
-		
 	}
 }
 
@@ -133,7 +122,6 @@ void initPWM(){
 
 void ioinit(void)
 {
-	
 	//1 = saida, 0 = entrada
 	//DDRD |= 0b00000010;  //(TXD on PD1)
 	//DDRD &= ~(0b00000001);  //(RXD on PD0)
@@ -165,4 +153,12 @@ void put_char(char byte)
 	UDR0 = byte;
 }
 
+uint8_t hex_to_dec(char hex)
+{
+   if (hex > 47 && hex <58) return (hex - 48);
+   if (hex > 64 && hex <71) return (hex - 55);
+   if (hex > 96 && hex <103) return (hex - 87);
+   
+   return 0;
+}
 
