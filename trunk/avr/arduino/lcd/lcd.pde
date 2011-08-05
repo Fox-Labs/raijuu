@@ -37,6 +37,18 @@ void loop()
     l_lcd = l_lcd + 1;
     Serial.print(c);
   }
+  if (l_lcd == 16 && c_lcd == 1)
+  {
+    l_lcd = 14;
+    c_lcd = 2;
+    posicao(c_lcd, l_lcd);
+  }
+  if (l_lcd == 13 && c_lcd == 2)
+  {
+    l_lcd = 15;
+    c_lcd = 1;
+    posicao(c_lcd, l_lcd);
+  }
 
 }
 
