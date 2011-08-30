@@ -1,17 +1,17 @@
-#define key_1 831
-#define key_2 766
-#define key_3 326
-#define key_4 794
-#define key_5 734
-#define key_6 319
-#define key_7 713
-#define key_8 665
-#define key_9 305
-#define key_10 459
-#define key_11 439
-#define key_12 246
+#define key_1 50
+#define key_2 95
+#define key_3 138
+#define key_4 200
+#define key_5 334
+#define key_6 432
+#define key_7 559
+#define key_8 724
+#define key_9 800
+#define key_10 889
+#define key_11 952
+#define key_12 975
 
-#define erro 4
+#define erro 20
 
 
 int sensor;
@@ -27,11 +27,14 @@ void loop()
 {
   
   sensor = 0;
-  for (int i = 0; i < 25; i++)
+  for (int i = 0; i < 10; i++)
   {
     sensor = sensor + analogRead(0);
   }
-  sensor = sensor / 25;
+  sensor = sensor / 10;
+  
+  Serial.print("Sensor = ");
+  Serial.println(sensor);
   
   key = tecla(sensor);
   
