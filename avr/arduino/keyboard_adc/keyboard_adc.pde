@@ -33,9 +33,6 @@ void loop()
   }
   sensor = sensor / 10;
   
-  Serial.print("Sensor = ");
-  Serial.println(sensor);
-  
   key = tecla(sensor);
   
   if ( (key != old_key) && (key != 0) )
