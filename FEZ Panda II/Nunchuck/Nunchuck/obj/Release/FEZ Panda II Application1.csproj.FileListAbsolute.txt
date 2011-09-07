@@ -1,0 +1,23 @@
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Release\le\FEZ Panda II Application.exe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Release\be\FEZ Panda II Application.exe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Release\le\FEZ Panda II Application.pdb
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Release\be\FEZ Panda II Application.pdb
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Release\FEZ Panda II Application.exe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Release\FEZ Panda II Application.pdb
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Release\le\FEZ Panda II Application.pe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Release\le\FEZ Panda II Application.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Release\be\FEZ Panda II Application.pe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Release\be\FEZ Panda II Application.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Release\TinyCLR_DebugReferences.cache
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Release\FEZ_Panda_II_Application1.Resources.resources
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Release\FEZ_Panda_II_Application1.Resources.tinyresources
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Release\TinyResGen.cache
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Release\be\FEZ Panda II Application.pe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Release\be\FEZ Panda II Application.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Release\le\FEZ Panda II Application.pe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Release\le\FEZ Panda II Application.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Release\FEZ Panda II Application.exe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Release\FEZ Panda II Application.pdb
