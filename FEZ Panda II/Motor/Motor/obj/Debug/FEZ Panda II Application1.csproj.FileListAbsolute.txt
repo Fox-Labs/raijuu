@@ -1,0 +1,35 @@
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\le\FEZ Panda II Application.exe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\be\FEZ Panda II Application.exe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\le\FEZ Panda II Application.pdb
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\be\FEZ Panda II Application.pdb
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\FEZ Panda II Application.exe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\FEZ Panda II Application.pdb
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\le\FEZ Panda II Application.pe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\le\FEZ Panda II Application.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\be\FEZ Panda II Application.pe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\be\FEZ Panda II Application.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Debug\TinyCLR_DebugReferences.cache
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Debug\FEZ_Panda_II_Application1.Resources.resources
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Debug\FEZ_Panda_II_Application1.Resources.tinyresources
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Debug\TinyResGen.cache
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Debug\be\FEZ Panda II Application.pe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Debug\be\FEZ Panda II Application.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Debug\le\FEZ Panda II Application.pe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Debug\le\FEZ Panda II Application.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Debug\FEZ Panda II Application.exe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\obj\Debug\FEZ Panda II Application.pdb
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\LE\GHIElectronics.NETMF.Hardware.pe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\LE\GHIElectronics.NETMF.System.pe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\BE\GHIElectronics.NETMF.Hardware.pe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\BE\GHIElectronics.NETMF.System.pe
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\LE\GHIElectronics.NETMF.Hardware.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\LE\GHIElectronics.NETMF.System.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\BE\GHIElectronics.NETMF.Hardware.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\BE\GHIElectronics.NETMF.System.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\GHIElectronics.NETMF.Hardware.dll
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\GHIElectronics.NETMF.System.dll
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\GHIElectronics.NETMF.Hardware.xml
+C:\Documents and Settings\Pesse.WIND.000\Local Settings\Application Data\Temporary Projects\FEZ Panda II Application1\bin\Debug\GHIElectronics.NETMF.System.xml
