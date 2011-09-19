@@ -1,20 +1,20 @@
-#define key_1 50
-#define key_2 95
-#define key_3 138
-#define key_4 200
-#define key_5 334
-#define key_6 432
-#define key_7 559
-#define key_8 724
-#define key_9 800
-#define key_10 889
-#define key_11 952
-#define key_12 975
+#define key_1 48
+#define key_2 75
+#define key_3 128
+#define key_4 190
+#define key_5 295
+#define key_6 386
+#define key_7 490
+#define key_8 611
+#define key_9 710
+#define key_10 747
+#define key_11 786
+#define key_12 860
 
-#define erro 20
+#define erro 10
 
 
-int sensor;
+long sensor;
 char key;
 char old_key = 0;
 
@@ -25,29 +25,36 @@ void setup()
 
 void loop()
 {
-  
-  sensor = 0;
-  for (int i = 0; i < 10; i++)
-  {
-    sensor = sensor + analogRead(0);
-  }
-  sensor = sensor / 10;
-  
-  key = tecla(sensor);
-  
-  if ( (key != old_key) && (key != 0) )
-  {
-    old_key = key;
-    Serial.print("Key = ");
-    Serial.println(key);
-  }
-  
-  if (key == 0)
+  if(analogRead(0) == 0)
   {
     old_key = 0;
   }
   
-  delay(100);
+  if(analogRead(0) != 0)
+  {
+    delay(100);
+    
+    sensor = 0;
+    for (int i = 0; i < 50; i++)
+    {
+      sensor = sensor + analogRead(0);
+    }
+    sensor = sensor / 50;
+  
+    Serial.print("Sensor = ");
+    Serial.println(sensor);
+  
+    key = tecla(sensor);
+  
+    if ( (key != old_key) && (key != 0) )
+    {
+      old_key = key;
+      Serial.print("Key = ");
+      Serial.println(key);
+      while(analogRead(0) != 0);
+    }
+    
+  }
  
 }
 
