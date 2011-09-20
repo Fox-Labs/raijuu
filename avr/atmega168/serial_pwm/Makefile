@@ -18,13 +18,12 @@ SIZE    = avr-size
 # AVRDUDE_PROGRAMMERID = the programer you are using, in the example is the usbtiny by ladyada.
 # AVRDUDE_PORT = the port your programmer use, usb, lpt1 (parallel) or com1(serial) problably.
 PROGNAME = main
-MCU = atmega8
-PROGRAMMER_MCU = m8
+MCU = atmega168
+PROGRAMMER_MCU = m168
 LOW_FUSE = 0xFF
-HIGH_FUSE = 0xCF
+HIGH_FUSE = 0xDF
 AVRDUDE_PROGRAMMERID = usbtiny
 AVRDUDE_PORT = usb
-VEL = 1
 
 # Make targets:
 # all, hex, writeflash/go, writefuse
@@ -36,8 +35,8 @@ writeflash: hex
 	avrdude -c $(AVRDUDE_PROGRAMMERID) \
 	-p $(PROGRAMMER_MCU) \
 	-P $(AVRDUDE_PORT) \
-	-B $(VEL) \
-	-U flash:w:$(PROGNAME).hex
+	-U flash:w:$(PROGNAME).hex \
+	-B 1
 
 go: writeflash
 
