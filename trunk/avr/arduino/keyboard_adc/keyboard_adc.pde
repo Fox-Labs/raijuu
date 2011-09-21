@@ -1,20 +1,19 @@
 #define key_1 48
-#define key_2 75
+#define key_2 86
 #define key_3 128
-#define key_4 190
-#define key_5 295
-#define key_6 386
-#define key_7 490
-#define key_8 611
-#define key_9 710
-#define key_10 747
-#define key_11 786
-#define key_12 860
+#define key_4 196
+#define key_5 308
+#define key_6 410
+#define key_7 535
+#define key_8 686
+#define key_9 778
+#define key_10 845
+#define key_11 922
+#define key_12 952
 
-#define erro 10
+#define erro 15
 
-
-long sensor;
+int sensor;
 char key;
 char old_key = 0;
 
@@ -35,11 +34,11 @@ void loop()
     delay(100);
     
     sensor = 0;
-    for (int i = 0; i < 50; i++)
+    for (int i = 0; i < 10; i++)
     {
       sensor = sensor + analogRead(0);
     }
-    sensor = sensor / 50;
+    sensor = sensor / 10;
   
     Serial.print("Sensor = ");
     Serial.println(sensor);
