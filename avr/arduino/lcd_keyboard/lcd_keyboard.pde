@@ -5,28 +5,25 @@
 
 #define keyPin 0
 
-#define key_1 50
-#define key_2 95
-#define key_3 138
-#define key_4 200
-#define key_5 334
-#define key_6 432
-#define key_7 559
-#define key_8 724
-#define key_9 800
-#define key_10 889
-#define key_11 952
-#define key_12 975
+#define key_1 48
+#define key_2 86
+#define key_3 128
+#define key_4 196
+#define key_5 308
+#define key_6 410
+#define key_7 535
+#define key_8 686
+#define key_9 778
+#define key_10 845
+#define key_11 922
+#define key_12 952
 
-#define erro 20
+#define erro 15
 
 SoftwareSerial lcd(rxPin, txPin);
 int c_lcd; //Coluna LCD
 int l_lcd; //Linha LCD
 int nome = 1;
-
-char key;
-char old_key = 0;
 
 char nome_e[] = "M0000000.csv";
 char nome_s[] = "R0000000.csv";
@@ -51,6 +48,9 @@ void loop()
 
 void lcd_menu()
 {
+  char key;
+  char old_key = 0;
+  
   posicao(1,0);
   lcd.print("Rato:    000");
   posicao(2,0);
@@ -62,87 +62,95 @@ void lcd_menu()
   
   while(true)
   {
-    int sensor = 0;
     
-    for (int i = 0; i < 10; i++)
-    {
-      sensor = sensor + analogRead(keyPin);
-    }
-    sensor = sensor / 10;
-    
-    key = tecla(sensor);
-    
-    if ( (key != old_key) && (key != 0) )
-    {
-      old_key = key;
-      
-      if(key == '*')
-      {
-        c_lcd = c_lcd - 1;
-        posicao(l_lcd, c_lcd);
-        nome = nome - 1;
-      }
-      if(key == '#')
-      {
-        c_lcd = c_lcd + 1;
-        posicao(l_lcd, c_lcd);
-        nome = nome + 1;
-      }
-      if(key >= '0' && key <= '9') 
-      {
-        c_lcd = c_lcd + 1;
-        lcd.print(key);
-        nome_e[nome] = key; 
-        nome_s[nome] = key;
-        nome = nome + 1;
-      }
-      if (c_lcd == 12 && l_lcd == 1)
-      {
-        c_lcd = 8;
-        l_lcd = 2;
-        posicao(l_lcd, c_lcd);
-      }
-      if (c_lcd == 7 && l_lcd == 2)
-      {
-        c_lcd = 11;
-        l_lcd = 1;
-        posicao(l_lcd, c_lcd);
-      }
-      if (c_lcd == 8 && l_lcd == 1)
-      {
-        c_lcd = 9;
-        l_lcd = 1;
-        posicao(l_lcd, c_lcd);
-        nome = nome + 1;
-      }
-      if (c_lcd == 12 && l_lcd == 2)
-      {
-        lcd.print(" Ok?");
-        l_lcd = 2;
-        c_lcd = 16;
-        posicao(l_lcd, c_lcd);
-      }
-      if (c_lcd == 15 && l_lcd == 2)
-      {
-        posicao(2,13);
-        lcd.print("   ");
-        c_lcd = 11;
-        l_lcd = 2;
-        posicao(l_lcd,c_lcd);
-      }
-      
-      if (c_lcd == 17 && l_lcd == 2)
-      {
-        limpa();
-        lcd.print("Rodando:");
-        lcd.print(nome_e);
-      }
-      
-    }
-    
-    if (key == 0)
+    if(analogRead(0) == 0)
     {
       old_key = 0;
+    }
+    
+    if(analogRead(0) != 0)
+    {
+      delay(100);
+    
+      int sensor = 0;
+      for (int i = 0; i < 10; i++)
+      {
+        sensor = sensor + analogRead(0);
+      }
+      sensor = sensor / 10;
+  
+      key = tecla(sensor);
+  
+      if ( (key != old_key) && (key != 0) )
+      {
+        old_key = key;
+      
+        if(key == '*')
+        {
+          c_lcd = c_lcd - 1;
+          posicao(l_lcd, c_lcd);
+          nome = nome - 1;
+        }
+        if(key == '#')
+        {
+          c_lcd = c_lcd + 1;
+          posicao(l_lcd, c_lcd);
+          nome = nome + 1;
+        }
+        if(key >= '0' && key <= '9') 
+        {
+          c_lcd = c_lcd + 1;
+          lcd.print(key);
+          nome_e[nome] = key; 
+          nome_s[nome] = key;
+          nome = nome + 1;
+        }
+        if (c_lcd == 12 && l_lcd == 1)
+        {
+          c_lcd = 8;
+          l_lcd = 2;
+          posicao(l_lcd, c_lcd);
+        }
+        if (c_lcd == 7 && l_lcd == 2)
+        {
+          c_lcd = 11;
+          l_lcd = 1;
+          posicao(l_lcd, c_lcd);
+        }
+        if (c_lcd == 8 && l_lcd == 1)
+        {
+          c_lcd = 9;
+          l_lcd = 1;
+          posicao(l_lcd, c_lcd);
+          nome = nome + 1;
+        }
+        if (c_lcd == 12 && l_lcd == 2)
+        {
+          lcd.print(" Ok?");
+          l_lcd = 2;
+          c_lcd = 16;
+          posicao(l_lcd, c_lcd);
+        }
+        if (c_lcd == 15 && l_lcd == 2)
+        {
+          posicao(2,13);
+          lcd.print("   ");
+          c_lcd = 11;
+          l_lcd = 2;
+          posicao(l_lcd,c_lcd);
+        }
+      
+        if (c_lcd == 17 && l_lcd == 2)
+        {
+          limpa();
+          lcd.print("Rodando:");
+          lcd.print(nome_e);
+        }
+        
+        while(analogRead(0) != 0);
+        
+      }
+    
     }
     
     if (c_lcd == 17 && l_lcd == 2) break;
