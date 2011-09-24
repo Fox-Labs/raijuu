@@ -3,7 +3,7 @@
 #define txPin 2
 #define rxPin 0
 
-#define keyPin 0
+#define keyPin 5
 
 #define key_1 48
 #define key_2 86
@@ -63,19 +63,19 @@ void lcd_menu()
   while(true)
   {
     
-    if(analogRead(0) == 0)
+    if(analogRead(keyPin) == 0)
     {
       old_key = 0;
     }
     
-    if(analogRead(0) != 0)
+    if(analogRead(keyPin) != 0)
     {
       delay(100);
     
       int sensor = 0;
       for (int i = 0; i < 10; i++)
       {
-        sensor = sensor + analogRead(0);
+        sensor = sensor + analogRead(keyPin);
       }
       sensor = sensor / 10;
   
@@ -147,7 +147,7 @@ void lcd_menu()
           lcd.print(nome_e);
         }
         
-        while(analogRead(0) != 0);
+        while(analogRead(keyPin) != 0);
         
       }
     
@@ -189,6 +189,14 @@ void posicao(int linha, int coluna)
   if (linha == 2)
   {
     lcd.print(192 + coluna, BYTE);
+  }
+  if (linha == 3)
+  {
+    lcd.print(148 + coluna, BYTE);
+  }
+  if (linha == 4)
+  {
+    lcd.print(212 + coluna, BYTE);
   }
 }
 
