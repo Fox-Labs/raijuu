@@ -48,8 +48,8 @@ void initPWM()
    //set up 2 PWM channels on PB1 and PB2 using Timer1
    DDRB |= _BV(1) |  _BV(2);   //set PB1 and PB2 as outputs
    OCR1A = OCR1B = 0;   //PWM set to zero
-   //timer 1 - 8 bit Fast PWM - divided by 256 - non-inverting
-   TCCR1B = (0 << WGM13) | (1<<WGM12) | (1 << CS12) | (0 << CS11) | (0 << CS10);
+   //timer 1 - 8 bit Fast PWM - divided by 1024 - non-inverting
+   TCCR1B = (0 << WGM13) | (1<<WGM12) | (1 << CS12) | (0 << CS11) | (1 << CS10);
    TCCR1A = (0 << WGM11) | (1<<WGM10) | (1 << COM1A1) | (0 << COM1A0) | (1 << COM1B1) | (0 << COM1B0);
 }
 
