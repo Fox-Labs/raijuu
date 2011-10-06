@@ -42,15 +42,11 @@ void setup()
 
 void loop()
 {
-  linha++;
-  //escreve_lcd("Linha: ",2,0);
-  //escreve_lcd(linha,2,8);
+  //linha++;
   
-  //posicao(2,0);
-  //lcd.print("Linha:  ");
-  //lcd.print(linha);
+  //lcdEscreve("Linha: ",2,1);
+  //lcdEscreve(linha,0,0);
   
-
   //escreve_sd(file_e, String (DELAY2) );
   //escreve_sd(file_e, String ("\r\n") );
   
@@ -65,70 +61,49 @@ void lcd_menu()
   
   lcdEscreve("Rato:    000",1,1);
   lcdEscreve("Sessao: 0000",2,1);
-  lcdEscreve('\0',1,10);
-  //l_lcd = 1;
-  //c_lcd = 1;
+  lcdEscreve(1,10);
   
-  /*while(true)
+  while(true)
   {
-    
+    tecla = 0;
     tecla = teclado (keyPin);
+    delay(100);
     
     if(tecla == '*')
     {
-      c_lcd = c_lcd - 1;
-      lcdEscreve("",l_lcd,c_lcd);
+      lcdEscreve(l_lcd,c_lcd - 1);
       nome = nome - 1;
     }
     if(tecla == '#')
     {
-      c_lcd = c_lcd + 1;
-      lcdEscreve("",l_lcd,c_lcd);
+      lcdEscreve(l_lcd,c_lcd + 1);
       nome = nome + 1;
     }
     if(tecla >= '0' && tecla <= '9') 
     {
-      lcdEscreve(tecla,0,0);
-      nome_e[nome] = tecla; 
+      lcdEscreve(tecla,l_lcd,c_lcd);
+      nome_e[nome] = tecla;
       nome_s[nome] = tecla;
       nome = nome + 1;
     }
-    if (c_lcd == 12 && l_lcd == 1)
+    if (l_lcd == 1 && c_lcd == 13)
     {
-      c_lcd = 8;
-      l_lcd = 2;
-      lcdEscreve("",l_lcd,c_lcd);
+      lcdEscreve(2,9);
     }
-    if (c_lcd == 7 && l_lcd == 2)
+    if (l_lcd == 2 && c_lcd == 8)
     {
-      c_lcd = 11;
-      l_lcd = 1;
-      lcdEscreve("",l_lcd,c_lcd);
+      lcdEscreve(1,12);
     }
-    if (c_lcd == 8 && l_lcd == 1)
+    if (l_lcd == 1 && c_lcd == 9)
     {
-      c_lcd = 9;
-      l_lcd = 1;
-      lcdEscreve("",l_lcd,c_lcd);
+      lcdEscreve(1,10);
       nome = nome + 1;
     }
-    if (c_lcd == 12 && l_lcd == 2)
+    if (l_lcd == 2 && c_lcd == 13)
     {
-      lcd.print(" Ok?");
-      l_lcd = 2;
-      c_lcd = 16;
-      lcdEscreve("",l_lcd,c_lcd);
+      lcdEscreve(" Ok?",0,0);
     }
-    if (c_lcd == 15 && l_lcd == 2)
-    {
-      lcdEscreve("",2,14);
-      lcd.print("   ");
-      c_lcd = 11;
-      l_lcd = 2;
-      lcdEscreve("",l_lcd,c_lcd);
-    }
-  
-    if (c_lcd == 17 && l_lcd == 2)
+    if (l_lcd == 2 && c_lcd == 18)
     {
       lcdLimpa();
       lcdEscreve("Rodando:",1,1);
@@ -136,10 +111,7 @@ void lcd_menu()
     }
     
     if (c_lcd == 17 && l_lcd == 2) break;
-    
-    tecla = 0;
-    delay(100);
-  }*/
+  }
 }
 
 char teclado(byte pino)
@@ -186,28 +158,7 @@ void lcdInit()
   lcdLimpa(); //limpa display
 }
 
-void posicao(int linha, int coluna)
-{
-  lcd.print(0xFE, BYTE);
-  if (linha == 1)
-  {
-    lcd.print(128 + coluna, BYTE);
-  }
-  if (linha == 2)
-  {
-    lcd.print(192 + coluna, BYTE);
-  }
-  if (linha == 3)
-  {
-    lcd.print(148 + coluna, BYTE);
-  }
-  if (linha == 4)
-  {
-    lcd.print(212 + coluna, BYTE);
-  }
-}
-
-void lcdEscreve(char letra, int linha, int coluna)
+void lcdEscreve(int linha, int coluna)
 {
   if (linha == 0 && coluna == 0)
   {
@@ -221,22 +172,24 @@ void lcdEscreve(char letra, int linha, int coluna)
   if (linha == 3) lcd.print(147 + coluna, BYTE);
   if (linha == 4) lcd.print(211 + coluna, BYTE);
   
-  if (letra != '\0')
-  {
-    c_lcd = coluna + 1;
-    l_lcd = linha;
-    lcd.print(letra);
-  }
-  if (letra == '\0')
-  {
-    c_lcd = coluna;
-    l_lcd = linha;
-  }
+  l_lcd = linha;
+  c_lcd = coluna;
 }
 
-void lcdEscreve(void)
+void lcdEscreve(char letra, int linha, int coluna)
 {
+  if (linha == 0 && coluna == 0)
+  {
+    linha = l_lcd;
+    coluna  = c_lcd;
+  }
   
+  lcdEscreve(linha,coluna);
+  
+  lcd.print(letra);
+  
+  l_lcd = linha;
+  c_lcd = coluna + 1;
 }
 
 void lcdEscreve(char texto[], int linha, int coluna)
@@ -248,12 +201,23 @@ void lcdEscreve(char texto[], int linha, int coluna)
   }
 }
 
-/*void escreve_lcd(int texto,byte linha, byte coluna)
+void lcdEscreve(long numero, int linha, int coluna)
 {
+  if (linha == 0 && coluna == 0)
+  {
+    linha = l_lcd;
+    coluna  = c_lcd;
+  }
+  
   char buffer[10];
-  itoa (texto,buffer,10);
-  escreve_lcd(buffer,linha,coluna);
-}*/
+  ltoa (numero,buffer,10);
+  lcdEscreve(buffer,linha,coluna);
+}
+
+void lcdEscreve(int numero, int linha, int coluna)
+{
+  lcdEscreve ((long)numero, linha, coluna);
+}
 
 void lcdLimpa() //Limpa a tela do LCD
 {
