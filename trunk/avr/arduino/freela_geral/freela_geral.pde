@@ -7,7 +7,7 @@
 #define keyPin 5 //Pino analogico do Teclado
 
 //Valores de calibração do teclado
-#define key_1 48 
+#define key_1 48
 #define key_2 95
 #define key_3 137
 #define key_4 198
@@ -22,40 +22,37 @@
 #define erro 15
 
 SoftwareSerial lcd(rxPin, txPin);
-int c_lcd; //Coluna LCD
-int l_lcd; //Linha LCD
-int nome = 1;
+int c_lcd = 1; //Coluna LCD
+int l_lcd = 1; //Linha LCD
 
 char nome_e[] = "M0000000.csv";
 char nome_s[] = "R0000000.csv";
-
-int linha = 0;
-
 File file_e;
+File file_s;
+
+int linha=0;
 
 void setup()
 {
   Serial.begin(9600);
 
-  init_lcd();
+  lcdInit();
   lcd_menu();
 }
 
 void loop()
 {
   linha++;
-  escreve_lcd("Linha: ",2,0);
-  escreve_lcd(linha,2,8);
+  //escreve_lcd("Linha: ",2,0);
+  //escreve_lcd(linha,2,8);
+  
   //posicao(2,0);
   //lcd.print("Linha:  ");
   //lcd.print(linha);
   
-  escreve_sd(file_e, String (LED) );
-  escreve_sd(file_e, String (REF) );
-  escreve_sd(file_e, String (DELAY) );
-  escreve_sd(file_e, String (REF2) );
-  escreve_sd(file_e, String (DELAY2) );
-  escreve_sd(file_e, String ("\r\n") );
+
+  //escreve_sd(file_e, String (DELAY2) );
+  //escreve_sd(file_e, String ("\r\n") );
   
   delay(100);
 }
@@ -63,60 +60,56 @@ void loop()
 
 void lcd_menu()
 {
-  char key;
-  char old_key = 0;
+  int nome = 1;
+  char tecla = 0;
   
-  posicao(1,0);
-  lcd.print("Rato:    000");
-  posicao(2,0);
-  lcd.print("Sessao: 0000");
+  lcdEscreve("Rato:    000",1,1);
+  lcdEscreve("Sessao: 0000",2,1);
+  lcdEscreve('\0',1,10);
+  //l_lcd = 1;
+  //c_lcd = 1;
   
-  c_lcd = 9;
-  l_lcd = 1; 
-  posicao(l_lcd,c_lcd);
-  
-  while(true)
+  /*while(true)
   {
     
-    key = teclado (keyPin);
+    tecla = teclado (keyPin);
     
-    if(key == '*')
+    if(tecla == '*')
     {
       c_lcd = c_lcd - 1;
-      posicao(l_lcd, c_lcd);
+      lcdEscreve("",l_lcd,c_lcd);
       nome = nome - 1;
     }
-    if(key == '#')
+    if(tecla == '#')
     {
       c_lcd = c_lcd + 1;
-      posicao(l_lcd, c_lcd);
+      lcdEscreve("",l_lcd,c_lcd);
       nome = nome + 1;
     }
-    if(key >= '0' && key <= '9') 
+    if(tecla >= '0' && tecla <= '9') 
     {
-      c_lcd = c_lcd + 1;
-      lcd.print(key);
-      nome_e[nome] = key; 
-      nome_s[nome] = key;
+      lcdEscreve(tecla,0,0);
+      nome_e[nome] = tecla; 
+      nome_s[nome] = tecla;
       nome = nome + 1;
     }
     if (c_lcd == 12 && l_lcd == 1)
     {
       c_lcd = 8;
       l_lcd = 2;
-      posicao(l_lcd, c_lcd);
+      lcdEscreve("",l_lcd,c_lcd);
     }
     if (c_lcd == 7 && l_lcd == 2)
     {
       c_lcd = 11;
       l_lcd = 1;
-      posicao(l_lcd, c_lcd);
+      lcdEscreve("",l_lcd,c_lcd);
     }
     if (c_lcd == 8 && l_lcd == 1)
     {
       c_lcd = 9;
       l_lcd = 1;
-      posicao(l_lcd, c_lcd);
+      lcdEscreve("",l_lcd,c_lcd);
       nome = nome + 1;
     }
     if (c_lcd == 12 && l_lcd == 2)
@@ -124,29 +117,29 @@ void lcd_menu()
       lcd.print(" Ok?");
       l_lcd = 2;
       c_lcd = 16;
-      posicao(l_lcd, c_lcd);
+      lcdEscreve("",l_lcd,c_lcd);
     }
     if (c_lcd == 15 && l_lcd == 2)
     {
-      posicao(2,13);
+      lcdEscreve("",2,14);
       lcd.print("   ");
       c_lcd = 11;
       l_lcd = 2;
-      posicao(l_lcd,c_lcd);
+      lcdEscreve("",l_lcd,c_lcd);
     }
   
     if (c_lcd == 17 && l_lcd == 2)
     {
-      limpa();
-      lcd.print("Rodando:");
-      lcd.print(nome_e);
+      lcdLimpa();
+      lcdEscreve("Rodando:",1,1);
+      lcdEscreve(nome_e,0,0);
     }
     
     if (c_lcd == 17 && l_lcd == 2) break;
     
-    key = 0;
+    tecla = 0;
     delay(100);
-  }
+  }*/
 }
 
 char teclado(byte pino)
@@ -182,15 +175,15 @@ char teclado(byte pino)
   return tecla;
 }
 
-void init_lcd()
+void lcdInit()
 {
   delay(500); //delay pedido pelo LCD
   pinMode(txPin, OUTPUT);
   lcd.begin(2400); //baudrate de 2400 bps pro LCD
   lcd.print(0x0D, BYTE); //identificador de baudrate
-  contraste(0); //muda contraste
-  controla_cursor(1); //liga o cursor piscando
-  limpa(); //limpa display
+  lcdContraste(0); //muda contraste
+  lcdCursor(1); //liga o cursor piscando
+  lcdLimpa(); //limpa display
 }
 
 void posicao(int linha, int coluna)
@@ -214,80 +207,89 @@ void posicao(int linha, int coluna)
   }
 }
 
-//strcat(crypted_aux,(char *) &aux1);
-
-void escreve_lcd(char* texto,byte linha, byte coluna)
+void lcdEscreve(char letra, int linha, int coluna)
 {
+  if (linha == 0 && coluna == 0)
+  {
+    linha = l_lcd;
+    coluna = c_lcd;
+  }
+  
   lcd.print(0xFE, BYTE);
-  if (linha == 1) lcd.print(128 + coluna, BYTE);
-  if (linha == 2) lcd.print(192 + coluna, BYTE);
-  if (linha == 3) lcd.print(148 + coluna, BYTE);
-  if (linha == 4) lcd.print(212 + coluna, BYTE);
-  lcd.print(texto);
+  if (linha == 1) lcd.print(127 + coluna, BYTE);
+  if (linha == 2) lcd.print(191 + coluna, BYTE);
+  if (linha == 3) lcd.print(147 + coluna, BYTE);
+  if (linha == 4) lcd.print(211 + coluna, BYTE);
+  
+  if (letra != '\0')
+  {
+    c_lcd = coluna + 1;
+    l_lcd = linha;
+    lcd.print(letra);
+  }
+  if (letra == '\0')
+  {
+    c_lcd = coluna;
+    l_lcd = linha;
+  }
 }
 
-void escreve_lcd(int texto,byte linha, byte coluna)
+void lcdEscreve(void)
+{
+  
+}
+
+void lcdEscreve(char texto[], int linha, int coluna)
+{
+  lcdEscreve(texto[0], linha, coluna);
+  for (int i = 1; texto[i] != '\0'; i++)
+  {
+    lcdEscreve(texto[i], 0, 0);
+  }
+}
+
+/*void escreve_lcd(int texto,byte linha, byte coluna)
 {
   char buffer[10];
   itoa (texto,buffer,10);
   escreve_lcd(buffer,linha,coluna);
-}
+}*/
 
-void limpa() //Limpa a tela do LCD
+void lcdLimpa() //Limpa a tela do LCD
 {
 lcd.print(0xFE, BYTE);
 lcd.print(0x01, BYTE);
 }
 
-void contraste(int valor) //O valor esperado varia de 0 a 15,sendo que 0 é o maior contraste (o valor recomendando é 0)
+void lcdContraste(int valor) //O valor esperado varia de 0 a 15,sendo que 0 é o maior contraste (o valor recomendando é 0)
 {
   lcd.print(0xFE, BYTE);
   lcd.print(0xFD, BYTE);
   lcd.print(valor, BYTE);
 }
 
-void controla_cursor(int estado)
+void lcdCursor(int estado)
 {
 lcd.print(0xFE, BYTE);
 if (estado == 1) lcd.print(0x0D, BYTE);
 if (estado == 0) lcd.print(0x0C, BYTE);
 }
 
-void escreve_sd(File file_e, String data) //GRAVA OS RESULTADOS FINAIS NA MATRIZ
+int pegaNumero() // IDENTIFICA SE HÁ UM NUMERO APENAS OU UM CONJUNTO DE NÚMEROS DENTRO DO ARQUIVO
 {
-  int posicao;
-  
-  posicao = file_e.position();
-  file_e.close();
-   
-  File file_s = SD.open(nome_s, FILE_WRITE);
-  if (file_s)
-  {
-      file_s.print(data); //Não mais adiciona automaticamente um fim de linha, isso deve ser controlado pelo usuario
-      if (data != "\r\n") file_s.print(';'); //Caso não seja um fim de linha, adiciona o caractere ';'
-      file_s.close();
-  }
-  else Serial.println("Nao foi possivel criar arquivo de saida");
-  
-  file_e = SD.open(nome_e);
-  file_e.seek(posicao);
-}
+    int numero = 0;
 
-int pega_numero(File file) // IDENTIFICA SE HÁ UM NUMERO APENAS OU UM CONJUNTO DE NÚMEROS DENTRO DO ARQUIVO
-{
-    int i = 0;
-
-    while ( file.peek() >= '0' && file.peek() <= '9' )
+    while ( file_e.peek() >= '0' && file_e.peek() <= '9' )
     {
-        i = i*10 + file.read() - '0'; // TRANSFORMADOR DE NÚMEROS INDIVIDUAIS EM DECIMAIS
+        numero = numero*10 + file_e.read() - '0'; // TRANSFORMADOR DE NÚMEROS INDIVIDUAIS EM DECIMAIS
     }
     
-    while ( (file.peek() < '0' || file.peek() > '9') && file.available() )
+    while ( (file_e.peek() < '0' || file_e.peek() > '9') && file_e.available() )
     {
-        file.read();
+        file_e.read();
     }
     
-    return i;
+    return numero;
 }
 
 void sdInit()
@@ -306,9 +308,7 @@ int sdLe()
 {
   if (file_e.available() > 0)
   {
-    //Colocar aqui lista de variaveis
-    variavel_1 = pega_numero(file_e);// números inteiros, NECESSARIAMENTE
-    variavel_2 = pega_numero(file_e);
+    return pegaNumero();
   }
   if (file_e.available() == 0)
   {
@@ -318,20 +318,40 @@ int sdLe()
 
 void sdEscreve(String data) //GRAVA OS RESULTADOS FINAIS NA MATRIZ
 {
-    int posicao;
-    
+  int posicao = -1;
+  
+  if( file_e.available() )
+  {
     posicao = file_e.position();
     file_e.close();
- 
-    File file_s = SD.open(nome_s, FILE_WRITE);
-    if (file_s)
-    {
-        file_s.print(data);
-        if (data != "\r\n") file_s.print(';');
-        file_s.close();
-    }
-    else Serial.println("Nao foi possivel criar arquivo de saida");
-    
+  }
+   
+  file_s = SD.open(nome_s, FILE_WRITE);
+  if (file_s)
+  {
+      file_s.print(data);
+      if (data != "\r\n") file_s.print(' ');
+      file_s.close();
+  }
+  else Serial.println("Nao foi possivel criar arquivo de saida");
+  
+  if(posicao >= 0)
+  {
     file_e = SD.open(nome_e);
     file_e.seek(posicao);
+  }
 }
+
+void sdLeMatrix()
+{
+  //LED1 = sdLe();
+  //LED2 = sdLe();
+}
+
+void sdEscreveMatrix()
+{
+  //sdEscreve( String(LED1) );
+  
+  //sdEscreve( String("\r\n") );
+}
+
