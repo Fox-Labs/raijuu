@@ -30,35 +30,38 @@ char nome_s[] = "R0000000.csv";
 File file_e;
 File file_s;
 
-int linha=0;
+int LED1;
+int LED2;
+int LED3;
+int LED4;
 
 void setup()
 {
   Serial.begin(9600);
 
   lcdInit();
-  lcd_menu();
+  sdInit();
 }
 
 void loop()
 {
-  //linha++;
-  
-  //lcdEscreve("Linha: ",2,1);
-  //lcdEscreve(linha,0,0);
-  
-  //escreve_sd(file_e, String (DELAY2) );
-  //escreve_sd(file_e, String ("\r\n") );
-  
-  delay(100);
+  lcdMenu();
+  sdOpen();
+  while( file_e.available() )
+  {
+    sdLeMatrix();
+    sdEscreveMatrix();
+  }
+  sdClose();
 }
 
 
-void lcd_menu()
+void lcdMenu()
 {
   int nome = 1;
   char tecla = 0;
   
+  lcdLimpa();
   lcdEscreve("Rato:    000",1,1);
   lcdEscreve("Sessao: 0000",2,1);
   lcdEscreve(1,10);
@@ -82,8 +85,7 @@ void lcd_menu()
     if(tecla >= '0' && tecla <= '9') 
     {
       lcdEscreve(tecla,l_lcd,c_lcd);
-      nome_e[nome] = tecla;
-      nome_s[nome] = tecla;
+      nome_e[nome] = nome_s[nome] = tecla;
       nome = nome + 1;
     }
     if (l_lcd == 1 && c_lcd == 13)
@@ -103,14 +105,19 @@ void lcd_menu()
     {
       lcdEscreve(" Ok?",0,0);
     }
+    if (l_lcd == 2 && c_lcd == 16)
+    {
+      lcdEscreve("    ",2,13);
+      lcdEscreve(2,12);
+    }
     if (l_lcd == 2 && c_lcd == 18)
     {
       lcdLimpa();
       lcdEscreve("Rodando:",1,1);
-      lcdEscreve(nome_e,0,0);
+      nome_e[8] = nome_s[8] = '.';
+      lcdEscreve(nome_s,0,0);
     }
-    
-    if (c_lcd == 17 && l_lcd == 2) break;
+    if (l_lcd == 1 && c_lcd == 21) break;
   }
 }
 
@@ -264,13 +271,23 @@ void sdInit()
       Serial.println("Erro ao iniciar cartao SD");
       return;
   }
+}
+
+void sdOpen()
+{ 
   file_e = SD.open(nome_e);
-  if (!file_e) Serial.println("Arquivo de entrada nao encontrado");
+  if (!file_e) Serial.println("Arquivo de entrada nao encontrado"); 
+}
+
+void sdClose()
+{
+  file_s.close();
+  file_e.close();  
 }
 
 int sdLe()
 {
-  if (file_e.available() > 0)
+  if (file_e.available())
   {
     return pegaNumero();
   }
@@ -284,38 +301,42 @@ void sdEscreve(String data) //GRAVA OS RESULTADOS FINAIS NA MATRIZ
 {
   int posicao = -1;
   
-  if( file_e.available() )
-  {
-    posicao = file_e.position();
-    file_e.close();
-  }
+  posicao = file_e.position();
+  file_e.close();
    
   file_s = SD.open(nome_s, FILE_WRITE);
   if (file_s)
   {
+      Serial.print(data);
       file_s.print(data);
-      if (data != "\r\n") file_s.print(' ');
+      if (data != "\r\n")
+      {
+        Serial.print(';');
+        file_s.print(';');
+      }
       file_s.close();
   }
   else Serial.println("Nao foi possivel criar arquivo de saida");
   
-  if(posicao >= 0)
-  {
-    file_e = SD.open(nome_e);
-    file_e.seek(posicao);
-  }
+  file_e = SD.open(nome_e);
+  file_e.seek(posicao);
 }
 
 void sdLeMatrix()
 {
-  //LED1 = sdLe();
-  //LED2 = sdLe();
+  LED1 = sdLe();
+  LED2 = sdLe();
+  LED3 = sdLe();
+  LED4 = sdLe();
 }
 
 void sdEscreveMatrix()
 {
-  //sdEscreve( String(LED1) );
-  
-  //sdEscreve( String("\r\n") );
+  sdEscreve( String(LED1) );
+  sdEscreve( String(LED2) );
+  sdEscreve( String(LED3) );
+  sdEscreve( String(LED4) );
+  sdEscreve( String("\r\n") );
+
 }
 
