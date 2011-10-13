@@ -307,11 +307,9 @@ void sdEscreve(String data) //GRAVA OS RESULTADOS FINAIS NA MATRIZ
   file_s = SD.open(nome_s, FILE_WRITE);
   if (file_s)
   {
-      Serial.print(data);
       file_s.print(data);
       if (data != "\r\n")
       {
-        Serial.print(';');
         file_s.print(';');
       }
       file_s.close();
