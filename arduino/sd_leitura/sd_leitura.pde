@@ -1,6 +1,5 @@
 #include <SD.h>
 
-
 Sd2Card card;
 SdVolume volume;
 SdFile root;
@@ -23,6 +22,8 @@ void loop()
   Serial.println("1 - ler um arquivo");
   Serial.println("2 - remover um arquivo");
   Serial.println("3 - ler todos os arquivos de saida");
+  Serial.println("4 - Gravar arquivo");
+  Serial.println();
   
   while (!Serial.available());
   menu = Serial.read();
@@ -31,7 +32,7 @@ void loop()
   if(menu == '1')
   {
     leNome(nome);
-    leArquivo();
+    leArquivo(nome);
   }
   
   if(menu == '2')
@@ -52,11 +53,19 @@ void loop()
   { 
     if (!card.init(SPI_HALF_SPEED,8)) Serial.print("card.init failed!");
     if (!volume.init(&card)) Serial.print("vol.init failed!");
-    if (!root.openRoot(&volume)) Serial.print("openRoot failed");
-  
+    //if (!root.openRoot(&volume)) Serial.print("openRoot failed");
+    root.openRoot(&volume);
+    
     listaArquivo();
   }
   
+  if(menu == '4')
+  { 
+    leNome(nome);
+    Serial.println("Digite o conteudo do arquivo:");
+    escreveArquivo(nome);
+  }
+   
 }
 
 void sdInit()
@@ -72,7 +81,6 @@ void sdInit()
 char leNome(char nome[])
 {
   Serial.println("Digite o nome do arquivo: ");
-  Serial.println();
   for(int i = 0; i < 12; i++)
   {
     while(Serial.available() == 0);
@@ -82,7 +90,7 @@ char leNome(char nome[])
   Serial.println();
 }
 
-void leArquivo()
+void leArquivo(char nome[])
 {
   file = SD.open(nome, FILE_READ);
   
@@ -98,6 +106,25 @@ void leArquivo()
   {
     Serial.println("Erro ao abrir arquivo");
   }
+}
+
+void escreveArquivo(char nome[])
+{ 
+  char data;
+  
+  file = SD.open(nome, FILE_WRITE);
+  if (file)
+  {
+    while(true)
+    {
+      while(Serial.available() == 0);
+      data = Serial.read();
+      if (data == '#') break;
+      file.print(data);
+    }
+    file.close();
+  }
+  else Serial.println("Nao foi possivel criar arquivo");
 }
 
 void listaArquivo()
@@ -130,7 +157,8 @@ void listaArquivo()
         }
       }
       Serial.println(nome);
-      leArquivo();
+      leArquivo(nome);
+      Serial.println();
     }
     Serial.println();
   }
