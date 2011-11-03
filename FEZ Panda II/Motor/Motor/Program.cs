@@ -14,8 +14,19 @@ namespace FEZ_Panda_II_Application1
         public static void Main()
         {
             PWM servo = new PWM((PWM.Pin)FEZ_Pin.PWM.Di5);
+
+            InputPort Button;
+            bool button_state;
+            Button = new InputPort((Cpu.Pin)FEZ_Pin.Digital.LDR, false, Port.ResistorMode.PullUp);
+
             while (true)
             {
+                button_state = Button.Read();
+
+                if (button_state == false) servo.SetPulse(20 * 1000 * 1000, 1450 * 1000);
+                if (button_state == true) servo.SetPulse(20 * 1000 * 1000, 1600 * 1000);
+                
+                /*
                 // 0 degrees. 20ms period and 1.00ms high pulse
                 Debug.Print("1.00");
                 servo.SetPulse(20 * 1000 * 1000, 1000 * 1000);
@@ -30,6 +41,7 @@ namespace FEZ_Panda_II_Application1
                 Debug.Print("2.10");
                 servo.SetPulse(20 * 1000 * 1000, 2100 * 1000);
                 Thread.Sleep(5000);
+                */
             }
         }
 
