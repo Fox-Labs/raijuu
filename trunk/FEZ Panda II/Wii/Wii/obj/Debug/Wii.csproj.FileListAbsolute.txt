@@ -21,26 +21,26 @@ C:\Documents and Settings\Pesse.WIND.000\Desktop\Iniciação\Codigo\Wii\Wii\obj\
 C:\Documents and Settings\Pesse.WIND.000\Desktop\Iniciação\Codigo\Wii\Wii\obj\Debug\le\Wii.pdbx
 C:\Documents and Settings\Pesse.WIND.000\Desktop\Iniciação\Codigo\Wii\Wii\obj\Debug\Wii.exe
 C:\Documents and Settings\Pesse.WIND.000\Desktop\Iniciação\Codigo\Wii\Wii\obj\Debug\Wii.pdb
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\bin\Debug\le\Wii.exe
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\bin\Debug\be\Wii.exe
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\bin\Debug\le\Wii.pdb
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\bin\Debug\be\Wii.pdb
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\bin\Debug\Wii.exe
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\bin\Debug\Wii.pdb
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\bin\Debug\le\Wii.pe
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\bin\Debug\le\Wii.pdbx
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\bin\Debug\be\Wii.pe
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\bin\Debug\be\Wii.pdbx
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\obj\Debug\TinyCLR_DebugReferences.cache
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\obj\Debug\FEZ_Panda_II_Application1.Resources.resources
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\obj\Debug\GenerateResource.read.1.tlog
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\obj\Debug\GenerateResource.write.1.tlog
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\obj\Debug\FEZ_Panda_II_Application1.Resources.tinyresources
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\obj\Debug\TinyResGen.cache
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\obj\Debug\be\Wii.pe
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\obj\Debug\be\Wii.pdbx
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\obj\Debug\le\Wii.pe
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\obj\Debug\le\Wii.pdbx
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\obj\Debug\Wii.exe
-C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\Wii\Wii\obj\Debug\Wii.pdb
+C:\Users\lucas\Desktop\Wii\Wii\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\lucas\Desktop\Wii\Wii\obj\Debug\TinyCLR_DebugReferences.cache
+C:\Users\lucas\Desktop\Wii\Wii\obj\Debug\FEZ_Panda_II_Application1.Resources.resources
+C:\Users\lucas\Desktop\Wii\Wii\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\lucas\Desktop\Wii\Wii\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\lucas\Desktop\Wii\Wii\obj\Debug\FEZ_Panda_II_Application1.Resources.tinyresources
+C:\Users\lucas\Desktop\Wii\Wii\obj\Debug\TinyResGen.cache
+C:\Users\lucas\Desktop\Wii\Wii\obj\Debug\Wii.exe
+C:\Users\lucas\Desktop\Wii\Wii\bin\Debug\le\Wii.exe
+C:\Users\lucas\Desktop\Wii\Wii\bin\Debug\be\Wii.exe
+C:\Users\lucas\Desktop\Wii\Wii\bin\Debug\le\Wii.pdb
+C:\Users\lucas\Desktop\Wii\Wii\bin\Debug\be\Wii.pdb
+C:\Users\lucas\Desktop\Wii\Wii\bin\Debug\Wii.exe
+C:\Users\lucas\Desktop\Wii\Wii\bin\Debug\Wii.pdb
+C:\Users\lucas\Desktop\Wii\Wii\bin\Debug\le\Wii.pe
+C:\Users\lucas\Desktop\Wii\Wii\bin\Debug\le\Wii.pdbx
+C:\Users\lucas\Desktop\Wii\Wii\bin\Debug\be\Wii.pe
+C:\Users\lucas\Desktop\Wii\Wii\bin\Debug\be\Wii.pdbx
+C:\Users\lucas\Desktop\Wii\Wii\obj\Debug\be\Wii.pe
+C:\Users\lucas\Desktop\Wii\Wii\obj\Debug\be\Wii.pdbx
+C:\Users\lucas\Desktop\Wii\Wii\obj\Debug\le\Wii.pe
+C:\Users\lucas\Desktop\Wii\Wii\obj\Debug\le\Wii.pdbx
+C:\Users\lucas\Desktop\Wii\Wii\obj\Debug\Wii.pdb
