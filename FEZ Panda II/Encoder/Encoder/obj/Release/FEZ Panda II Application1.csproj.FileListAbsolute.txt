@@ -1,0 +1,23 @@
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\bin\Release\le\FEZ Panda II Application.exe
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\bin\Release\be\FEZ Panda II Application.exe
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\bin\Release\le\FEZ Panda II Application.pdb
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\bin\Release\be\FEZ Panda II Application.pdb
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\bin\Release\FEZ Panda II Application.exe
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\bin\Release\FEZ Panda II Application.pdb
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\bin\Release\le\FEZ Panda II Application.pe
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\bin\Release\le\FEZ Panda II Application.pdbx
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\bin\Release\be\FEZ Panda II Application.pe
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\bin\Release\be\FEZ Panda II Application.pdbx
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\obj\Release\ResolveAssemblyReference.cache
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\obj\Release\TinyCLR_DebugReferences.cache
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\obj\Release\FEZ_Panda_II_Application1.Resources.resources
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\obj\Release\GenerateResource.read.1.tlog
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\obj\Release\GenerateResource.write.1.tlog
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\obj\Release\FEZ_Panda_II_Application1.Resources.tinyresources
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\obj\Release\TinyResGen.cache
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\obj\Release\be\FEZ Panda II Application.pe
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\obj\Release\be\FEZ Panda II Application.pdbx
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\obj\Release\le\FEZ Panda II Application.pe
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\obj\Release\le\FEZ Panda II Application.pdbx
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\obj\Release\FEZ Panda II Application.exe
+C:\Users\lucas\AppData\Local\Temporary Projects\FEZ Panda II Application1\obj\Release\FEZ Panda II Application.pdb
