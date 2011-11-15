@@ -14,7 +14,6 @@ namespace FEZ_Panda_II_Application1
 
         static OutputPort LED;
         static int i = 0;
-        static int j = 0;
 
         public static void Main()
         {
@@ -22,7 +21,7 @@ namespace FEZ_Panda_II_Application1
 
             LED = new OutputPort((Cpu.Pin)FEZ_Pin.Digital.LED, true);
             // the pin will generate interrupt on high and low edges
-            InterruptPort IntEncoderA = new InterruptPort((Cpu.Pin)FEZ_Pin.Interrupt.An0, true, Port.ResistorMode.Disabled, Port.InterruptMode.InterruptEdgeBoth);
+            InterruptPort IntEncoderA = new InterruptPort((Cpu.Pin)FEZ_Pin.Interrupt.An0 , true, Port.ResistorMode.Disabled, Port.InterruptMode.InterruptEdgeBoth);
             InterruptPort IntEncoderB = new InterruptPort((Cpu.Pin)FEZ_Pin.Interrupt.An1, true, Port.ResistorMode.Disabled, Port.InterruptMode.InterruptEdgeBoth);
 
 
@@ -39,10 +38,10 @@ namespace FEZ_Panda_II_Application1
             {
                 button_state = Button.Read();
 
-                if (button_state == false) servo.SetPulse(20 * 1000 * 1000, 1450 * 1000);
+                if (button_state == false) servo.SetPulse(20 * 1000 * 1000, 1300 * 1000);
                 if (button_state == true) servo.SetPulse(20 * 1000 * 1000, 1500 * 1000);
 
-                if (i > 1024) Debug.Print("I > 1024");
+                Debug.Print("I: " + i);
             }
 
         }
