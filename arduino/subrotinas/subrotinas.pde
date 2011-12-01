@@ -53,6 +53,7 @@ void loop()
     sdEscreveMatrix();
   }
   sdClose();
+  //delay(3000);
 }
 
 
@@ -62,9 +63,8 @@ void lcdMenu()
   char tecla = 0;
   
   lcdLimpa();
-  lcdEscreve("Rato:    000",1,1);
-  lcdEscreve("Sessao: 0000",2,1);
-  lcdEscreve(1,10);
+  lcdEscreve("M0000000.csv",1,1);
+  lcdEscreve(1,2);
   
   while(true)
   {
@@ -88,28 +88,29 @@ void lcdMenu()
       nome_e[nome] = nome_s[nome] = tecla;
       nome = nome + 1;
     }
-    if (l_lcd == 1 && c_lcd == 13)
+    if (l_lcd == 1 && c_lcd == 1)
     {
-      lcdEscreve(2,9);
-    }
-    if (l_lcd == 2 && c_lcd == 8)
-    {
-      lcdEscreve(1,12);
+      lcdEscreve(1,2);
     }
     if (l_lcd == 1 && c_lcd == 9)
     {
-      lcdEscreve(1,10);
-      nome = nome + 1;
+      lcdEscreve(" Ok?",1,13);
     }
-    if (l_lcd == 2 && c_lcd == 13)
+    if (l_lcd == 1 && c_lcd == 16)
     {
-      lcdEscreve(" Ok?",0,0);
+      lcdEscreve("    ",1,13);
+      lcdEscreve(1,8);
     }
-    if (l_lcd == 2 && c_lcd == 16)
+    if (l_lcd == 1 && c_lcd == 18)
     {
-      lcdEscreve("    ",2,13);
-      lcdEscreve(2,12);
+      lcdEscreve("    ",1,13);
+      lcdEscreve("R0000000.csv",2,1);
+      lcdEscreve(2,2);
     }
+    if (l_lcd == 2 && c_lcd == 9)
+    {
+      lcdEscreve(" Ok?",2,13);
+    }    
     if (l_lcd == 2 && c_lcd == 18)
     {
       lcdLimpa();
