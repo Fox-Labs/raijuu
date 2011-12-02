@@ -56,7 +56,6 @@ void loop()
   //delay(3000);
 }
 
-
 void lcdMenu()
 {
   int nome = 1;
@@ -64,6 +63,9 @@ void lcdMenu()
   
   lcdLimpa();
   lcdEscreve("M0000000.csv",1,1);
+  lcdEscreve("R0000000.csv",2,1);
+  lcdEscreve("'*' para corrigir",3,1);
+  lcdEscreve("'#' aceita nome",4,1);
   lcdEscreve(1,2);
   
   while(true)
@@ -85,40 +87,44 @@ void lcdMenu()
     if(tecla >= '0' && tecla <= '9') 
     {
       lcdEscreve(tecla,l_lcd,c_lcd);
-      nome_e[nome] = nome_s[nome] = tecla;
+      if (l_lcd == 1) nome_e[nome] = tecla;
+      if (l_lcd == 2) nome_s[nome] = tecla;
       nome = nome + 1;
     }
     if (l_lcd == 1 && c_lcd == 1)
     {
       lcdEscreve(1,2);
+      nome = 1;
     }
-    if (l_lcd == 1 && c_lcd == 9)
+    if ((l_lcd == 1 || l_lcd ==2) && c_lcd == 9)
     {
-      lcdEscreve(" Ok?",1,13);
+      lcdEscreve(" Ok?",l_lcd,13);
     }
-    if (l_lcd == 1 && c_lcd == 16)
+    if ((l_lcd == 1 || l_lcd == 2) && c_lcd == 16)
     {
-      lcdEscreve("    ",1,13);
-      lcdEscreve(1,8);
+      lcdEscreve("        ",l_lcd,13);
+      lcdEscreve(l_lcd,8);
     }
     if (l_lcd == 1 && c_lcd == 18)
     {
-      lcdEscreve("    ",1,13);
-      lcdEscreve("R0000000.csv",2,1);
+      lcdEscreve("        ",1,13);
       lcdEscreve(2,2);
+      nome = 1;
     }
-    if (l_lcd == 2 && c_lcd == 9)
+    if (l_lcd == 2 && c_lcd == 1)
     {
-      lcdEscreve(" Ok?",2,13);
-    }    
+      lcdEscreve(1,8);
+      nome = 7;
+    }
     if (l_lcd == 2 && c_lcd == 18)
     {
       lcdLimpa();
-      lcdEscreve("Rodando:",1,1);
       nome_e[8] = nome_s[8] = '.';
-      lcdEscreve(nome_s,0,0);
+      lcdEscreve("Rodando:",1,1);
+      lcdEscreve(nome_e,2,1);
+      lcdEscreve(nome_s,3,1);
     }
-    if (l_lcd == 1 && c_lcd == 21) break;
+    if (l_lcd == 3 && c_lcd == 13) break;
   }
 }
 
