@@ -1,0 +1,35 @@
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\le\ir transmitter.exe
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\be\ir transmitter.exe
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\le\ir transmitter.pdb
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\be\ir transmitter.pdb
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\ir transmitter.exe
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\ir transmitter.pdb
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\le\ir transmitter.pe
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\le\ir transmitter.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\be\ir transmitter.pe
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\be\ir transmitter.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\LE\GHIElectronics.NETMF.Hardware.pe
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\LE\GHIElectronics.NETMF.System.pe
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\BE\GHIElectronics.NETMF.Hardware.pe
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\BE\GHIElectronics.NETMF.System.pe
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\LE\GHIElectronics.NETMF.Hardware.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\LE\GHIElectronics.NETMF.System.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\BE\GHIElectronics.NETMF.Hardware.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\BE\GHIElectronics.NETMF.System.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\GHIElectronics.NETMF.Hardware.dll
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\GHIElectronics.NETMF.System.dll
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\GHIElectronics.NETMF.Hardware.xml
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\bin\Release\GHIElectronics.NETMF.System.xml
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\obj\Release\TinyCLR_DebugReferences.cache
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\obj\Release\FEZ_Panda_II_Application1.Resources.resources
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\obj\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\obj\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\obj\Release\FEZ_Panda_II_Application1.Resources.tinyresources
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\obj\Release\TinyResGen.cache
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\obj\Release\be\ir transmitter.pe
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\obj\Release\be\ir transmitter.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\obj\Release\le\ir transmitter.pe
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\obj\Release\le\ir transmitter.pdbx
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\obj\Release\ir transmitter.exe
+C:\Documents and Settings\Pesse.WIND.000\Desktop\raijuu\trunk\FEZ Panda II\ir transmitter\ir transmitter\obj\Release\ir transmitter.pdb
