@@ -114,29 +114,28 @@
 <packages>
 <package name="IN-12">
 <description>May be used with socket: &lt;b&gt;SK-136&lt;/b&gt;</description>
-<wire x1="-8.89" y1="6.6675" x2="7.9375" y2="6.6675" width="0.127" layer="21" curve="-103.699894"/>
-<wire x1="7.9375" y1="-6.35" x2="-8.89" y2="-6.35" width="0.127" layer="21" curve="-108.924838"/>
-<wire x1="7.9375" y1="-6.35" x2="-8.89" y2="-6.35" width="0.254" layer="21" curve="-110.891013"/>
-<wire x1="-8.89" y1="6.6675" x2="7.9375" y2="6.6675" width="0.254" layer="21" curve="-104.398074"/>
-<wire x1="7.9375" y1="6.6675" x2="7.9375" y2="-6.35" width="0.254" layer="21"/>
-<wire x1="-8.89" y1="-6.1913" x2="-8.89" y2="6.6675" width="0.254" layer="21"/>
-<wire x1="-8.89" y1="-6.1913" x2="-8.89" y2="-6.35" width="0.254" layer="21"/>
-<circle x="0" y="0" radius="2.54" width="0.127" layer="21"/>
-<pad name="6" x="-0.3175" y="8.8175" drill="1.5" diameter="2.54"/>
-<pad name="9" x="5.1745" y="0" drill="1.5" diameter="2.54"/>
-<pad name="8" x="5.0475" y="4.5" drill="1.5" diameter="2.54"/>
-<pad name="LHDP" x="-0.3175" y="-8.8175" drill="1.5" diameter="2.54"/>
-<pad name="0" x="5.0475" y="-4.5" drill="1.5" diameter="2.54"/>
+<wire x1="-10.00125" y1="10.00125" x2="10.00125" y2="10.00125" width="0.127" layer="21" curve="-103.699894"/>
+<wire x1="10.00125" y1="-10.00125" x2="-10.00125" y2="-10.00125" width="0.127" layer="21" curve="-108.924838"/>
+<wire x1="10.00125" y1="-10.00125" x2="-10.00125" y2="-10.00125" width="0.254" layer="21" curve="-110.891013"/>
+<wire x1="-10.00125" y1="10.00125" x2="10.00125" y2="10.00125" width="0.254" layer="21" curve="-104.398074"/>
+<wire x1="10.00125" y1="10.00125" x2="10.00125" y2="-10.00125" width="0.254" layer="21"/>
+<circle x="0" y="0" radius="2.54" width="0.254" layer="21"/>
+<pad name="6" x="0" y="8.89" drill="1.5" diameter="2.54"/>
+<pad name="9" x="5.55625" y="0" drill="1.5" diameter="2.54"/>
+<pad name="8" x="5.55625" y="4.445" drill="1.5" diameter="2.54"/>
+<pad name="LHDP" x="0" y="-8.89" drill="1.5" diameter="2.54"/>
+<pad name="0" x="5.55625" y="-4.445" drill="1.5" diameter="2.54"/>
 <pad name="A" x="3.6825" y="-7.8175" drill="1.5" diameter="2.54"/>
-<pad name="7" x="3.6825" y="7.8175" drill="1.5" diameter="2.54"/>
-<pad name="5" x="-4.3175" y="7.8175" drill="1.5" diameter="2.54"/>
-<pad name="4" x="-6" y="4.5" drill="1.5" diameter="2.54"/>
-<pad name="3" x="-6.127" y="0" drill="1.5" diameter="2.54"/>
-<pad name="2" x="-6" y="-4.5" drill="1.5" diameter="2.54"/>
+<pad name="7" x="3.96875" y="7.77875" drill="1.5" diameter="2.54"/>
+<pad name="5" x="-3.96875" y="7.77875" drill="1.5" diameter="2.54"/>
+<pad name="4" x="-5.55625" y="4.445" drill="1.5" diameter="2.54"/>
+<pad name="3" x="-5.55625" y="0" drill="1.5" diameter="2.54"/>
+<pad name="2" x="-5.55625" y="-4.445" drill="1.5" diameter="2.54"/>
 <pad name="1" x="-4.3175" y="-7.8175" drill="1.5" diameter="2.54"/>
-<text x="10.3188" y="-2.8575" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<hole x="0" y="0" drill="5"/>
+<text x="11.9063" y="-2.8575" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 <text x="1.905" y="-7.62" size="1.27" layer="21">*</text>
+<wire x1="-10.00125" y1="-10.00125" x2="-10.00125" y2="10.00125" width="0.254" layer="21"/>
+<hole x="0" y="0" drill="5"/>
 </package>
 <package name="DIL16">
 <description>&lt;b&gt;Dual In Line Package&lt;/b&gt;</description>
@@ -265,6 +264,72 @@ Source: http://www.semicon.toshiba.co.jp/td/en/Opto/Photocoupler/en_20050928_TLP
 <rectangle x1="2.785" y1="-1.4605" x2="4.106" y2="-1.0795" layer="51" rot="R180"/>
 <rectangle x1="2.785" y1="1.0795" x2="4.106" y2="1.4605" layer="51" rot="R180"/>
 </package>
+<package name="1X04">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="0" y1="0.635" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="0.635" x2="2.54" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="-0.635" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="0" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-4.445" y1="1.27" x2="-3.175" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="1.27" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="-0.635" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="0" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-1.27" x2="-2.54" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="0.635" x2="-5.08" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-4.445" y1="1.27" x2="-5.08" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="-0.635" x2="-4.445" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="-1.27" x2="-4.445" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="1.27" x2="4.445" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="4.445" y1="1.27" x2="5.08" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="0.635" x2="5.08" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="-0.635" x2="4.445" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="1.27" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="-0.635" x2="3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="4.445" y1="-1.27" x2="3.175" y2="-1.27" width="0.1524" layer="21"/>
+<pad name="1" x="-3.81" y="0" drill="1.1" shape="octagon" rot="R90"/>
+<pad name="2" x="-1.27" y="0" drill="1.1" shape="octagon" rot="R90"/>
+<pad name="3" x="1.27" y="0" drill="1.1" shape="octagon" rot="R90"/>
+<pad name="4" x="3.81" y="0" drill="1.1" shape="octagon" rot="R90"/>
+<text x="-5.1562" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-5.08" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
+<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
+<rectangle x1="-4.064" y1="-0.254" x2="-3.556" y2="0.254" layer="51"/>
+<rectangle x1="3.556" y1="-0.254" x2="4.064" y2="0.254" layer="51"/>
+</package>
+<package name="1X02">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-1.905" y1="1.27" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="0" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0" y1="0.635" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="0.635" x2="2.54" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="-0.635" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="0" y2="-0.635" width="0.1524" layer="21"/>
+<pad name="1" x="-1.27" y="0" drill="1.1" shape="octagon" rot="R90"/>
+<pad name="2" x="1.27" y="0" drill="1.1" shape="octagon" rot="R90"/>
+<text x="-2.6162" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
+<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="IN-12B">
@@ -383,6 +448,28 @@ Source: http://www.semicon.toshiba.co.jp/td/en/Opto/Photocoupler/en_20050928_TLP
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+<symbol name="PINHD4">
+<wire x1="-6.35" y1="-5.08" x2="1.27" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-5.08" x2="1.27" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="7.62" x2="-6.35" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="7.62" x2="-6.35" y2="-5.08" width="0.4064" layer="94"/>
+<text x="-6.35" y="8.255" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="2" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="3" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="4" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
+</symbol>
+<symbol name="PINHD2">
+<wire x1="-6.35" y1="-2.54" x2="1.27" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.27" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="5.08" x2="-6.35" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="5.08" x2="-6.35" y2="-2.54" width="0.4064" layer="94"/>
+<text x="-6.35" y="5.715" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="2" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -553,6 +640,42 @@ Source: http://www.semicon.toshiba.co.jp/td/en/Opto/Photocoupler/en_20050928_TLP
 </device>
 </devices>
 </deviceset>
+<deviceset name="PINHD-1X4" prefix="JP" uservalue="yes">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<gates>
+<gate name="A" symbol="PINHD4" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1X04">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+<connect gate="A" pin="3" pad="3"/>
+<connect gate="A" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PINHD-1X2" prefix="JP" uservalue="yes">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="PINHD2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1X02">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -582,16 +705,21 @@ Source: http://www.semicon.toshiba.co.jp/td/en/Opto/Photocoupler/en_20050928_TLP
 <part name="P+2" library="nixie_tube" deviceset="+180V" device=""/>
 <part name="P+3" library="nixie_tube" deviceset="+180V" device=""/>
 <part name="P+4" library="nixie_tube" deviceset="+180V" device=""/>
-<part name="R17" library="nixie_tube" deviceset="R-EU_" device="R0805"/>
+<part name="R17" library="nixie_tube" deviceset="R-EU_" device="10"/>
 <part name="P+5" library="nixie_tube" deviceset="+5V" device=""/>
-<part name="R18" library="nixie_tube" deviceset="R-EU_" device="R0805"/>
+<part name="R18" library="nixie_tube" deviceset="R-EU_" device="10"/>
 <part name="P+6" library="nixie_tube" deviceset="+5V" device=""/>
-<part name="R19" library="nixie_tube" deviceset="R-EU_" device="R0805"/>
+<part name="R19" library="nixie_tube" deviceset="R-EU_" device="10"/>
 <part name="P+7" library="nixie_tube" deviceset="+5V" device=""/>
-<part name="R20" library="nixie_tube" deviceset="R-EU_" device="R0805"/>
+<part name="R20" library="nixie_tube" deviceset="R-EU_" device="10"/>
 <part name="P+8" library="nixie_tube" deviceset="+5V" device=""/>
 <part name="P+9" library="nixie_tube" deviceset="+5V" device=""/>
 <part name="GND5" library="nixie_tube" deviceset="GND" device=""/>
+<part name="JP1" library="nixie_tube" deviceset="PINHD-1X4" device=""/>
+<part name="JP2" library="nixie_tube" deviceset="PINHD-1X2" device=""/>
+<part name="P+10" library="nixie_tube" deviceset="+5V" device=""/>
+<part name="GND1" library="nixie_tube" deviceset="GND" device=""/>
+<part name="JP3" library="nixie_tube" deviceset="PINHD-1X4" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -626,6 +754,11 @@ Source: http://www.semicon.toshiba.co.jp/td/en/Opto/Photocoupler/en_20050928_TLP
 <instance part="IC1" gate="P" x="-7.62" y="27.94"/>
 <instance part="P+9" gate="1" x="-7.62" y="38.1"/>
 <instance part="GND5" gate="1" x="-7.62" y="17.78"/>
+<instance part="JP1" gate="A" x="-25.4" y="-7.62"/>
+<instance part="JP2" gate="G$1" x="-25.4" y="-30.48"/>
+<instance part="P+10" gate="1" x="-20.32" y="-22.86"/>
+<instance part="GND1" gate="1" x="-20.32" y="-35.56"/>
+<instance part="JP3" gate="A" x="-25.4" y="66.04"/>
 </instances>
 <busses>
 <bus name="C[0..9]">
@@ -868,6 +1001,12 @@ Source: http://www.semicon.toshiba.co.jp/td/en/Opto/Photocoupler/en_20050928_TLP
 <pinref part="IC1" gate="P" pin="GND"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="JP2" gate="G$1" pin="2"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="-27.94" y1="-30.48" x2="-20.32" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="-30.48" x2="-20.32" y2="-33.02" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$13" class="0">
 <segment>
@@ -995,6 +1134,12 @@ Source: http://www.semicon.toshiba.co.jp/td/en/Opto/Photocoupler/en_20050928_TLP
 <pinref part="IC1" gate="P" pin="VCC"/>
 <pinref part="P+9" gate="1" pin="+5V"/>
 </segment>
+<segment>
+<pinref part="JP2" gate="G$1" pin="1"/>
+<pinref part="P+10" gate="1" pin="+5V"/>
+<wire x1="-27.94" y1="-27.94" x2="-20.32" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="-27.94" x2="-20.32" y2="-25.4" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$22" class="0">
 <segment>
@@ -1015,6 +1160,82 @@ Source: http://www.semicon.toshiba.co.jp/td/en/Opto/Photocoupler/en_20050928_TLP
 <pinref part="OK4" gate="G$1" pin="A"/>
 <pinref part="R20" gate="G$1" pin="2"/>
 <wire x1="198.12" y1="71.12" x2="195.58" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="1"/>
+<pinref part="IC1" gate="A" pin="A"/>
+<wire x1="-27.94" y1="-2.54" x2="-20.32" y2="-2.54" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="2"/>
+<pinref part="IC1" gate="A" pin="B"/>
+<wire x1="-27.94" y1="-5.08" x2="-20.32" y2="-5.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="3"/>
+<pinref part="IC1" gate="A" pin="C"/>
+<wire x1="-27.94" y1="-7.62" x2="-20.32" y2="-7.62" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="4"/>
+<pinref part="IC1" gate="A" pin="D"/>
+<wire x1="-27.94" y1="-10.16" x2="-20.32" y2="-10.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="A1" class="0">
+<segment>
+<pinref part="JP3" gate="A" pin="1"/>
+<wire x1="-27.94" y1="71.12" x2="-15.24" y2="71.12" width="0.1524" layer="91"/>
+<label x="-20.32" y="71.12" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="OK1" gate="G$1" pin="C"/>
+<wire x1="30.48" y1="66.04" x2="25.4" y2="66.04" width="0.1524" layer="91"/>
+<label x="25.4" y="66.04" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="A2" class="0">
+<segment>
+<pinref part="JP3" gate="A" pin="2"/>
+<wire x1="-27.94" y1="68.58" x2="-15.24" y2="68.58" width="0.1524" layer="91"/>
+<label x="-20.32" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="OK2" gate="G$1" pin="C"/>
+<wire x1="86.36" y1="66.04" x2="81.28" y2="66.04" width="0.1524" layer="91"/>
+<label x="81.28" y="66.04" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="A3" class="0">
+<segment>
+<pinref part="JP3" gate="A" pin="3"/>
+<wire x1="-27.94" y1="66.04" x2="-15.24" y2="66.04" width="0.1524" layer="91"/>
+<label x="-20.32" y="66.04" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="OK3" gate="G$1" pin="C"/>
+<wire x1="142.24" y1="66.04" x2="137.16" y2="66.04" width="0.1524" layer="91"/>
+<label x="137.16" y="66.04" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="A4" class="0">
+<segment>
+<pinref part="JP3" gate="A" pin="4"/>
+<wire x1="-27.94" y1="63.5" x2="-15.24" y2="63.5" width="0.1524" layer="91"/>
+<label x="-20.32" y="63.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="OK4" gate="G$1" pin="C"/>
+<wire x1="198.12" y1="66.04" x2="193.04" y2="66.04" width="0.1524" layer="91"/>
+<label x="193.04" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
