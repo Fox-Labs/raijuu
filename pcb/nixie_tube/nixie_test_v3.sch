@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -697,10 +697,10 @@ Source: http://www.semicon.toshiba.co.jp/td/en/Opto/Photocoupler/en_20050928_TLP
 </classes>
 <parts>
 <part name="N1" library="nixie_tube" deviceset="IN-12B" device=""/>
-<part name="R2" library="nixie_tube" deviceset="R-EU_" device="10"/>
+<part name="R2" library="nixie_tube" deviceset="R-EU_" device="10" value="22k"/>
 <part name="OK1" library="nixie_tube" deviceset="TLP627" device=""/>
 <part name="P+3" library="nixie_tube" deviceset="+180V" device=""/>
-<part name="R1" library="nixie_tube" deviceset="R-EU_" device="R0805"/>
+<part name="R1" library="nixie_tube" deviceset="R-EU_" device="R0805" value="1k"/>
 <part name="JP2" library="nixie_tube" deviceset="PINHD-1X2" device=""/>
 <part name="JP3" library="nixie_tube" deviceset="PINHD-1X2" device=""/>
 <part name="IC1" library="nixie_tube" deviceset="74*141" device="N"/>
