@@ -4,11 +4,26 @@
 //#include <util/delay_basic.h>
 
 #define pinPWM 9
+#define pinLED 5
+
+#define pinA 2
+#define pinB 3
+#define pinC 4
+#define pinD 5
+
+int i=0;
 
 void setup()
 {
   Serial.begin(9600);
   pinMode(pinPWM, OUTPUT);
+  pinMode(pinLED, OUTPUT);
+  pinMode(pinA, OUTPUT);
+  pinMode(pinB, OUTPUT);
+  pinMode(pinC, OUTPUT);
+  pinMode(pinD, OUTPUT);
+          
+  digitalWrite(pinLED, HIGH);
   
   initPWM();
   OCR1A = 0;
@@ -56,15 +71,24 @@ void loop()
     Serial.println(total);
     OCR1A = total;
     
-    
     Serial.print("adc = ");
     Serial.println( analogRead(A1));
     Serial.print("vol = ");
     vol = analogRead(A1);
     vol = vol * 345/1024;
     Serial.println(vol);
+
     Serial.println("");
   }
+  
+  i++;
+  if (i > 9) i = 0;
+  digitalWrite(pinA, i%2);
+  digitalWrite(pinB, (i>>1)%2 );
+  digitalWrite(pinC, (i>>2)%2 );
+  digitalWrite(pinD, (i>>3)%2 );
+  delay(1000);
+  
 }
 
 void initPWM()
