@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -1020,7 +1020,7 @@ http://focus.ti.com/lit/ds/symlink/opa2134.pdf</description>
 <part name="C3" library="amp" deviceset="CPOL-EU" device="E2.5-6" value="22uF"/>
 <part name="R7" library="amp" deviceset="R-EU_" device="0207/7" value="100k"/>
 <part name="C4" library="amp" deviceset="C-EU" device="050-025X075" value="82nF"/>
-<part name="C5" library="amp" deviceset="C-EU" device="050-025X075" value="1uF"/>
+<part name="C5" library="amp" deviceset="C-EU" device="050-045X075" value="1uF"/>
 <part name="R10" library="amp" deviceset="R-EU_" device="0207/7" value="47k"/>
 <part name="R11" library="amp" deviceset="R-EU_" device="0207/7" value="2.2k"/>
 <part name="R14" library="amp" deviceset="R-EU_" device="0207/7" value="180k"/>
@@ -1034,7 +1034,7 @@ http://focus.ti.com/lit/ds/symlink/opa2134.pdf</description>
 <part name="C8" library="amp" deviceset="CPOL-EU" device="E2.5-6" value="22uF"/>
 <part name="R16" library="amp" deviceset="R-EU_" device="0207/7" value="100k"/>
 <part name="C9" library="amp" deviceset="C-EU" device="050-025X075" value="82nF"/>
-<part name="C10" library="amp" deviceset="C-EU" device="050-025X075" value="1uF"/>
+<part name="C10" library="amp" deviceset="C-EU" device="050-045X075" value="1uF"/>
 <part name="AGND1" library="amp" deviceset="AGND" device=""/>
 <part name="AGND2" library="amp" deviceset="AGND" device=""/>
 <part name="AGND3" library="amp" deviceset="AGND" device=""/>
