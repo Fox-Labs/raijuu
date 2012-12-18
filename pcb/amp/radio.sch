@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -907,13 +907,15 @@ distributor RS 112-3794</description>
 <part name="GND2" library="amp" deviceset="GND" device=""/>
 <part name="JP1" library="amp" deviceset="PINHD-1X3" device="180"/>
 <part name="GND3" library="amp" deviceset="GND" device=""/>
-<part name="C1" library="amp" deviceset="CPOL-EU" device="SMD"/>
-<part name="C2" library="amp" deviceset="CPOL-EU" device="SMD"/>
+<part name="C1" library="amp" deviceset="CPOL-EU" device="SMD" value="10uF"/>
+<part name="C2" library="amp" deviceset="CPOL-EU" device="SMD" value="10uF"/>
 <part name="X2" library="amp" deviceset="BU-SMA-V" device="" value=""/>
 <part name="GND4" library="amp" deviceset="GND" device=""/>
 <part name="GND5" library="amp" deviceset="GND" device=""/>
 <part name="GND6" library="amp" deviceset="GND" device=""/>
 <part name="GND7" library="amp" deviceset="GND" device=""/>
+<part name="C3" library="amp" deviceset="CPOL-EU" device="D"/>
+<part name="C4" library="amp" deviceset="CPOL-EU" device="D"/>
 </parts>
 <sheets>
 <sheet>
@@ -941,6 +943,8 @@ distributor RS 112-3794</description>
 <instance part="GND5" gate="1" x="17.78" y="7.62"/>
 <instance part="GND6" gate="1" x="83.82" y="50.8"/>
 <instance part="GND7" gate="1" x="83.82" y="35.56"/>
+<instance part="C3" gate="G$1" x="76.2" y="43.18" rot="R90"/>
+<instance part="C4" gate="G$1" x="76.2" y="58.42" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -972,22 +976,12 @@ distributor RS 112-3794</description>
 </net>
 <net name="OUT_R" class="0">
 <segment>
-<wire x1="73.66" y1="58.42" x2="91.44" y2="58.42" width="0.1524" layer="91"/>
 <label x="76.2" y="58.42" size="1.778" layer="95"/>
-<pinref part="JP7" gate="G$1" pin="1"/>
 <pinref part="U1" gate="G$1" pin="LOUT"/>
-<wire x1="66.04" y1="55.88" x2="73.66" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="55.88" x2="73.66" y2="58.42" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="OUT_L" class="0">
-<segment>
-<wire x1="73.66" y1="43.18" x2="91.44" y2="43.18" width="0.1524" layer="91"/>
-<label x="76.2" y="43.18" size="1.778" layer="95"/>
-<pinref part="JP6" gate="G$1" pin="1"/>
-<pinref part="U1" gate="G$1" pin="ROUT"/>
-<wire x1="66.04" y1="53.34" x2="73.66" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="53.34" x2="73.66" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="55.88" x2="71.12" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="55.88" x2="71.12" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="+"/>
+<wire x1="71.12" y1="58.42" x2="73.66" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -1094,6 +1088,29 @@ distributor RS 112-3794</description>
 <wire x1="66.04" y1="60.96" x2="66.04" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="X2" gate="G$1" pin="1"/>
 <wire x1="66.04" y1="78.74" x2="73.66" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="ROUT"/>
+<wire x1="66.04" y1="53.34" x2="71.12" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="+"/>
+<wire x1="71.12" y1="53.34" x2="71.12" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="43.18" x2="73.66" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="C3" gate="G$1" pin="-"/>
+<pinref part="JP6" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="43.18" x2="91.44" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="C4" gate="G$1" pin="-"/>
+<pinref part="JP7" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="58.42" x2="91.44" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
