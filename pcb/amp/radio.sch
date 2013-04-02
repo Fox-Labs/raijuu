@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -907,15 +907,15 @@ distributor RS 112-3794</description>
 <part name="GND2" library="amp" deviceset="GND" device=""/>
 <part name="JP1" library="amp" deviceset="PINHD-1X3" device="180"/>
 <part name="GND3" library="amp" deviceset="GND" device=""/>
-<part name="C1" library="amp" deviceset="CPOL-EU" device="SMD" value="10uF"/>
-<part name="C2" library="amp" deviceset="CPOL-EU" device="SMD" value="10uF"/>
+<part name="C1" library="amp" deviceset="CPOL-EU" device="SMD" value="1uF"/>
+<part name="C2" library="amp" deviceset="CPOL-EU" device="SMD" value="1uF"/>
 <part name="X2" library="amp" deviceset="BU-SMA-V" device="" value=""/>
 <part name="GND4" library="amp" deviceset="GND" device=""/>
 <part name="GND5" library="amp" deviceset="GND" device=""/>
 <part name="GND6" library="amp" deviceset="GND" device=""/>
 <part name="GND7" library="amp" deviceset="GND" device=""/>
-<part name="C3" library="amp" deviceset="CPOL-EU" device="D"/>
-<part name="C4" library="amp" deviceset="CPOL-EU" device="D"/>
+<part name="C3" library="amp" deviceset="CPOL-EU" device="D" value="22uF"/>
+<part name="C4" library="amp" deviceset="CPOL-EU" device="D" value="22uF"/>
 </parts>
 <sheets>
 <sheet>

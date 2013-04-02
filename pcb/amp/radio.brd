@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -360,7 +360,7 @@ distributor RS 112-3794</description>
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules>
+<designrules name="default">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -522,16 +522,16 @@ design rules under a new name.</description>
 <element name="U1" library="amp" package="TEA5767" value="TEA5767" x="17.78" y="22.225" rot="MR180"/>
 <element name="IC1" library="amp" package="SOT223" value="LM1117S" x="17.78" y="35.56" rot="MR0"/>
 <element name="JP1" library="amp" package="1X03" value="" x="4.445" y="15.875" rot="R90"/>
-<element name="C1" library="amp" package="SMC_A" value="10uF" x="12.7" y="35.56" rot="MR90"/>
-<element name="C2" library="amp" package="SMC_A" value="10uF" x="22.86" y="35.56" rot="MR270"/>
+<element name="C1" library="amp" package="SMC_A" value="1uF" x="12.7" y="35.56" rot="MR90"/>
+<element name="C2" library="amp" package="SMC_A" value="1uF" x="22.86" y="35.56" rot="MR270"/>
 <element name="X2" library="amp" package="BU-SMA-V" value="" x="17.78" y="8.89" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="17.78" y="8.89" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="17.78" y="8.89" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
 <attribute name="MF" value="" x="17.78" y="8.89" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="17.78" y="8.89" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
 </element>
-<element name="C3" library="amp" package="PANASONIC_D" value="" x="29.21" y="25.4" rot="MR0"/>
-<element name="C4" library="amp" package="PANASONIC_D" value="" x="29.21" y="19.05" rot="MR0"/>
+<element name="C3" library="amp" package="PANASONIC_D" value="22uF" x="29.21" y="25.4" rot="MR0"/>
+<element name="C4" library="amp" package="PANASONIC_D" value="22uF" x="29.21" y="19.05" rot="MR0"/>
 </elements>
 <signals>
 <signal name="+12V">
