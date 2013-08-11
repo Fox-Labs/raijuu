@@ -525,9 +525,9 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <wire x1="5.08" y1="-1.143" x2="5.08" y2="-4.064" width="0.1524" layer="21"/>
 <wire x1="-5.08" y1="-4.064" x2="-5.08" y2="-1.143" width="0.1524" layer="21"/>
 <circle x="-4.6228" y="-3.7084" radius="0.254" width="0" layer="21"/>
-<pad name="IN" x="-2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
-<pad name="GND" x="0" y="-2.54" drill="1.016" shape="long" rot="R90"/>
-<pad name="OUT" x="2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
+<pad name="IN" x="-2.54" y="-2.54" drill="1.1" diameter="1.6764" shape="long" rot="R90"/>
+<pad name="GND" x="0" y="-2.54" drill="1.1" diameter="1.6764" shape="long" rot="R90"/>
+<pad name="OUT" x="2.54" y="-2.54" drill="1.1" diameter="1.6764" shape="long" rot="R90"/>
 <text x="-5.08" y="-6.0452" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-5.08" y="-7.62" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="-0.635" y="-3.81" size="1.27" layer="51" ratio="10">-</text>
@@ -583,9 +583,9 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <wire x1="5.08" y1="-1.143" x2="5.08" y2="-4.064" width="0.1524" layer="21"/>
 <wire x1="-5.08" y1="-4.064" x2="-5.08" y2="-1.143" width="0.1524" layer="21"/>
 <circle x="-4.6228" y="-3.7084" radius="0.254" width="0" layer="21"/>
-<pad name="GND" x="-2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
-<pad name="IN" x="0" y="-2.54" drill="1.016" shape="long" rot="R90"/>
-<pad name="OUT" x="2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
+<pad name="GND" x="-2.54" y="-2.54" drill="1.1" diameter="1.6764" shape="long" rot="R90"/>
+<pad name="IN" x="0" y="-2.54" drill="1.1" diameter="1.6764" shape="long" rot="R90"/>
+<pad name="OUT" x="2.54" y="-2.54" drill="1.1" diameter="1.6764" shape="long" rot="R90"/>
 <text x="-5.08" y="-6.0452" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-5.08" y="-7.62" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="-0.635" y="-3.81" size="1.27" layer="51" ratio="10">+</text>
@@ -785,9 +785,9 @@ Copal</description>
 <wire x1="2.2537" y1="-0.254" x2="2.6549" y2="-0.254" width="0.127" layer="21"/>
 <wire x1="0.2863" y1="-0.254" x2="2.2537" y2="-0.254" width="0.127" layer="51"/>
 <wire x1="-0.7863" y1="2.5485" x2="0.7863" y2="2.5485" width="0.127" layer="51" curve="-34.2936"/>
-<pad name="1" x="1.27" y="0" drill="0.8128" shape="octagon"/>
-<pad name="2" x="0" y="1.905" drill="0.8128" shape="octagon"/>
-<pad name="3" x="-1.27" y="0" drill="0.8128" shape="octagon"/>
+<pad name="1" x="1.27" y="0" drill="1.1" diameter="1.6764" shape="octagon"/>
+<pad name="2" x="0" y="1.905" drill="1.1" diameter="1.6764" shape="octagon"/>
+<pad name="3" x="-1.27" y="0" drill="1.1" diameter="1.6764" shape="octagon"/>
 <text x="3.175" y="0.635" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="3.175" y="-1.27" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="-0.635" y="0.635" size="1.27" layer="51" ratio="10">2</text>
@@ -940,6 +940,8 @@ NS Package M08A</description>
 <rectangle x1="0.39" y1="2" x2="0.88" y2="3.1" layer="51"/>
 <rectangle x1="-0.88" y1="2" x2="-0.39" y2="3.1" layer="51"/>
 <rectangle x1="-2.15" y1="2" x2="-1.66" y2="3.1" layer="51"/>
+<wire x1="-2.4" y1="-0.508" x2="-2.4" y2="0.508" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="0.508" x2="-2.4" y2="-0.508" width="0.2032" layer="51" curve="-180"/>
 </package>
 <package name="DIL08">
 <description>&lt;b&gt;Dual In Line Package&lt;/b&gt;</description>
@@ -1019,9 +1021,9 @@ NS Package M08A</description>
 <wire x1="5.08" y1="-1.143" x2="5.08" y2="-4.064" width="0.1524" layer="21"/>
 <wire x1="-5.08" y1="-4.064" x2="-5.08" y2="-1.143" width="0.1524" layer="21"/>
 <circle x="-4.6228" y="-3.7084" radius="0.254" width="0" layer="21"/>
-<pad name="1" x="-2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
-<pad name="2" x="0" y="-2.54" drill="1.016" shape="long" rot="R90"/>
-<pad name="3" x="2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
+<pad name="1" x="-2.54" y="-2.54" drill="1.1" diameter="1.6764" shape="long" rot="R90"/>
+<pad name="2" x="0" y="-2.54" drill="1.1" diameter="1.6764" shape="long" rot="R90"/>
+<pad name="3" x="2.54" y="-2.54" drill="1.1" diameter="1.6764" shape="long" rot="R90"/>
 <text x="-5.08" y="-5.9182" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-5.08" y="-7.62" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="1.905" y="-3.81" size="1.27" layer="51" ratio="10">O</text>
@@ -1119,9 +1121,9 @@ grid 15 mm, outline 7.2 x 18.3 mm</description>
 <wire x1="2.25" y1="-4.35" x2="-2.25" y2="-4.35" width="0.254" layer="21"/>
 <wire x1="-2.25" y1="-4.35" x2="-2.25" y2="4.35" width="0.254" layer="21"/>
 <circle x="0" y="-2.55" radius="1.1011" width="0.1524" layer="51"/>
-<pad name="1" x="1.27" y="-2.54" drill="0.6096"/>
-<pad name="2" x="-1.27" y="0" drill="0.6096"/>
-<pad name="3" x="1.27" y="2.54" drill="0.6096"/>
+<pad name="1" x="1.27" y="-2.54" drill="1.1" diameter="1.6764" shape="octagon"/>
+<pad name="2" x="-1.27" y="0" drill="1.1" diameter="1.6764" shape="octagon"/>
+<pad name="3" x="1.27" y="2.54" drill="1.1" diameter="1.6764" shape="octagon"/>
 <text x="-2.65" y="-4.5" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 <text x="3.95" y="-4.5" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
 <rectangle x1="-0.15" y1="-3.6" x2="0.15" y2="-1.5" layer="21"/>
@@ -1916,7 +1918,7 @@ Source: Source: Comchip Bridge Rectifiers DF005S-G thru DF10S-G.pdf</description
 </device>
 </devices>
 </deviceset>
-<deviceset name="OPA2*" prefix="IC">
+<deviceset name="NE5535" prefix="IC">
 <description>&lt;b&gt;Dual Operational Amplifier&lt;/b&gt;&lt;p&gt;
 Low Power, Single-Supply, Rail-To-Rail Operational Amplifier&lt;br&gt;
 Source: http://focus.ti.com/lit/ds/symlink/opa2345.pdf&lt;br&gt;
@@ -1939,8 +1941,7 @@ http://focus.ti.com/lit/ds/symlink/opa2134.pdf</description>
 <connect gate="B" pin="OUT" pad="7"/>
 </connects>
 <technologies>
-<technology name="344"/>
-<technology name="345"/>
+<technology name=""/>
 </technologies>
 </device>
 <device name="P" package="DIL08">
@@ -1955,7 +1956,7 @@ http://focus.ti.com/lit/ds/symlink/opa2134.pdf</description>
 <connect gate="B" pin="OUT" pad="7"/>
 </connects>
 <technologies>
-<technology name="344"/>
+<technology name=""/>
 </technologies>
 </device>
 <device name="E" package="MSOP08">
@@ -1970,42 +1971,7 @@ http://focus.ti.com/lit/ds/symlink/opa2134.pdf</description>
 <connect gate="B" pin="OUT" pad="7"/>
 </connects>
 <technologies>
-<technology name="344"/>
-<technology name="345"/>
-</technologies>
-</device>
-<device name="PA" package="DIL08">
-<connects>
-<connect gate="A" pin="+IN" pad="3"/>
-<connect gate="A" pin="-IN" pad="2"/>
-<connect gate="A" pin="OUT" pad="1"/>
-<connect gate="A" pin="V+" pad="8"/>
-<connect gate="A" pin="V-" pad="4"/>
-<connect gate="B" pin="+IN" pad="5"/>
-<connect gate="B" pin="-IN" pad="6"/>
-<connect gate="B" pin="OUT" pad="7"/>
-</connects>
-<technologies>
-<technology name="134"/>
-<technology name="241"/>
-<technology name="251"/>
-</technologies>
-</device>
-<device name="UA" package="SO08">
-<connects>
-<connect gate="A" pin="+IN" pad="3"/>
-<connect gate="A" pin="-IN" pad="2"/>
-<connect gate="A" pin="OUT" pad="1"/>
-<connect gate="A" pin="V+" pad="8"/>
-<connect gate="A" pin="V-" pad="4"/>
-<connect gate="B" pin="+IN" pad="5"/>
-<connect gate="B" pin="-IN" pad="6"/>
-<connect gate="B" pin="OUT" pad="7"/>
-</connects>
-<technologies>
-<technology name="134"/>
-<technology name="241"/>
-<technology name="251"/>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -2106,7 +2072,6 @@ general purpose rectifier, 1 A</description>
 </class>
 </classes>
 <parts>
-<part name="X1" library="amp_soha" deviceset="W237-103" device=""/>
 <part name="B2" library="amp_soha" deviceset="DF*S" device="" technology="01"/>
 <part name="D3" library="amp_soha" deviceset="ES1" device=""/>
 <part name="AGND1" library="amp_soha" deviceset="AGND" device=""/>
@@ -2153,7 +2118,7 @@ general purpose rectifier, 1 A</description>
 <part name="Q1" library="amp_soha" deviceset="J113" device=""/>
 <part name="C5" library="amp_soha" deviceset="C-EU" device="150-072X183" value="1uF/100V"/>
 <part name="P+3" library="amp_soha" deviceset="+24V" device=""/>
-<part name="IC1" library="amp_soha" deviceset="OPA2*" device="PA" technology="134"/>
+<part name="IC1" library="amp_soha" deviceset="NE5535" device="U"/>
 <part name="P-2" library="amp_soha" deviceset="-12V" device=""/>
 <part name="P+4" library="amp_soha" deviceset="+12V" device=""/>
 <part name="R4" library="amp_soha" deviceset="R-EU_" device="" value="100k"/>
@@ -2190,13 +2155,13 @@ general purpose rectifier, 1 A</description>
 <part name="IC4" library="amp_soha" deviceset="LM337TS" device=""/>
 <part name="R19" library="amp_soha" deviceset="RTRIM329" device="Y"/>
 <part name="R18" library="amp_soha" deviceset="RTRIM329" device="Y"/>
+<part name="X2" library="amp_soha" deviceset="W237-103" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="X1" gate="G$1" x="2.54" y="17.78" rot="R180"/>
 <instance part="B2" gate="G$1" x="30.48" y="25.4" rot="R90"/>
 <instance part="D3" gate="G$1" x="15.24" y="22.86" rot="R90"/>
 <instance part="AGND1" gate="VR1" x="-2.54" y="15.24"/>
@@ -2283,15 +2248,16 @@ general purpose rectifier, 1 A</description>
 <instance part="V1" gate="B" x="185.42" y="38.1"/>
 <instance part="R19" gate="G$1" x="185.42" y="-71.12" rot="R180"/>
 <instance part="R18" gate="G$1" x="185.42" y="12.7" rot="R180"/>
+<instance part="X2" gate="G$1" x="7.62" y="17.78"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="AGND" class="0">
 <segment>
-<pinref part="X1" gate="G$1" pin="2"/>
 <pinref part="AGND1" gate="VR1" pin="AGND"/>
 <wire x1="5.08" y1="17.78" x2="-2.54" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="X2" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="C11" gate="G$1" pin="+"/>
@@ -2332,6 +2298,7 @@ general purpose rectifier, 1 A</description>
 <pinref part="AGND6" gate="VR1" pin="AGND"/>
 <wire x1="68.58" y1="25.4" x2="76.2" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="25.4" x2="76.2" y2="22.86" width="0.1524" layer="91"/>
+<junction x="45.72" y="25.4"/>
 </segment>
 <segment>
 <pinref part="V1" gate="&quot;" pin="H3"/>
@@ -2411,7 +2378,6 @@ general purpose rectifier, 1 A</description>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="X1" gate="G$1" pin="3"/>
 <wire x1="5.08" y1="20.32" x2="10.16" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="20.32" x2="10.16" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="D3" gate="G$1" pin="C"/>
@@ -2423,11 +2389,11 @@ general purpose rectifier, 1 A</description>
 <junction x="22.86" y="25.4"/>
 <pinref part="C3" gate="G$1" pin="-"/>
 <wire x1="22.86" y1="45.72" x2="22.86" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="X2" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="X1" gate="G$1" pin="1"/>
 <wire x1="5.08" y1="15.24" x2="10.16" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="15.24" x2="10.16" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="D4" gate="G$1" pin="C"/>
@@ -2440,6 +2406,7 @@ general purpose rectifier, 1 A</description>
 <junction x="38.1" y="25.4"/>
 <pinref part="C4" gate="G$1" pin="-"/>
 <wire x1="38.1" y1="45.72" x2="38.1" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="X2" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$3" class="0">
