@@ -2108,7 +2108,7 @@ general purpose rectifier, 1 A</description>
 <part name="AGND3" library="amp_soha" deviceset="AGND" device=""/>
 <part name="C12" library="amp_soha" deviceset="CPOL-EU" device="E2.5-6" value="47uF/16V"/>
 <part name="AGND4" library="amp_soha" deviceset="AGND" device=""/>
-<part name="R10" library="amp_soha" deviceset="R-EU_" device=""/>
+<part name="R10" library="amp_soha" deviceset="R-EU_" device="" value="1k"/>
 <part name="AGND5" library="amp_soha" deviceset="AGND" device=""/>
 <part name="LED1" library="amp_soha" deviceset="LED" device="5MM"/>
 <part name="IC2" library="amp_soha" deviceset="78XX" device="TO-220" value="7812"/>
@@ -2138,7 +2138,7 @@ general purpose rectifier, 1 A</description>
 <part name="R7" library="amp_soha" deviceset="R-EU_" device="" value="560"/>
 <part name="C8" library="amp_soha" deviceset="CPOL-EU" device="E5-10,5" value="1000uF/10V"/>
 <part name="AGND11" library="amp_soha" deviceset="AGND" device=""/>
-<part name="R2" library="amp_soha" deviceset="R-EU_" device="" value="360"/>
+<part name="R2" library="amp_soha" deviceset="R-EU_" device="" value="1k5"/>
 <part name="Q2" library="amp_soha" deviceset="J113" device=""/>
 <part name="Q1" library="amp_soha" deviceset="J113" device=""/>
 <part name="C5" library="amp_soha" deviceset="C-EU" device="075-052X106" value="1uF/100V"/>
@@ -2163,7 +2163,7 @@ general purpose rectifier, 1 A</description>
 <part name="R17" library="amp_soha" deviceset="R-EU_" device="" value="560"/>
 <part name="C14" library="amp_soha" deviceset="CPOL-EU" device="E5-10,5" value="1000uF/10V"/>
 <part name="AGND16" library="amp_soha" deviceset="AGND" device=""/>
-<part name="R12" library="amp_soha" deviceset="R-EU_" device="" value="360"/>
+<part name="R12" library="amp_soha" deviceset="R-EU_" device="" value="1k5"/>
 <part name="Q4" library="amp_soha" deviceset="J113" device=""/>
 <part name="Q3" library="amp_soha" deviceset="J113" device=""/>
 <part name="C13" library="amp_soha" deviceset="C-EU" device="075-052X106" value="1uF/100V"/>
@@ -2178,9 +2178,9 @@ general purpose rectifier, 1 A</description>
 <part name="OUT_R" library="amp_soha" deviceset="PINHD-1X2" device=""/>
 <part name="AGND18" library="amp_soha" deviceset="AGND" device=""/>
 <part name="IC4" library="amp_soha" deviceset="LM337TS" device=""/>
-<part name="R19" library="amp_soha" deviceset="RTRIM329" device="Y"/>
-<part name="R18" library="amp_soha" deviceset="RTRIM329" device="Y"/>
-<part name="X2" library="amp_soha" deviceset="W237-103" device=""/>
+<part name="R18" library="amp_soha" deviceset="RTRIM329" device="Y" value="2k"/>
+<part name="R8" library="amp_soha" deviceset="RTRIM329" device="Y" value="2k"/>
+<part name="X1" library="amp_soha" deviceset="W237-103" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2271,9 +2271,9 @@ general purpose rectifier, 1 A</description>
 <instance part="IC4" gate="1" x="55.88" y="0" rot="MR180"/>
 <instance part="V1" gate="A" x="185.42" y="-45.72"/>
 <instance part="V1" gate="B" x="185.42" y="38.1"/>
-<instance part="R19" gate="G$1" x="185.42" y="-71.12" rot="R180"/>
-<instance part="R18" gate="G$1" x="185.42" y="12.7" rot="R180"/>
-<instance part="X2" gate="G$1" x="7.62" y="17.78"/>
+<instance part="R18" gate="G$1" x="185.42" y="-71.12" rot="R180"/>
+<instance part="R8" gate="G$1" x="185.42" y="12.7" rot="R180"/>
+<instance part="X1" gate="G$1" x="7.62" y="17.78"/>
 </instances>
 <busses>
 </busses>
@@ -2282,7 +2282,7 @@ general purpose rectifier, 1 A</description>
 <segment>
 <pinref part="AGND1" gate="VR1" pin="AGND"/>
 <wire x1="5.08" y1="17.78" x2="-2.54" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="X2" gate="G$1" pin="2"/>
+<pinref part="X1" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="C11" gate="G$1" pin="+"/>
@@ -2352,9 +2352,9 @@ general purpose rectifier, 1 A</description>
 <junction x="177.8" y="12.7"/>
 <wire x1="177.8" y1="12.7" x2="177.8" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="7.62" x2="185.42" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="R18" gate="G$1" pin="E"/>
+<pinref part="R8" gate="G$1" pin="E"/>
 <junction x="185.42" y="7.62"/>
-<pinref part="R18" gate="G$1" pin="S"/>
+<pinref part="R8" gate="G$1" pin="S"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -2385,9 +2385,9 @@ general purpose rectifier, 1 A</description>
 <junction x="177.8" y="-71.12"/>
 <wire x1="177.8" y1="-71.12" x2="177.8" y2="-76.2" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="-76.2" x2="185.42" y2="-76.2" width="0.1524" layer="91"/>
-<pinref part="R19" gate="G$1" pin="E"/>
+<pinref part="R18" gate="G$1" pin="E"/>
 <junction x="185.42" y="-76.2"/>
-<pinref part="R19" gate="G$1" pin="S"/>
+<pinref part="R18" gate="G$1" pin="S"/>
 </segment>
 <segment>
 <pinref part="R14" gate="G$1" pin="2"/>
@@ -2414,7 +2414,7 @@ general purpose rectifier, 1 A</description>
 <junction x="22.86" y="25.4"/>
 <pinref part="C3" gate="G$1" pin="-"/>
 <wire x1="22.86" y1="45.72" x2="22.86" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="X2" gate="G$1" pin="1"/>
+<pinref part="X1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -2431,7 +2431,7 @@ general purpose rectifier, 1 A</description>
 <junction x="38.1" y="25.4"/>
 <pinref part="C4" gate="G$1" pin="-"/>
 <wire x1="38.1" y1="45.72" x2="38.1" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="X2" gate="G$1" pin="3"/>
+<pinref part="X1" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -2806,13 +2806,13 @@ general purpose rectifier, 1 A</description>
 <net name="N$18" class="0">
 <segment>
 <pinref part="R17" gate="G$1" pin="2"/>
-<pinref part="R19" gate="G$1" pin="A"/>
+<pinref part="R18" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="N$17" class="0">
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
-<pinref part="R18" gate="G$1" pin="A"/>
+<pinref part="R8" gate="G$1" pin="A"/>
 </segment>
 </net>
 </nets>
