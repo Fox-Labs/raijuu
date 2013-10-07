@@ -1053,39 +1053,6 @@ grid 15 mm, outline 7.2 x 18.3 mm</description>
 <text x="-5.48" y="-4.5" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 <text x="-2.17" y="-3.45" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
 </package>
-<package name="RTRIM3296W">
-<description>&lt;b&gt;Trimm resistor&lt;/b&gt; BOURNS&lt;p&gt;</description>
-<wire x1="-2.25" y1="4.35" x2="2.25" y2="4.35" width="0.254" layer="21"/>
-<wire x1="2.25" y1="4.35" x2="2.25" y2="-4.35" width="0.254" layer="21"/>
-<wire x1="2.25" y1="-4.35" x2="-2.25" y2="-4.35" width="0.254" layer="21"/>
-<wire x1="-2.25" y1="-4.35" x2="-2.25" y2="4.35" width="0.254" layer="21"/>
-<circle x="0" y="-2.55" radius="1.1011" width="0.1524" layer="21"/>
-<pad name="1" x="0" y="-2.54" drill="0.6096"/>
-<pad name="2" x="0" y="0" drill="0.6096"/>
-<pad name="3" x="0" y="2.54" drill="0.6096"/>
-<text x="-2.65" y="-4.5" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="3.95" y="-4.5" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<rectangle x1="-0.15" y1="-3.6" x2="0.15" y2="-1.5" layer="51"/>
-</package>
-<package name="RTRIM3296X">
-<description>&lt;b&gt;Trimm resistor&lt;/b&gt; BOURNS&lt;p&gt;</description>
-<wire x1="-2.25" y1="4.35" x2="2.25" y2="4.35" width="0.254" layer="21"/>
-<wire x1="2.25" y1="4.35" x2="2.25" y2="-4.35" width="0.254" layer="21"/>
-<wire x1="2.25" y1="-4.35" x2="-2.25" y2="-4.35" width="0.254" layer="21"/>
-<wire x1="-2.25" y1="-4.35" x2="-2.25" y2="4.35" width="0.254" layer="21"/>
-<wire x1="-1.1" y1="4.4" x2="-1.1" y2="5.6" width="0.1524" layer="21"/>
-<wire x1="-1.1" y1="5.6" x2="-0.25" y2="5.6" width="0.1524" layer="21"/>
-<wire x1="-0.25" y1="5.6" x2="-0.25" y2="5.1" width="0.1524" layer="21"/>
-<wire x1="-0.25" y1="5.1" x2="0.25" y2="5.1" width="0.1524" layer="21"/>
-<wire x1="0.25" y1="5.1" x2="0.25" y2="5.6" width="0.1524" layer="21"/>
-<wire x1="0.25" y1="5.6" x2="1.1" y2="5.6" width="0.1524" layer="21"/>
-<wire x1="1.1" y1="5.6" x2="1.1" y2="4.4" width="0.1524" layer="21"/>
-<pad name="1" x="0" y="-2.54" drill="0.6096"/>
-<pad name="2" x="0" y="0" drill="0.6096"/>
-<pad name="3" x="0" y="2.54" drill="0.6096"/>
-<text x="-2.65" y="-4.5" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="3.95" y="-4.5" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-</package>
 <package name="RTRIM3296Y">
 <description>&lt;b&gt;Trimm resistor&lt;/b&gt; BOURNS&lt;p&gt;</description>
 <wire x1="-2.25" y1="4.35" x2="2.25" y2="4.35" width="0.254" layer="21"/>
@@ -1143,6 +1110,39 @@ grid 7.5 mm, outline 5.2 x 10.6 mm</description>
 <pad name="2" x="3.81" y="0" drill="1.1" diameter="1.6764" shape="octagon"/>
 <text x="-4.826" y="2.921" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-0.635" y="-2.032" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="RTRIM3296W">
+<description>&lt;b&gt;Trimm resistor&lt;/b&gt; BOURNS&lt;p&gt;</description>
+<wire x1="-2.25" y1="4.35" x2="2.25" y2="4.35" width="0.254" layer="21"/>
+<wire x1="2.25" y1="4.35" x2="2.25" y2="-4.35" width="0.254" layer="21"/>
+<wire x1="2.25" y1="-4.35" x2="-2.25" y2="-4.35" width="0.254" layer="21"/>
+<wire x1="-2.25" y1="-4.35" x2="-2.25" y2="4.35" width="0.254" layer="21"/>
+<circle x="0" y="-2.55" radius="1.1011" width="0.1524" layer="21"/>
+<pad name="1" x="0" y="-2.54" drill="1.1" diameter="1.6764" shape="octagon"/>
+<pad name="2" x="0" y="0" drill="1.1" diameter="1.6764" shape="octagon"/>
+<pad name="3" x="0" y="2.54" drill="1.1" diameter="1.6764" shape="octagon"/>
+<text x="-2.65" y="-4.5" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="3.95" y="-4.5" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-0.15" y1="-3.6" x2="0.15" y2="-1.5" layer="51"/>
+</package>
+<package name="RTRIM3296X">
+<description>&lt;b&gt;Trimm resistor&lt;/b&gt; BOURNS&lt;p&gt;</description>
+<wire x1="-2.25" y1="4.35" x2="2.25" y2="4.35" width="0.254" layer="21"/>
+<wire x1="2.25" y1="4.35" x2="2.25" y2="-4.35" width="0.254" layer="21"/>
+<wire x1="2.25" y1="-4.35" x2="-2.25" y2="-4.35" width="0.254" layer="21"/>
+<wire x1="-2.25" y1="-4.35" x2="-2.25" y2="4.35" width="0.254" layer="21"/>
+<wire x1="-1.1" y1="4.4" x2="-1.1" y2="5.6" width="0.1524" layer="21"/>
+<wire x1="-1.1" y1="5.6" x2="-0.25" y2="5.6" width="0.1524" layer="21"/>
+<wire x1="-0.25" y1="5.6" x2="-0.25" y2="5.1" width="0.1524" layer="21"/>
+<wire x1="-0.25" y1="5.1" x2="0.25" y2="5.1" width="0.1524" layer="21"/>
+<wire x1="0.25" y1="5.1" x2="0.25" y2="5.6" width="0.1524" layer="21"/>
+<wire x1="0.25" y1="5.6" x2="1.1" y2="5.6" width="0.1524" layer="21"/>
+<wire x1="1.1" y1="5.6" x2="1.1" y2="4.4" width="0.1524" layer="21"/>
+<pad name="1" x="0" y="-2.54" drill="1.1" diameter="1.6764" shape="octagon"/>
+<pad name="2" x="0" y="0" drill="1.1" diameter="1.6764" shape="octagon"/>
+<pad name="3" x="0" y="2.54" drill="1.1" diameter="1.6764" shape="octagon"/>
+<text x="-2.65" y="-4.5" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="3.95" y="-4.5" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -2131,7 +2131,7 @@ general purpose rectifier, 1 A</description>
 <part name="AGND8" library="amp_soha" deviceset="AGND" device=""/>
 <part name="P+2" library="amp_soha" deviceset="+24V" device=""/>
 <part name="IN_L" library="amp_soha" deviceset="PINHD-1X2" device=""/>
-<part name="R5" library="amp_soha" deviceset="POTENTIOMETER_" device="" value="100k"/>
+<part name="POT_L" library="amp_soha" deviceset="POTENTIOMETER_" device="" value="100k"/>
 <part name="AGND9" library="amp_soha" deviceset="AGND" device=""/>
 <part name="AGND10" library="amp_soha" deviceset="AGND" device=""/>
 <part name="R6" library="amp_soha" deviceset="R-EU_" device="" value="300"/>
@@ -2156,7 +2156,7 @@ general purpose rectifier, 1 A</description>
 <part name="OUT_L" library="amp_soha" deviceset="PINHD-1X2" device=""/>
 <part name="AGND13" library="amp_soha" deviceset="AGND" device=""/>
 <part name="IN_R" library="amp_soha" deviceset="PINHD-1X2" device=""/>
-<part name="R15" library="amp_soha" deviceset="POTENTIOMETER_" device="" value="100k"/>
+<part name="POT_R" library="amp_soha" deviceset="POTENTIOMETER_" device="" value="100k"/>
 <part name="AGND14" library="amp_soha" deviceset="AGND" device=""/>
 <part name="AGND15" library="amp_soha" deviceset="AGND" device=""/>
 <part name="R16" library="amp_soha" deviceset="R-EU_" device="" value="300"/>
@@ -2178,8 +2178,8 @@ general purpose rectifier, 1 A</description>
 <part name="OUT_R" library="amp_soha" deviceset="PINHD-1X2" device=""/>
 <part name="AGND18" library="amp_soha" deviceset="AGND" device=""/>
 <part name="IC4" library="amp_soha" deviceset="LM337TS" device=""/>
-<part name="R18" library="amp_soha" deviceset="RTRIM329" device="Y" value="2k"/>
-<part name="R8" library="amp_soha" deviceset="RTRIM329" device="Y" value="2k"/>
+<part name="TRIM_R" library="amp_soha" deviceset="RTRIM329" device="W" value="2k"/>
+<part name="TRIM_L" library="amp_soha" deviceset="RTRIM329" device="W" value="2k"/>
 <part name="X1" library="amp_soha" deviceset="W237-103" device=""/>
 </parts>
 <sheets>
@@ -2221,7 +2221,7 @@ general purpose rectifier, 1 A</description>
 <instance part="AGND8" gate="VR1" x="68.58" y="58.42"/>
 <instance part="P+2" gate="1" x="68.58" y="78.74"/>
 <instance part="IN_L" gate="G$1" x="149.86" y="45.72"/>
-<instance part="R5" gate="1" x="160.02" y="38.1" rot="R90"/>
+<instance part="POT_L" gate="1" x="160.02" y="38.1" rot="R90"/>
 <instance part="AGND9" gate="VR1" x="152.4" y="30.48"/>
 <instance part="AGND10" gate="VR1" x="160.02" y="30.48"/>
 <instance part="R6" gate="G$1" x="170.18" y="38.1" rot="R180"/>
@@ -2246,7 +2246,7 @@ general purpose rectifier, 1 A</description>
 <instance part="OUT_L" gate="G$1" x="254" y="43.18"/>
 <instance part="AGND13" gate="VR1" x="246.38" y="30.48"/>
 <instance part="IN_R" gate="G$1" x="149.86" y="-38.1"/>
-<instance part="R15" gate="1" x="160.02" y="-45.72" rot="R90"/>
+<instance part="POT_R" gate="1" x="160.02" y="-45.72" rot="R90"/>
 <instance part="AGND14" gate="VR1" x="152.4" y="-53.34"/>
 <instance part="AGND15" gate="VR1" x="160.02" y="-53.34"/>
 <instance part="R16" gate="G$1" x="170.18" y="-45.72" rot="R180"/>
@@ -2271,8 +2271,8 @@ general purpose rectifier, 1 A</description>
 <instance part="IC4" gate="1" x="55.88" y="0" rot="MR180"/>
 <instance part="V1" gate="A" x="185.42" y="-45.72"/>
 <instance part="V1" gate="B" x="185.42" y="38.1"/>
-<instance part="R18" gate="G$1" x="185.42" y="-71.12" rot="R180"/>
-<instance part="R8" gate="G$1" x="185.42" y="12.7" rot="R180"/>
+<instance part="TRIM_R" gate="G$1" x="185.42" y="-71.12" rot="R180"/>
+<instance part="TRIM_L" gate="G$1" x="185.42" y="12.7" rot="R180"/>
 <instance part="X1" gate="G$1" x="7.62" y="17.78"/>
 </instances>
 <busses>
@@ -2341,7 +2341,7 @@ general purpose rectifier, 1 A</description>
 <wire x1="152.4" y1="45.72" x2="152.4" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R5" gate="1" pin="1"/>
+<pinref part="POT_L" gate="1" pin="1"/>
 <pinref part="AGND10" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
@@ -2352,9 +2352,9 @@ general purpose rectifier, 1 A</description>
 <junction x="177.8" y="12.7"/>
 <wire x1="177.8" y1="12.7" x2="177.8" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="7.62" x2="185.42" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="R8" gate="G$1" pin="E"/>
+<pinref part="TRIM_L" gate="G$1" pin="E"/>
 <junction x="185.42" y="7.62"/>
-<pinref part="R8" gate="G$1" pin="S"/>
+<pinref part="TRIM_L" gate="G$1" pin="S"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -2374,7 +2374,7 @@ general purpose rectifier, 1 A</description>
 <wire x1="152.4" y1="-38.1" x2="152.4" y2="-50.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R15" gate="1" pin="1"/>
+<pinref part="POT_R" gate="1" pin="1"/>
 <pinref part="AGND15" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
@@ -2385,9 +2385,9 @@ general purpose rectifier, 1 A</description>
 <junction x="177.8" y="-71.12"/>
 <wire x1="177.8" y1="-71.12" x2="177.8" y2="-76.2" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="-76.2" x2="185.42" y2="-76.2" width="0.1524" layer="91"/>
-<pinref part="R18" gate="G$1" pin="E"/>
+<pinref part="TRIM_R" gate="G$1" pin="E"/>
 <junction x="185.42" y="-76.2"/>
-<pinref part="R18" gate="G$1" pin="S"/>
+<pinref part="TRIM_R" gate="G$1" pin="S"/>
 </segment>
 <segment>
 <pinref part="R14" gate="G$1" pin="2"/>
@@ -2598,14 +2598,14 @@ general purpose rectifier, 1 A</description>
 <net name="N$12" class="0">
 <segment>
 <pinref part="IN_L" gate="G$1" pin="1"/>
-<pinref part="R5" gate="1" pin="2"/>
+<pinref part="POT_L" gate="1" pin="2"/>
 <wire x1="147.32" y1="48.26" x2="160.02" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="48.26" x2="160.02" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$13" class="0">
 <segment>
-<pinref part="R5" gate="1" pin="3"/>
+<pinref part="POT_L" gate="1" pin="3"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -2686,14 +2686,14 @@ general purpose rectifier, 1 A</description>
 <net name="N$26" class="0">
 <segment>
 <pinref part="IN_R" gate="G$1" pin="1"/>
-<pinref part="R15" gate="1" pin="2"/>
+<pinref part="POT_R" gate="1" pin="2"/>
 <wire x1="147.32" y1="-35.56" x2="160.02" y2="-35.56" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="-35.56" x2="160.02" y2="-40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$27" class="0">
 <segment>
-<pinref part="R15" gate="1" pin="3"/>
+<pinref part="POT_R" gate="1" pin="3"/>
 <pinref part="R16" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -2806,13 +2806,13 @@ general purpose rectifier, 1 A</description>
 <net name="N$18" class="0">
 <segment>
 <pinref part="R17" gate="G$1" pin="2"/>
-<pinref part="R18" gate="G$1" pin="A"/>
+<pinref part="TRIM_R" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="N$17" class="0">
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
-<pinref part="R8" gate="G$1" pin="A"/>
+<pinref part="TRIM_L" gate="G$1" pin="A"/>
 </segment>
 </net>
 </nets>
