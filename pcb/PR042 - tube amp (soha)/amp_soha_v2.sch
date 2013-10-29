@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2143,7 +2143,7 @@ general purpose rectifier, 1 A</description>
 <part name="Q1" library="amp_soha" deviceset="J113" device=""/>
 <part name="C5" library="amp_soha" deviceset="C-EU" device="075-052X106" value="1uF/100V"/>
 <part name="P+3" library="amp_soha" deviceset="+24V" device=""/>
-<part name="IC1" library="amp_soha" deviceset="NE5535" device="U"/>
+<part name="IC1" library="amp_soha" deviceset="NE5535" device="U" value="NE5532"/>
 <part name="P-2" library="amp_soha" deviceset="-12V" device=""/>
 <part name="P+4" library="amp_soha" deviceset="+12V" device=""/>
 <part name="R4" library="amp_soha" deviceset="R-EU_" device="" value="100k"/>
