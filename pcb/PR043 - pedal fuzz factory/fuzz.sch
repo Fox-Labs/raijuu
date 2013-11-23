@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.05" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -1395,7 +1395,7 @@ general purpose rectifier, 1 A</description>
 <part name="COMP" library="fuzz" deviceset="POTENTIOMETER_" device="" value="10kB"/>
 <part name="DRIVE" library="fuzz" deviceset="POTENTIOMETER_" device="" value="10kB"/>
 <part name="C2" library="fuzz" deviceset="CPOL-EU" device="E2.5-6" value="10uF"/>
-<part name="R6" library="fuzz" deviceset="R-EU_" device="0207/7" value="5k1"/>
+<part name="R6" library="fuzz" deviceset="R-EU_" device="0207/7" value="5k6"/>
 <part name="VOL" library="fuzz" deviceset="POTENTIOMETER_" device="" value="5kB"/>
 <part name="C5" library="fuzz" deviceset="CPOL-EU" device="E2.5-6" value="10uF"/>
 <part name="R7" library="fuzz" deviceset="R-EU_" device="0207/7" value="220k"/>
