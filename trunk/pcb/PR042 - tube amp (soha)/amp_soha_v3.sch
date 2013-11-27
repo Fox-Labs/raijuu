@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2634,14 +2634,13 @@ general purpose rectifier, 1 A</description>
 <pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="Q2" gate="G$1" pin="S"/>
 <junction x="185.42" y="58.42"/>
-<wire x1="185.42" y1="58.42" x2="193.04" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="58.42" x2="193.04" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="58.42" x2="195.58" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="G"/>
 <pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="195.58" y1="58.42" x2="195.58" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="48.26" x2="198.12" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="48.26" x2="195.58" y2="66.04" width="0.1524" layer="91"/>
-<junction x="195.58" y="48.26"/>
-<wire x1="193.04" y1="48.26" x2="195.58" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="58.42" x2="195.58" y2="66.04" width="0.1524" layer="91"/>
+<junction x="195.58" y="58.42"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -2715,14 +2714,13 @@ general purpose rectifier, 1 A</description>
 <pinref part="R12" gate="G$1" pin="1"/>
 <pinref part="Q4" gate="G$1" pin="S"/>
 <junction x="185.42" y="-25.4"/>
-<wire x1="185.42" y1="-25.4" x2="193.04" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="-25.4" x2="193.04" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="-25.4" x2="195.58" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="Q3" gate="G$1" pin="G"/>
-<wire x1="195.58" y1="-35.56" x2="195.58" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="-25.4" x2="195.58" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="C13" gate="G$1" pin="1"/>
+<wire x1="195.58" y1="-25.4" x2="195.58" y2="-35.56" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="-35.56" x2="198.12" y2="-35.56" width="0.1524" layer="91"/>
-<junction x="195.58" y="-35.56"/>
-<wire x1="193.04" y1="-35.56" x2="195.58" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="195.58" y="-25.4"/>
 </segment>
 </net>
 <net name="N$33" class="0">
