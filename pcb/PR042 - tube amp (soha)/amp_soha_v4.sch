@@ -2101,7 +2101,7 @@ general purpose rectifier, 1 A</description>
 <part name="D3" library="amp_soha" deviceset="ES1" device=""/>
 <part name="AGND1" library="amp_soha" deviceset="AGND" device=""/>
 <part name="D4" library="amp_soha" deviceset="ES1" device=""/>
-<part name="C11" library="amp_soha" deviceset="CPOL-EU" device="E5-10,5" value="470uF/35V"/>
+<part name="C11" library="amp_soha" deviceset="CPOL-EU" device="E2.5-6" value="47uF/35V"/>
 <part name="AGND2" library="amp_soha" deviceset="AGND" device=""/>
 <part name="R9" library="amp_soha" deviceset="R-EU_" device="" value="1k3"/>
 <part name="R11" library="amp_soha" deviceset="R-EU_" device="" value="11k"/>
