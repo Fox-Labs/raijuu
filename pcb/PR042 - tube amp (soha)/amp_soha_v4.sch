@@ -1446,6 +1446,11 @@ grid 7.5 mm, outline 5.2 x 10.6 mm</description>
 <pin name="E" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
 <pin name="S" x="5.08" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
 </symbol>
+<symbol name="GND-1">
+<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="W237-103" prefix="X" uservalue="yes">
@@ -2085,6 +2090,19 @@ general purpose rectifier, 1 A</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="GND" prefix="GND">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="GND-1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -2099,21 +2117,15 @@ general purpose rectifier, 1 A</description>
 <parts>
 <part name="B2" library="amp_soha" deviceset="DF*S" device="" technology="01"/>
 <part name="D3" library="amp_soha" deviceset="ES1" device=""/>
-<part name="AGND1" library="amp_soha" deviceset="AGND" device=""/>
 <part name="D4" library="amp_soha" deviceset="ES1" device=""/>
 <part name="C11" library="amp_soha" deviceset="CPOL-EU" device="E2.5-6" value="47uF/35V"/>
-<part name="AGND2" library="amp_soha" deviceset="AGND" device=""/>
 <part name="R9" library="amp_soha" deviceset="R-EU_" device="" value="1k3"/>
 <part name="R11" library="amp_soha" deviceset="R-EU_" device="" value="11k"/>
-<part name="AGND3" library="amp_soha" deviceset="AGND" device=""/>
 <part name="C12" library="amp_soha" deviceset="CPOL-EU" device="E2.5-6" value="47uF/16V"/>
-<part name="AGND4" library="amp_soha" deviceset="AGND" device=""/>
 <part name="R10" library="amp_soha" deviceset="R-EU_" device="" value="1k"/>
-<part name="AGND5" library="amp_soha" deviceset="AGND" device=""/>
 <part name="LED1" library="amp_soha" deviceset="LED" device="5MM"/>
 <part name="IC2" library="amp_soha" deviceset="78XX" device="TO-220" value="7812"/>
 <part name="IC3" library="amp_soha" deviceset="79XX" device="TO-220" value="7912"/>
-<part name="AGND6" library="amp_soha" deviceset="AGND" device=""/>
 <part name="C6" library="amp_soha" deviceset="CPOL-EU" device="E5-10,5" value="470uF/35V"/>
 <part name="C9" library="amp_soha" deviceset="CPOL-EU" device="E5-10,5" value="470uF/35V"/>
 <part name="C10" library="amp_soha" deviceset="CPOL-EU" device="E2.5-6" value="47uF/16V"/>
@@ -2121,14 +2133,12 @@ general purpose rectifier, 1 A</description>
 <part name="P+1" library="amp_soha" deviceset="+12V" device=""/>
 <part name="P-1" library="amp_soha" deviceset="-12V" device=""/>
 <part name="V1" library="amp_soha" deviceset="12AU7-P" device=""/>
-<part name="AGND7" library="amp_soha" deviceset="AGND" device=""/>
 <part name="B1" library="amp_soha" deviceset="DF*S" device="" technology="01"/>
 <part name="C4" library="amp_soha" deviceset="CPOL-EU" device="E5-10,5" value="100uF/100V"/>
 <part name="C3" library="amp_soha" deviceset="CPOL-EU" device="E5-10,5" value="100uF/100V"/>
 <part name="C1" library="amp_soha" deviceset="CPOL-EU" device="E5-10,5" value="100uF/100V"/>
 <part name="R1" library="amp_soha" deviceset="R-EU_" device="" value="2k2"/>
 <part name="C2" library="amp_soha" deviceset="CPOL-EU" device="E5-10,5" value="100uF/100V"/>
-<part name="AGND8" library="amp_soha" deviceset="AGND" device=""/>
 <part name="P+2" library="amp_soha" deviceset="+24V" device=""/>
 <part name="IN_L" library="amp_soha" deviceset="PINHD-1X2" device=""/>
 <part name="POT_L" library="amp_soha" deviceset="POTENTIOMETER_" device="" value="100k"/>
@@ -2181,6 +2191,17 @@ general purpose rectifier, 1 A</description>
 <part name="TRIM_R" library="amp_soha" deviceset="RTRIM329" device="W" value="2k"/>
 <part name="TRIM_L" library="amp_soha" deviceset="RTRIM329" device="W" value="2k"/>
 <part name="X1" library="amp_soha" deviceset="W237-103" device=""/>
+<part name="GND1" library="amp_soha" deviceset="GND" device=""/>
+<part name="GND2" library="amp_soha" deviceset="GND" device=""/>
+<part name="GND3" library="amp_soha" deviceset="GND" device=""/>
+<part name="GND4" library="amp_soha" deviceset="GND" device=""/>
+<part name="GND5" library="amp_soha" deviceset="GND" device=""/>
+<part name="GND6" library="amp_soha" deviceset="GND" device=""/>
+<part name="GND7" library="amp_soha" deviceset="GND" device=""/>
+<part name="GND8" library="amp_soha" deviceset="GND" device=""/>
+<part name="GND9" library="amp_soha" deviceset="GND" device=""/>
+<part name="R5" library="amp_soha" deviceset="R-EU_" device="" value="0"/>
+<part name="AGND1" library="amp_soha" deviceset="AGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2189,21 +2210,15 @@ general purpose rectifier, 1 A</description>
 <instances>
 <instance part="B2" gate="G$1" x="30.48" y="25.4" rot="R90"/>
 <instance part="D3" gate="G$1" x="15.24" y="22.86" rot="R90"/>
-<instance part="AGND1" gate="VR1" x="-2.54" y="15.24"/>
 <instance part="D4" gate="G$1" x="15.24" y="12.7" rot="R270"/>
 <instance part="C11" gate="G$1" x="45.72" y="-12.7" rot="R180"/>
-<instance part="AGND2" gate="VR1" x="45.72" y="-22.86"/>
 <instance part="R9" gate="G$1" x="66.04" y="-5.08" rot="R90"/>
 <instance part="R11" gate="G$1" x="55.88" y="-15.24" rot="R90"/>
-<instance part="AGND3" gate="VR1" x="55.88" y="-22.86"/>
 <instance part="C12" gate="G$1" x="73.66" y="-12.7" rot="R180"/>
-<instance part="AGND4" gate="VR1" x="73.66" y="-22.86"/>
 <instance part="R10" gate="G$1" x="81.28" y="-12.7" rot="R90"/>
-<instance part="AGND5" gate="VR1" x="81.28" y="-22.86"/>
 <instance part="LED1" gate="G$1" x="81.28" y="-5.08" rot="R180"/>
 <instance part="IC2" gate="1" x="55.88" y="38.1"/>
 <instance part="IC3" gate="1" x="55.88" y="12.7"/>
-<instance part="AGND6" gate="VR1" x="76.2" y="20.32"/>
 <instance part="C6" gate="G$1" x="45.72" y="33.02"/>
 <instance part="C9" gate="G$1" x="45.72" y="20.32"/>
 <instance part="C10" gate="G$1" x="68.58" y="20.32"/>
@@ -2211,14 +2226,12 @@ general purpose rectifier, 1 A</description>
 <instance part="P+1" gate="1" x="68.58" y="43.18"/>
 <instance part="P-1" gate="1" x="68.58" y="7.62"/>
 <instance part="V1" gate="&quot;" x="88.9" y="-10.16"/>
-<instance part="AGND7" gate="VR1" x="88.9" y="-22.86"/>
 <instance part="B1" gate="G$1" x="30.48" y="66.04" rot="R90"/>
 <instance part="C4" gate="G$1" x="38.1" y="50.8"/>
 <instance part="C3" gate="G$1" x="22.86" y="50.8"/>
 <instance part="C1" gate="G$1" x="53.34" y="68.58"/>
 <instance part="R1" gate="G$1" x="60.96" y="73.66" rot="R180"/>
 <instance part="C2" gate="G$1" x="68.58" y="68.58"/>
-<instance part="AGND8" gate="VR1" x="68.58" y="58.42"/>
 <instance part="P+2" gate="1" x="68.58" y="78.74"/>
 <instance part="IN_L" gate="G$1" x="149.86" y="45.72"/>
 <instance part="POT_L" gate="1" x="160.02" y="38.1" rot="R90"/>
@@ -2274,66 +2287,22 @@ general purpose rectifier, 1 A</description>
 <instance part="TRIM_R" gate="G$1" x="185.42" y="-71.12" rot="R180"/>
 <instance part="TRIM_L" gate="G$1" x="185.42" y="12.7" rot="R180"/>
 <instance part="X1" gate="G$1" x="7.62" y="17.78"/>
+<instance part="GND1" gate="1" x="45.72" y="-22.86"/>
+<instance part="GND2" gate="1" x="55.88" y="-22.86"/>
+<instance part="GND3" gate="1" x="73.66" y="-22.86"/>
+<instance part="GND4" gate="1" x="81.28" y="-22.86"/>
+<instance part="GND5" gate="1" x="88.9" y="-22.86"/>
+<instance part="GND6" gate="1" x="76.2" y="20.32"/>
+<instance part="GND7" gate="1" x="68.58" y="58.42"/>
+<instance part="GND8" gate="1" x="-2.54" y="15.24"/>
+<instance part="GND9" gate="1" x="106.68" y="20.32"/>
+<instance part="R5" gate="G$1" x="111.76" y="22.86" rot="R180"/>
+<instance part="AGND1" gate="VR1" x="116.84" y="20.32"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="AGND" class="0">
-<segment>
-<pinref part="AGND1" gate="VR1" pin="AGND"/>
-<wire x1="5.08" y1="17.78" x2="-2.54" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="X1" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="C11" gate="G$1" pin="+"/>
-<pinref part="AGND2" gate="VR1" pin="AGND"/>
-<wire x1="45.72" y1="-20.32" x2="45.72" y2="-15.24" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R11" gate="G$1" pin="1"/>
-<pinref part="AGND3" gate="VR1" pin="AGND"/>
-</segment>
-<segment>
-<pinref part="C12" gate="G$1" pin="+"/>
-<pinref part="AGND4" gate="VR1" pin="AGND"/>
-<wire x1="73.66" y1="-15.24" x2="73.66" y2="-20.32" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R10" gate="G$1" pin="1"/>
-<pinref part="AGND5" gate="VR1" pin="AGND"/>
-<wire x1="81.28" y1="-20.32" x2="81.28" y2="-17.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="IC3" gate="1" pin="GND"/>
-<pinref part="IC2" gate="1" pin="GND"/>
-<wire x1="55.88" y1="20.32" x2="55.88" y2="25.4" width="0.1524" layer="91"/>
-<junction x="55.88" y="25.4"/>
-<wire x1="55.88" y1="25.4" x2="55.88" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="C6" gate="G$1" pin="-"/>
-<pinref part="C9" gate="G$1" pin="+"/>
-<wire x1="45.72" y1="27.94" x2="45.72" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="25.4" x2="45.72" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="25.4" x2="45.72" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="C7" gate="G$1" pin="-"/>
-<wire x1="55.88" y1="25.4" x2="68.58" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="25.4" x2="68.58" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="C10" gate="G$1" pin="+"/>
-<wire x1="68.58" y1="22.86" x2="68.58" y2="25.4" width="0.1524" layer="91"/>
-<junction x="68.58" y="25.4"/>
-<pinref part="AGND6" gate="VR1" pin="AGND"/>
-<wire x1="68.58" y1="25.4" x2="76.2" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="25.4" x2="76.2" y2="22.86" width="0.1524" layer="91"/>
-<junction x="45.72" y="25.4"/>
-</segment>
-<segment>
-<pinref part="V1" gate="&quot;" pin="H3"/>
-<pinref part="AGND7" gate="VR1" pin="AGND"/>
-</segment>
-<segment>
-<pinref part="C2" gate="G$1" pin="-"/>
-<pinref part="AGND8" gate="VR1" pin="AGND"/>
-<wire x1="68.58" y1="60.96" x2="68.58" y2="63.5" width="0.1524" layer="91"/>
-</segment>
 <segment>
 <pinref part="IN_L" gate="G$1" pin="2"/>
 <pinref part="AGND9" gate="VR1" pin="AGND"/>
@@ -2399,6 +2368,10 @@ general purpose rectifier, 1 A</description>
 <wire x1="246.38" y1="-50.8" x2="246.38" y2="-40.64" width="0.1524" layer="91"/>
 <pinref part="OUT_R" gate="G$1" pin="2"/>
 <wire x1="246.38" y1="-40.64" x2="251.46" y2="-40.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="AGND1" gate="VR1" pin="AGND"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -2819,9 +2792,82 @@ general purpose rectifier, 1 A</description>
 <wire x1="175.26" y1="-35.56" x2="185.42" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="GND" class="0">
+<segment>
+<pinref part="C11" gate="G$1" pin="+"/>
+<wire x1="45.72" y1="-20.32" x2="45.72" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R11" gate="G$1" pin="1"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C12" gate="G$1" pin="+"/>
+<wire x1="73.66" y1="-15.24" x2="73.66" y2="-20.32" width="0.1524" layer="91"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="-20.32" x2="81.28" y2="-17.78" width="0.1524" layer="91"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="V1" gate="&quot;" pin="H3"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="IC3" gate="1" pin="GND"/>
+<pinref part="IC2" gate="1" pin="GND"/>
+<wire x1="55.88" y1="20.32" x2="55.88" y2="25.4" width="0.1524" layer="91"/>
+<junction x="55.88" y="25.4"/>
+<wire x1="55.88" y1="25.4" x2="55.88" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="-"/>
+<pinref part="C9" gate="G$1" pin="+"/>
+<wire x1="45.72" y1="27.94" x2="45.72" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="25.4" x2="45.72" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="25.4" x2="45.72" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="C7" gate="G$1" pin="-"/>
+<wire x1="55.88" y1="25.4" x2="68.58" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="25.4" x2="68.58" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="C10" gate="G$1" pin="+"/>
+<wire x1="68.58" y1="22.86" x2="68.58" y2="25.4" width="0.1524" layer="91"/>
+<junction x="68.58" y="25.4"/>
+<wire x1="68.58" y1="25.4" x2="76.2" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="25.4" x2="76.2" y2="22.86" width="0.1524" layer="91"/>
+<junction x="45.72" y="25.4"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="-"/>
+<wire x1="68.58" y1="60.96" x2="68.58" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="5.08" y1="17.78" x2="-2.54" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="X1" gate="G$1" pin="2"/>
+<pinref part="GND8" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND9" gate="1" pin="GND"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,228.6,53.34,IC1A,V+,+12V,,,"/>
+<approved hash="104,1,228.6,38.1,IC1A,V-,-12V,,,"/>
+<approved hash="115,1,80.9583,-3.81,LED1,,,,,"/>
+<approved hash="115,1,89.2997,-10.16,V1,,,,,"/>
+<approved hash="115,1,147.557,48.3912,IN_L,,,,,"/>
+<approved hash="115,1,251.756,45.8512,OUT_L,,,,,"/>
+<approved hash="115,1,147.557,-35.4288,IN_R,,,,,"/>
+<approved hash="115,1,251.966,-37.9688,OUT_R,,,,,"/>
+<approved hash="115,1,55.88,-4.5974,IC4,,,,,"/>
+<approved hash="115,1,5.31707,19.1812,X1,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
