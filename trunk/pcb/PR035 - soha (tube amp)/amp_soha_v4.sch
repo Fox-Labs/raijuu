@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2142,18 +2142,18 @@ general purpose rectifier, 1 A</description>
 <part name="B2" library="amp_soha" deviceset="DF*S" device="" technology="01"/>
 <part name="D3" library="amp_soha" deviceset="ES1" device=""/>
 <part name="D4" library="amp_soha" deviceset="ES1" device=""/>
-<part name="C11" library="amp_soha" deviceset="CPOL-EU" device="E2.5-6" value="47uF/35V"/>
+<part name="C11" library="amp_soha" deviceset="CPOL-EU" device="E2.5-6" value="100uF/35V"/>
 <part name="R9" library="amp_soha" deviceset="R-EU_" device="" value="1k3"/>
 <part name="R11" library="amp_soha" deviceset="R-EU_" device="" value="11k"/>
-<part name="C12" library="amp_soha" deviceset="CPOL-EU" device="E2.5-6" value="47uF/16V"/>
+<part name="C12" library="amp_soha" deviceset="CPOL-EU" device="E2.5-6" value="100uF/16V"/>
 <part name="R10" library="amp_soha" deviceset="R-EU_" device="" value="1k"/>
 <part name="LED1" library="amp_soha" deviceset="LED" device="5MM"/>
 <part name="IC2" library="amp_soha" deviceset="78XX" device="TO-220" value="7812"/>
 <part name="IC3" library="amp_soha" deviceset="79XX" device="TO-220" value="7912"/>
 <part name="C6" library="amp_soha" deviceset="CPOL-EU" device="E5-10,5" value="470uF/35V"/>
 <part name="C9" library="amp_soha" deviceset="CPOL-EU" device="E5-10,5" value="470uF/35V"/>
-<part name="C10" library="amp_soha" deviceset="CPOL-EU" device="E2.5-6" value="47uF/16V"/>
-<part name="C7" library="amp_soha" deviceset="CPOL-EU" device="E2.5-6" value="47uF/16V"/>
+<part name="C10" library="amp_soha" deviceset="CPOL-EU" device="E2.5-6" value="100uF/16V"/>
+<part name="C7" library="amp_soha" deviceset="CPOL-EU" device="E2.5-6" value="100uF/16V"/>
 <part name="P+1" library="amp_soha" deviceset="+12V" device=""/>
 <part name="P-1" library="amp_soha" deviceset="-12V" device=""/>
 <part name="V1" library="amp_soha" deviceset="12AU7-P" device=""/>
