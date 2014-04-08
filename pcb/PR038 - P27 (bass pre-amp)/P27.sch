@@ -948,6 +948,20 @@ grid 5.08 mm, diameter 13 mm</description>
 <vertex x="-2.15" y="2.1"/>
 </polygon>
 </package>
+<package name="C1206">
+<wire x1="-2.473" y1="1.483" x2="2.473" y2="1.483" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="-1.483" x2="-2.473" y2="-1.483" width="0.0508" layer="39"/>
+<wire x1="-2.473" y1="-1.483" x2="-2.473" y2="1.483" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="1.483" x2="2.473" y2="-1.483" width="0.0508" layer="39"/>
+<wire x1="1.143" y1="0.8382" x2="-1.143" y2="0.8382" width="0.1524" layer="51"/>
+<wire x1="1.143" y1="-0.8382" x2="-1.143" y2="-0.8382" width="0.1524" layer="51"/>
+<smd name="1" x="-1.4" y="0" dx="1.6" dy="2" layer="1"/>
+<smd name="2" x="1.4" y="0" dx="1.6" dy="2" layer="1"/>
+<text x="-1.27" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.7018" y1="-0.9144" x2="-1.1176" y2="0.9144" layer="51"/>
+<rectangle x1="1.1176" y1="-0.9144" x2="1.7018" y2="0.9144" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="R-EU">
@@ -1282,6 +1296,15 @@ grid 5.08 mm, diameter 13 mm</description>
 </technologies>
 </device>
 <device name="075-052X106" package="C075-052X106">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="C1206" package="C1206">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -1673,64 +1696,64 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 </class>
 </classes>
 <parts>
-<part name="R1" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="R2" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="C1" library="P27" deviceset="C-EU" device="C0805K"/>
-<part name="R3" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="R4" library="P27" deviceset="R-EU_" device="0805"/>
+<part name="R1" library="P27" deviceset="R-EU_" device="0805" value="22k"/>
+<part name="R2" library="P27" deviceset="R-EU_" device="0805" value="100k"/>
+<part name="C1" library="P27" deviceset="C-EU" device="C0805K" value="47nF"/>
+<part name="R3" library="P27" deviceset="R-EU_" device="0805" value="2k2"/>
+<part name="R4" library="P27" deviceset="R-EU_" device="0805" value="1M"/>
 <part name="IC1" library="P27" deviceset="NE5532" device="U"/>
 <part name="P+1" library="P27" deviceset="+12V" device=""/>
 <part name="P-1" library="P27" deviceset="-12V" device=""/>
 <part name="AGND1" library="P27" deviceset="AGND" device=""/>
-<part name="R5" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="C2" library="P27" deviceset="C-EU" device="C0805K"/>
+<part name="R5" library="P27" deviceset="R-EU_" device="0805" value="4k7"/>
+<part name="C2" library="P27" deviceset="C-EU" device="C0805K" value="1uF"/>
 <part name="AGND2" library="P27" deviceset="AGND" device=""/>
-<part name="R6" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="C3" library="P27" deviceset="C-EU" device="C0805K"/>
-<part name="R7" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="C4" library="P27" deviceset="C-EU" device="C0805K"/>
-<part name="C5" library="P27" deviceset="C-EU" device="C0805K"/>
-<part name="C6" library="P27" deviceset="C-EU" device="C0805K"/>
-<part name="JP1" library="P27" deviceset="PINHD-1X5" device=""/>
+<part name="R6" library="P27" deviceset="R-EU_" device="0805" value="68k"/>
+<part name="C3" library="P27" deviceset="C-EU" device="C0805K" value="120pF"/>
+<part name="R7" library="P27" deviceset="R-EU_" device="0805" value="33k"/>
+<part name="C4" library="P27" deviceset="C-EU" device="C0805K" value="1nF"/>
+<part name="C5" library="P27" deviceset="C-EU" device="C0805K" value="220nF"/>
+<part name="C6" library="P27" deviceset="C-EU" device="C0805K" value="100nF"/>
+<part name="TRIMPOT" library="P27" deviceset="PINHD-1X5" device=""/>
 <part name="AGND3" library="P27" deviceset="AGND" device=""/>
-<part name="R8" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="R9" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="R10" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="C7" library="P27" deviceset="C-EU" device="C0805K"/>
-<part name="R11" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="C8" library="P27" deviceset="C-EU" device="C0805K"/>
-<part name="C9" library="P27" deviceset="C-EU" device="C0805K"/>
-<part name="R12" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="R13" library="P27" deviceset="R-EU_" device="0805"/>
+<part name="R8" library="P27" deviceset="R-EU_" device="0805" value="2k2"/>
+<part name="R9" library="P27" deviceset="R-EU_" device="0805" value="1M"/>
+<part name="R10" library="P27" deviceset="R-EU_" device="0805" value="4k7"/>
+<part name="C7" library="P27" deviceset="C-EU" device="C0805K" value="1uF"/>
+<part name="R11" library="P27" deviceset="R-EU_" device="0805" value="68k"/>
+<part name="C8" library="P27" deviceset="C-EU" device="C0805K" value="120pF"/>
+<part name="C9" library="P27" deviceset="C-EU" device="C1206" value="2.2uF"/>
+<part name="R12" library="P27" deviceset="R-EU_" device="0805" value="4k7"/>
+<part name="R13" library="P27" deviceset="R-EU_" device="0805" value="220"/>
 <part name="D1" library="P27" deviceset="1N4148" device=""/>
 <part name="D2" library="P27" deviceset="1N4148" device=""/>
 <part name="D3" library="P27" deviceset="1N4148" device=""/>
 <part name="D4" library="P27" deviceset="1N4148" device=""/>
 <part name="AGND4" library="P27" deviceset="AGND" device=""/>
 <part name="AGND5" library="P27" deviceset="AGND" device=""/>
-<part name="JP2" library="P27" deviceset="PINHD-1X2" device=""/>
-<part name="C10" library="P27" deviceset="C-EU" device="C0805K"/>
-<part name="R14" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="T1" library="P27" deviceset="BC847" device=""/>
+<part name="MASTER" library="P27" deviceset="PINHD-1X2" device=""/>
+<part name="C10" library="P27" deviceset="C-EU" device="C1206" value="2.2uF"/>
+<part name="R14" library="P27" deviceset="R-EU_" device="0805" value="2k2"/>
+<part name="T1" library="P27" deviceset="BC847" device="" value="BC549"/>
 <part name="P+2" library="P27" deviceset="+12V" device=""/>
 <part name="P-2" library="P27" deviceset="-12V" device=""/>
-<part name="C11" library="P27" deviceset="C-EU" device="C0805K"/>
-<part name="R15" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="R16" library="P27" deviceset="R-EU_" device="0805"/>
+<part name="C11" library="P27" deviceset="C-EU" device="C1206" value="10uF"/>
+<part name="R15" library="P27" deviceset="R-EU_" device="0805" value="100"/>
+<part name="R16" library="P27" deviceset="R-EU_" device="0805" value="100k"/>
 <part name="AGND6" library="P27" deviceset="AGND" device=""/>
-<part name="JP3" library="P27" deviceset="PINHD-1X2" device=""/>
+<part name="OUT" library="P27" deviceset="PINHD-1X2" device=""/>
 <part name="AGND7" library="P27" deviceset="AGND" device=""/>
-<part name="JP4" library="P27" deviceset="PINHD-1X3" device="180"/>
+<part name="IN" library="P27" deviceset="PINHD-1X3" device="180"/>
 <part name="AGND8" library="P27" deviceset="AGND" device=""/>
-<part name="C12" library="P27" deviceset="C-EU" device="C0805K"/>
-<part name="R17" library="P27" deviceset="R-EU_" device="0805"/>
-<part name="JP5" library="P27" deviceset="PINHD-1X2" device=""/>
+<part name="C12" library="P27" deviceset="C-EU" device="C0805K" value="22nF"/>
+<part name="R17" library="P27" deviceset="R-EU_" device="0805" value="1k"/>
+<part name="BRIGHT" library="P27" deviceset="PINHD-1X2" device=""/>
 <part name="AGND9" library="P27" deviceset="AGND" device=""/>
 <part name="X1" library="P27" deviceset="W237-103" device=""/>
 <part name="B1" library="P27" deviceset="DF*S" device="" technology="01"/>
 <part name="AGND10" library="P27" deviceset="AGND" device=""/>
 <part name="IC2" library="P27" deviceset="LM317" device=""/>
-<part name="U$1" library="P27" deviceset="LM337" device=""/>
+<part name="IC3" library="P27" deviceset="LM337" device=""/>
 <part name="R18" library="P27" deviceset="R-EU_" device="0805" value="2k"/>
 <part name="R19" library="P27" deviceset="R-EU_" device="0805" value="240"/>
 <part name="R20" library="P27" deviceset="R-EU_" device="0805" value="2k"/>
@@ -1767,7 +1790,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <instance part="C4" gate="G$1" x="73.66" y="35.56" rot="R90"/>
 <instance part="C5" gate="G$1" x="73.66" y="20.32" rot="R90"/>
 <instance part="C6" gate="G$1" x="73.66" y="12.7" rot="R90"/>
-<instance part="JP1" gate="A" x="88.9" y="2.54" rot="R270"/>
+<instance part="TRIMPOT" gate="A" x="88.9" y="2.54" rot="R270"/>
 <instance part="AGND3" gate="VR1" x="76.2" y="2.54"/>
 <instance part="R8" gate="G$1" x="104.14" y="35.56" rot="R180"/>
 <instance part="R9" gate="G$1" x="104.14" y="17.78" rot="R270"/>
@@ -1784,7 +1807,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <instance part="D4" gate="1" x="165.1" y="10.16" rot="R270"/>
 <instance part="AGND4" gate="VR1" x="157.48" y="0"/>
 <instance part="AGND5" gate="VR1" x="114.3" y="0"/>
-<instance part="JP2" gate="G$1" x="177.8" y="2.54" rot="R270"/>
+<instance part="MASTER" gate="G$1" x="177.8" y="2.54" rot="R270"/>
 <instance part="C10" gate="G$1" x="185.42" y="33.02" rot="R90"/>
 <instance part="R14" gate="G$1" x="205.74" y="17.78" rot="R90"/>
 <instance part="T1" gate="G$1" x="203.2" y="33.02"/>
@@ -1794,19 +1817,19 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <instance part="R15" gate="G$1" x="223.52" y="25.4" rot="R180"/>
 <instance part="R16" gate="G$1" x="195.58" y="25.4" rot="R90"/>
 <instance part="AGND6" gate="VR1" x="195.58" y="17.78"/>
-<instance part="JP3" gate="G$1" x="236.22" y="22.86"/>
+<instance part="OUT" gate="G$1" x="236.22" y="22.86"/>
 <instance part="AGND7" gate="VR1" x="228.6" y="17.78"/>
-<instance part="JP4" gate="A" x="-12.7" y="35.56" rot="R180"/>
+<instance part="IN" gate="A" x="-12.7" y="35.56" rot="R180"/>
 <instance part="AGND8" gate="VR1" x="-2.54" y="27.94"/>
 <instance part="C12" gate="G$1" x="30.48" y="12.7" rot="R180"/>
 <instance part="R17" gate="G$1" x="30.48" y="5.08" rot="R90"/>
-<instance part="JP5" gate="G$1" x="27.94" y="-7.62" rot="R270"/>
+<instance part="BRIGHT" gate="G$1" x="27.94" y="-7.62" rot="R270"/>
 <instance part="AGND9" gate="VR1" x="20.32" y="-7.62"/>
 <instance part="X1" gate="G$1" x="-7.62" y="-35.56" rot="R180"/>
 <instance part="B1" gate="G$1" x="12.7" y="-35.56"/>
 <instance part="AGND10" gate="VR1" x="-12.7" y="-40.64"/>
 <instance part="IC2" gate="G$1" x="48.26" y="-22.86"/>
-<instance part="U$1" gate="G$1" x="48.26" y="-60.96"/>
+<instance part="IC3" gate="G$1" x="48.26" y="-60.96"/>
 <instance part="R18" gate="G$1" x="60.96" y="-27.94" rot="R90"/>
 <instance part="R19" gate="G$1" x="48.26" y="-38.1" rot="R90"/>
 <instance part="R20" gate="G$1" x="60.96" y="-58.42" rot="R90"/>
@@ -1883,7 +1906,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <pinref part="P-2" gate="1" pin="-12V"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="OUT"/>
+<pinref part="IC3" gate="G$1" pin="OUT"/>
 <pinref part="R20" gate="G$1" pin="1"/>
 <wire x1="55.88" y1="-63.5" x2="60.96" y2="-63.5" width="0.1524" layer="91"/>
 <pinref part="C14" gate="G$1" pin="+"/>
@@ -1904,7 +1927,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <pinref part="AGND2" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="5"/>
+<pinref part="TRIMPOT" gate="A" pin="5"/>
 <wire x1="83.82" y1="5.08" x2="83.82" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="AGND3" gate="VR1" pin="AGND"/>
 <wire x1="83.82" y1="7.62" x2="76.2" y2="7.62" width="0.1524" layer="91"/>
@@ -1934,20 +1957,20 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <pinref part="AGND6" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="G$1" pin="2"/>
+<pinref part="OUT" gate="G$1" pin="2"/>
 <pinref part="AGND7" gate="VR1" pin="AGND"/>
 <wire x1="233.68" y1="22.86" x2="228.6" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="22.86" x2="228.6" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP4" gate="A" pin="1"/>
+<pinref part="IN" gate="A" pin="1"/>
 <wire x1="-10.16" y1="33.02" x2="-2.54" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="AGND8" gate="VR1" pin="AGND"/>
 <wire x1="-2.54" y1="33.02" x2="-2.54" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="AGND9" gate="VR1" pin="AGND"/>
-<pinref part="JP5" gate="G$1" pin="2"/>
+<pinref part="BRIGHT" gate="G$1" pin="2"/>
 <wire x1="20.32" y1="-5.08" x2="20.32" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="-2.54" x2="27.94" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="-2.54" x2="27.94" y2="-5.08" width="0.1524" layer="91"/>
@@ -2039,7 +2062,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <net name="N$7" class="0">
 <segment>
 <pinref part="C6" gate="G$1" pin="2"/>
-<pinref part="JP1" gate="A" pin="4"/>
+<pinref part="TRIMPOT" gate="A" pin="4"/>
 <wire x1="78.74" y1="12.7" x2="86.36" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="12.7" x2="86.36" y2="5.08" width="0.1524" layer="91"/>
 </segment>
@@ -2047,7 +2070,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <net name="N$9" class="0">
 <segment>
 <pinref part="C5" gate="G$1" pin="2"/>
-<pinref part="JP1" gate="A" pin="3"/>
+<pinref part="TRIMPOT" gate="A" pin="3"/>
 <wire x1="78.74" y1="20.32" x2="88.9" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="20.32" x2="88.9" y2="5.08" width="0.1524" layer="91"/>
 </segment>
@@ -2055,7 +2078,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <net name="N$10" class="0">
 <segment>
 <pinref part="C4" gate="G$1" pin="2"/>
-<pinref part="JP1" gate="A" pin="2"/>
+<pinref part="TRIMPOT" gate="A" pin="2"/>
 <wire x1="78.74" y1="35.56" x2="91.44" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="35.56" x2="91.44" y2="5.08" width="0.1524" layer="91"/>
 </segment>
@@ -2068,7 +2091,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 </net>
 <net name="N$13" class="0">
 <segment>
-<pinref part="JP1" gate="A" pin="1"/>
+<pinref part="TRIMPOT" gate="A" pin="1"/>
 <wire x1="93.98" y1="5.08" x2="93.98" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="27.94" x2="93.98" y2="35.56" width="0.1524" layer="91"/>
@@ -2129,7 +2152,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <pinref part="R12" gate="G$1" pin="2"/>
 <pinref part="R13" gate="G$1" pin="2"/>
 <wire x1="154.94" y1="33.02" x2="157.48" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="G$1" pin="2"/>
+<pinref part="MASTER" gate="G$1" pin="2"/>
 <wire x1="157.48" y1="33.02" x2="177.8" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="33.02" x2="177.8" y2="5.08" width="0.1524" layer="91"/>
 <junction x="157.48" y="33.02"/>
@@ -2161,7 +2184,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 </net>
 <net name="N$27" class="0">
 <segment>
-<pinref part="JP2" gate="G$1" pin="1"/>
+<pinref part="MASTER" gate="G$1" pin="1"/>
 <wire x1="180.34" y1="5.08" x2="180.34" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="33.02" x2="182.88" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="1"/>
@@ -2198,21 +2221,21 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 </net>
 <net name="N$19" class="0">
 <segment>
-<pinref part="JP3" gate="G$1" pin="1"/>
+<pinref part="OUT" gate="G$1" pin="1"/>
 <pinref part="R15" gate="G$1" pin="1"/>
 <wire x1="233.68" y1="25.4" x2="228.6" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$25" class="0">
 <segment>
-<pinref part="JP4" gate="A" pin="3"/>
+<pinref part="IN" gate="A" pin="3"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="-10.16" y1="38.1" x2="2.54" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$26" class="0">
 <segment>
-<pinref part="JP4" gate="A" pin="2"/>
+<pinref part="IN" gate="A" pin="2"/>
 <wire x1="-10.16" y1="35.56" x2="0" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="0" y1="35.56" x2="0" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -2228,7 +2251,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <net name="N$30" class="0">
 <segment>
 <pinref part="R17" gate="G$1" pin="1"/>
-<pinref part="JP5" gate="G$1" pin="1"/>
+<pinref part="BRIGHT" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="0" x2="30.48" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -2270,7 +2293,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <pinref part="B1" gate="G$1" pin="-"/>
 <wire x1="7.62" y1="-35.56" x2="5.08" y2="-35.56" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="-35.56" x2="5.08" y2="-63.5" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="IN"/>
+<pinref part="IC3" gate="G$1" pin="IN"/>
 <wire x1="5.08" y1="-63.5" x2="33.02" y2="-63.5" width="0.1524" layer="91"/>
 <pinref part="C15" gate="G$1" pin="+"/>
 <wire x1="33.02" y1="-63.5" x2="40.64" y2="-63.5" width="0.1524" layer="91"/>
@@ -2292,7 +2315,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <segment>
 <pinref part="R20" gate="G$1" pin="2"/>
 <wire x1="60.96" y1="-53.34" x2="48.26" y2="-53.34" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="ADJ"/>
+<pinref part="IC3" gate="G$1" pin="ADJ"/>
 <wire x1="48.26" y1="-53.34" x2="48.26" y2="-55.88" width="0.1524" layer="91"/>
 <pinref part="R21" gate="G$1" pin="1"/>
 <junction x="48.26" y="-53.34"/>
