@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -800,17 +800,17 @@ design rules under a new name.</description>
 <element name="R17" library="P27" package="0207/7" value="1k" x="21.59" y="12.7" rot="R90"/>
 <element name="BRIGHT" library="P27" package="1X02" value="" x="15.24" y="5.08" rot="R180"/>
 <element name="X1" library="P27" package="W237-103" value="" x="8.89" y="33.655" rot="R270"/>
-<element name="IC2" library="P27" package="78XXS" value="" x="5.715" y="48.26" rot="R90"/>
-<element name="C13" library="P27" package="E2,5-6" value="" x="13.97" y="51.435" rot="R90"/>
-<element name="C14" library="P27" package="E2,5-6" value="" x="13.335" y="22.225" rot="R270"/>
-<element name="C15" library="P27" package="E2,5-6" value="" x="13.335" y="15.875" rot="R270"/>
-<element name="C16" library="P27" package="E2,5-6" value="" x="13.97" y="45.085" rot="R90"/>
-<element name="IC3" library="P27" package="79XXS" value="" x="5.715" y="19.05" rot="R90"/>
+<element name="IC2" library="P27" package="78XXS" value="7815" x="5.715" y="48.26" rot="R90"/>
+<element name="C13" library="P27" package="E2,5-6" value="220uF/25V" x="13.97" y="51.435" rot="R90"/>
+<element name="C14" library="P27" package="E2,5-6" value="220uF/25V" x="13.335" y="22.225" rot="R270"/>
+<element name="C15" library="P27" package="E2,5-6" value="220uF/25V" x="13.335" y="15.875" rot="R270"/>
+<element name="C16" library="P27" package="E2,5-6" value="220uF/25V" x="13.97" y="45.085" rot="R90"/>
+<element name="IC3" library="P27" package="79XXS" value="7915" x="5.715" y="19.05" rot="R90"/>
 <element name="Q1" library="P27" package="TO92" value="BC337" x="38.1" y="33.655" rot="R270"/>
-<element name="D5" library="P27" package="DO41-7" value="1N4004D" x="16.51" y="37.465" rot="R180"/>
-<element name="D6" library="P27" package="DO41-7" value="1N4004D" x="16.51" y="34.925" rot="R180"/>
-<element name="D7" library="P27" package="DO41-7" value="1N4004D" x="16.51" y="29.845"/>
-<element name="D8" library="P27" package="DO41-7" value="1N4004D" x="16.51" y="32.385"/>
+<element name="D5" library="P27" package="DO41-7" value="1N4007" x="16.51" y="37.465" rot="R180"/>
+<element name="D6" library="P27" package="DO41-7" value="1N4007" x="16.51" y="34.925" rot="R180"/>
+<element name="D7" library="P27" package="DO41-7" value="1N4007" x="16.51" y="29.845"/>
+<element name="D8" library="P27" package="DO41-7" value="1N4007" x="16.51" y="32.385"/>
 </elements>
 <signals>
 <signal name="N$1">
