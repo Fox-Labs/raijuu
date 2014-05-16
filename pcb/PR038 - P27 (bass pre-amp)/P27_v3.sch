@@ -1757,10 +1757,10 @@ general purpose rectifier, 1 A</description>
 <part name="C9" library="P27" deviceset="C-EU" device="050-025X075" value="2.2uF"/>
 <part name="R12" library="P27" deviceset="R-EU_" device="0207/7" value="4k7"/>
 <part name="R13" library="P27" deviceset="R-EU_" device="0207/7" value="220"/>
-<part name="D1" library="P27" deviceset="1N4004" device="D"/>
-<part name="D2" library="P27" deviceset="1N4004" device="D"/>
-<part name="D3" library="P27" deviceset="1N4004" device="D"/>
-<part name="D4" library="P27" deviceset="1N4004" device="D"/>
+<part name="D1" library="P27" deviceset="1N4004" device="D" value="1N4148"/>
+<part name="D2" library="P27" deviceset="1N4004" device="D" value="1N4148"/>
+<part name="D3" library="P27" deviceset="1N4004" device="D" value="1N4148"/>
+<part name="D4" library="P27" deviceset="1N4004" device="D" value="1N4148"/>
 <part name="AGND4" library="P27" deviceset="AGND" device=""/>
 <part name="AGND5" library="P27" deviceset="AGND" device=""/>
 <part name="MASTER" library="P27" deviceset="PINHD-1X2" device=""/>
@@ -1791,7 +1791,7 @@ general purpose rectifier, 1 A</description>
 <part name="P+3" library="P27" deviceset="+12V" device=""/>
 <part name="P-3" library="P27" deviceset="-12V" device=""/>
 <part name="IC3" library="P27" deviceset="79XX" device="TO-220" value="7915"/>
-<part name="Q1" library="P27" deviceset="BC337" device=""/>
+<part name="Q1" library="P27" deviceset="BC337" device="" value="BC549"/>
 <part name="D5" library="P27" deviceset="1N4004" device="D" value="1N4007"/>
 <part name="D6" library="P27" deviceset="1N4004" device="D" value="1N4007"/>
 <part name="D7" library="P27" deviceset="1N4004" device="D" value="1N4007"/>
