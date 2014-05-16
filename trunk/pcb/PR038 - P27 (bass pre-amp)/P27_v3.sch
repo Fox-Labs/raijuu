@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1782,20 +1782,20 @@ general purpose rectifier, 1 A</description>
 <part name="AGND9" library="P27" deviceset="AGND" device=""/>
 <part name="X1" library="P27" deviceset="W237-103" device=""/>
 <part name="AGND10" library="P27" deviceset="AGND" device=""/>
-<part name="IC2" library="P27" deviceset="78XX" device="TO-220"/>
-<part name="C13" library="P27" deviceset="CPOL-EU" device="E2.5-6"/>
-<part name="C14" library="P27" deviceset="CPOL-EU" device="E2.5-6"/>
-<part name="C15" library="P27" deviceset="CPOL-EU" device="E2.5-6"/>
-<part name="C16" library="P27" deviceset="CPOL-EU" device="E2.5-6"/>
+<part name="IC2" library="P27" deviceset="78XX" device="TO-220" value="7815"/>
+<part name="C13" library="P27" deviceset="CPOL-EU" device="E2.5-6" value="220uF/25V"/>
+<part name="C14" library="P27" deviceset="CPOL-EU" device="E2.5-6" value="220uF/25V"/>
+<part name="C15" library="P27" deviceset="CPOL-EU" device="E2.5-6" value="220uF/25V"/>
+<part name="C16" library="P27" deviceset="CPOL-EU" device="E2.5-6" value="220uF/25V"/>
 <part name="AGND11" library="P27" deviceset="AGND" device=""/>
 <part name="P+3" library="P27" deviceset="+12V" device=""/>
 <part name="P-3" library="P27" deviceset="-12V" device=""/>
-<part name="IC3" library="P27" deviceset="79XX" device="TO-220"/>
+<part name="IC3" library="P27" deviceset="79XX" device="TO-220" value="7915"/>
 <part name="Q1" library="P27" deviceset="BC337" device=""/>
-<part name="D5" library="P27" deviceset="1N4004" device="D"/>
-<part name="D6" library="P27" deviceset="1N4004" device="D"/>
-<part name="D7" library="P27" deviceset="1N4004" device="D"/>
-<part name="D8" library="P27" deviceset="1N4004" device="D"/>
+<part name="D5" library="P27" deviceset="1N4004" device="D" value="1N4007"/>
+<part name="D6" library="P27" deviceset="1N4004" device="D" value="1N4007"/>
+<part name="D7" library="P27" deviceset="1N4004" device="D" value="1N4007"/>
+<part name="D8" library="P27" deviceset="1N4004" device="D" value="1N4007"/>
 </parts>
 <sheets>
 <sheet>
