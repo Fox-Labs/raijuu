@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -1048,7 +1048,7 @@ type 0207, grid 7.5 mm</description>
 <part name="AGND11" library="amp" deviceset="AGND" device="" value="AGND"/>
 <part name="AGND6" library="amp" deviceset="AGND" device="" value="AGND"/>
 <part name="AGND10" library="amp" deviceset="AGND" device="" value="AGND"/>
-<part name="U1" library="amp" deviceset="PGA2311" device=""/>
+<part name="U1" library="amp" deviceset="PGA2311" device="" value="PGA2311"/>
 <part name="AGND4" library="amp" deviceset="AGND" device="" value="AGND"/>
 <part name="C5" library="amp" deviceset="C-EU" device="C0805K" value="100nF"/>
 <part name="C6" library="amp" deviceset="C-EU" device="C0805K" value="10uF"/>
@@ -1056,7 +1056,7 @@ type 0207, grid 7.5 mm</description>
 <part name="C8" library="amp" deviceset="C-EU" device="C0805K" value="10uF"/>
 <part name="IC1" library="amp" deviceset="LM317" device=""/>
 <part name="IC2" library="amp" deviceset="LM337" device=""/>
-<part name="R3" library="amp" deviceset="R-EU_" device=""/>
+<part name="R3" library="amp" deviceset="R-EU_" device="" value="220"/>
 <part name="P+7" library="amp" deviceset="+5V" device=""/>
 <part name="P+8" library="amp" deviceset="+5V" device=""/>
 <part name="AGND5" library="amp" deviceset="AGND" device="" value="AGND"/>
@@ -1064,25 +1064,25 @@ type 0207, grid 7.5 mm</description>
 <part name="AGND9" library="amp" deviceset="AGND" device="" value="AGND"/>
 <part name="AGND12" library="amp" deviceset="AGND" device="" value="AGND"/>
 <part name="P+6" library="amp" deviceset="+5V" device=""/>
-<part name="R1" library="amp" deviceset="R-EU_" device=""/>
-<part name="R2" library="amp" deviceset="R-EU_" device=""/>
-<part name="R4" library="amp" deviceset="R-EU_" device=""/>
+<part name="R1" library="amp" deviceset="R-EU_" device="" value="680"/>
+<part name="R2" library="amp" deviceset="R-EU_" device="" value="680"/>
+<part name="R4" library="amp" deviceset="R-EU_" device="" value="220"/>
 <part name="P+1" library="amp" deviceset="+12V" device=""/>
 <part name="P-1" library="amp" deviceset="-12V" device=""/>
 <part name="P+2" library="amp" deviceset="+5V" device=""/>
-<part name="C1" library="amp" deviceset="C-EU" device="C0805K"/>
-<part name="C2" library="amp" deviceset="C-EU" device="C0805K"/>
-<part name="C4" library="amp" deviceset="C-EU" device="C0805K"/>
-<part name="C3" library="amp" deviceset="C-EU" device="C0805K"/>
+<part name="C1" library="amp" deviceset="C-EU" device="C0805K" value="1uF"/>
+<part name="C2" library="amp" deviceset="C-EU" device="C0805K" value="1uF"/>
+<part name="C4" library="amp" deviceset="C-EU" device="C0805K" value="10uF"/>
+<part name="C3" library="amp" deviceset="C-EU" device="C0805K" value="10uF"/>
 <part name="AGND1" library="amp" deviceset="AGND" device=""/>
 <part name="GND2" library="amp" deviceset="GND" device=""/>
-<part name="R5" library="amp" deviceset="R-EU_" device=""/>
+<part name="R5" library="amp" deviceset="R-EU_" device="" value="0"/>
 <part name="AGND3" library="amp" deviceset="AGND" device="" value="AGND"/>
 <part name="GND1" library="amp" deviceset="GND" device=""/>
 <part name="X2" library="amp" deviceset="22-23-2021" device="" value=""/>
 <part name="GND3" library="amp" deviceset="GND" device=""/>
-<part name="C9" library="amp" deviceset="C-EU" device="C0805K"/>
-<part name="C10" library="amp" deviceset="C-EU" device="C0805K"/>
+<part name="C9" library="amp" deviceset="C-EU" device="C0805K" value="10uF"/>
+<part name="C10" library="amp" deviceset="C-EU" device="C0805K" value="100nF"/>
 <part name="GND4" library="amp" deviceset="GND" device=""/>
 <part name="GND5" library="amp" deviceset="GND" device=""/>
 <part name="JP1" library="amp" deviceset="PINHD-1X6" device=""/>
@@ -1220,12 +1220,12 @@ type 0207, grid 7.5 mm</description>
 <attribute name="VALUE" x="-11.176" y="150.241" size="1.778" layer="96"/>
 </instance>
 <instance part="C2" gate="G$1" x="-12.7" y="134.62" smashed="yes" rot="R180">
-<attribute name="NAME" x="-14.224" y="134.239" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-14.224" y="139.319" size="1.778" layer="96" rot="R180"/>
+<attribute name="NAME" x="-11.176" y="137.541" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-11.176" y="132.461" size="1.778" layer="96"/>
 </instance>
 <instance part="C4" gate="G$1" x="15.24" y="134.62" smashed="yes" rot="R180">
-<attribute name="NAME" x="13.716" y="134.239" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="13.716" y="139.319" size="1.778" layer="96" rot="R180"/>
+<attribute name="NAME" x="16.764" y="137.541" size="1.778" layer="95"/>
+<attribute name="VALUE" x="16.764" y="132.461" size="1.778" layer="96"/>
 </instance>
 <instance part="C3" gate="G$1" x="15.24" y="154.94" smashed="yes">
 <attribute name="NAME" x="16.764" y="155.321" size="1.778" layer="95"/>
