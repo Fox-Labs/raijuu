@@ -1,0 +1,434 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              usbdrv/usbdrv.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              usbdrv/usbdrv.o (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcmp.o)
+                              2nsnes.o (memcmp)
+
+Allocating common symbols
+Common symbol       size              file
+
+usbTxBuf            0xb               usbdrv/usbdrv.o
+usbTxStatus1        0xc               usbdrv/usbdrv.o
+usbDeviceAddr       0x1               usbdrv/usbdrv.o
+usbRxToken          0x1               usbdrv/usbdrv.o
+usbInputBufOffset   0x1               usbdrv/usbdrv.o
+usbMsgPtr           0x2               usbdrv/usbdrv.o
+usbRxLen            0x1               usbdrv/usbdrv.o
+usbNewDeviceAddr    0x1               usbdrv/usbdrv.o
+usbCurrentTok       0x1               usbdrv/usbdrv.o
+usbConfiguration    0x1               usbdrv/usbdrv.o
+usbRxBuf            0x16              usbdrv/usbdrv.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+LOAD usbdrv/usbdrv.o
+LOAD usbdrv/usbdrvasm.o
+LOAD usbdrv/oddebug.o
+LOAD main.o
+LOAD 2nsnes.o
+LOAD devdesc.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0xe0c
+ *(.vectors)
+ .vectors       0x00000000       0x68 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x00000068        0x4 usbdrv/usbdrv.o
+                0x00000068                usbDescriptorString0
+ .progmem.data  0x0000006c        0xa main.o
+                0x0000006c                usbDescriptorStringSerialNumber
+ .progmem.data  0x00000076      0x13b 2nsnes.o
+                0x000000a3                two_nsnes_usbHidReportDescriptor
+                0x000000fd                fournsnes_usbHidReportDescriptor
+                0x00000076                one_nsnes_usbHidReportDescriptor
+ .progmem.data  0x000001b1       0x12 devdesc.o
+                0x000001b1                usbDescrDevice
+                0x000001c4                . = ALIGN (0x2)
+ *fill*         0x000001c3        0x1 00
+                0x000001c4                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000001c4        0x0 linker stubs
+ *(.trampolines*)
+                0x000001c4                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000001c4                __ctors_start = .
+ *(.ctors)
+                0x000001c4                __ctors_end = .
+                0x000001c4                __dtors_start = .
+ *(.dtors)
+                0x000001c4                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000001c4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+                0x000001c4                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000001c4        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000001d0       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x000001d0                __do_copy_data
+ .init4         0x000001e6       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x000001e6                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000001f6        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+ *(.init9)
+ *(.text)
+ .text          0x000001fe        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+                0x000001fe                __vector_22
+                0x000001fe                __vector_24
+                0x000001fe                __vector_12
+                0x000001fe                __bad_interrupt
+                0x000001fe                __vector_6
+                0x000001fe                __vector_3
+                0x000001fe                __vector_23
+                0x000001fe                __vector_25
+                0x000001fe                __vector_11
+                0x000001fe                __vector_13
+                0x000001fe                __vector_17
+                0x000001fe                __vector_19
+                0x000001fe                __vector_7
+                0x000001fe                __vector_5
+                0x000001fe                __vector_4
+                0x000001fe                __vector_9
+                0x000001fe                __vector_2
+                0x000001fe                __vector_21
+                0x000001fe                __vector_15
+                0x000001fe                __vector_8
+                0x000001fe                __vector_14
+                0x000001fe                __vector_10
+                0x000001fe                __vector_16
+                0x000001fe                __vector_18
+                0x000001fe                __vector_20
+ .text          0x00000202      0x26a usbdrv/usbdrv.o
+                0x0000021c                usbPoll
+                0x00000426                usbSetInterrupt
+                0x00000202                usbInit
+ .text          0x0000046c      0x2a6 usbdrv/usbdrvasm.o
+                0x0000049e                __vector_1
+                0x0000046c                usbCrc16
+                0x00000496                usbCrc16Append
+ .text          0x00000712        0x0 usbdrv/oddebug.o
+ .text          0x00000712      0x25a main.o
+                0x00000712                usbFunctionDescriptor
+                0x0000076e                usbFunctionSetup
+                0x000007ae                main
+ .text          0x0000096c      0x47c 2nsnes.o
+                0x0000096c                disableLiveAutodetect
+                0x00000c1e                fournsnesGetGamepad
+ .text          0x00000de8        0x6 devdesc.o
+                0x00000de8                getUsbDescrDevice_size
+ .text          0x00000dee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000dee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000dee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000dee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcmp.o)
+                0x00000dee                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x00000dee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000dee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000dee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00000dee       0x1a c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcmp.o)
+                0x00000dee                memcmp
+                0x00000e08                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000e08        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000e08                exit
+                0x00000e08                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000e08        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000e0c                _etext = .
+
+.data           0x00800100       0x50 load address 0x00000e0c
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+ .data          0x00800100        0x2 usbdrv/usbdrv.o
+                0x00800100                usbTxLen
+ .data          0x00800102        0x0 usbdrv/usbdrvasm.o
+ .data          0x00800102        0x0 usbdrv/oddebug.o
+ .data          0x00800102       0x3c main.o
+                0x0080011c                my_usbDescriptorConfiguration
+                0x00800102                usbDescriptorStringDevice
+ .data          0x0080013e       0x12 2nsnes.o
+                0x0080013e                SnesGamepad
+ .data          0x00800150        0x0 devdesc.o
+ .data          0x00800150        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800150        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800150        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00800150        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcmp.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800150                . = ALIGN (0x2)
+                0x00800150                _edata = .
+                0x00800150                PROVIDE (__data_end, .)
+
+.bss            0x00800150       0x5f
+                0x00800150                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800150        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+ .bss           0x00800150        0x1 usbdrv/usbdrv.o
+ .bss           0x00800151        0x0 usbdrv/usbdrvasm.o
+ .bss           0x00800151        0x0 usbdrv/oddebug.o
+ .bss           0x00800151       0x16 main.o
+                0x00800151                usbDescriptorConfiguration
+ .bss           0x00800167       0x12 2nsnes.o
+ .bss           0x00800179        0x0 devdesc.o
+ .bss           0x00800179        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800179        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800179        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800179        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcmp.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00800179       0x36 usbdrv/usbdrv.o
+                0x00800179                usbTxBuf
+                0x00800184                usbTxStatus1
+                0x00800190                usbDeviceAddr
+                0x00800191                usbRxToken
+                0x00800192                usbInputBufOffset
+                0x00800193                usbMsgPtr
+                0x00800195                usbRxLen
+                0x00800196                usbNewDeviceAddr
+                0x00800197                usbCurrentTok
+                0x00800198                usbConfiguration
+                0x00800199                usbRxBuf
+                0x008001af                PROVIDE (__bss_end, .)
+                0x00000e0c                __data_load_start = LOADADDR (.data)
+                0x00000e5c                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008001af        0x0
+                0x008001af                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008001af                PROVIDE (__noinit_end, .)
+                0x008001af                _end = .
+                0x008001af                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(2nes2usb-m168.elf elf32-avr)
+LOAD linker stubs
