@@ -148,8 +148,8 @@ rename it to "usbconfig.h". Then edit it accordingly.
 #define USB_CFG_DEVICE_VERSION  0x09, 0x01
 /* Version number of the device: Minor number first, then major number.
  */
-#define USB_CFG_VENDOR_NAME     'r', 'a', 'p', 'h', 'n', 'e', 't', '.', 'n', 'e', 't'
-#define USB_CFG_VENDOR_NAME_LEN 11
+//#define USB_CFG_VENDOR_NAME     'r', 'a', 'p', 'h', 'n', 'e', 't', '.', 'n', 'e', 't'
+//#define USB_CFG_VENDOR_NAME_LEN 11
 /* These two values define the vendor name returned by the USB device. The name
  * must be given as a list of characters under single quotes. The characters
  * are interpreted as Unicode (UTF-16) entities.
@@ -256,11 +256,12 @@ rename it to "usbconfig.h". Then edit it accordingly.
  * Conveniently all 16 characters long so we can use fixed length. 
  * USB strings use two bytes per character.
  */
-#define DEVICE_STRING_LENGTH	16 /* 16 characters */
-#define DEFAULT_PROD_STRING	'(','S',')','N','E','S','/','A','t','a','r','i','_','U','S','B' // (S)NES/Atari_USB
-#define MTAP_PROD_STRING	'S','e','g','a','M','u','l','t','i','t','a','p','_','U','S','B' // SegaMultitap_USB
-#define MOUSE_PROD_STRING	'S','N','E','S','M','o','u','s','e','_','t','o','_','U','S','B' // SNESMouse_to_USB
-#define TG16_PROD_STRING	'N','e','c','-','P','c',' ','e','n','g','i','n','e',' ',' ',' '
+#define DEVICE_STRING_LENGTH	12 /* 12 characters */
+#define DEFAULT_PROD_STRING	'S','t','h','e','f','a','n','e','i','r','a','s' // Sthefaneiras
+//#define DEFAULT_PROD_STRING	'(','S',')','N','E','S','/','A','t','a','r','i','_','U','S','B' // (S)NES/Atari_USB
+//#define MTAP_PROD_STRING	'S','e','g','a','M','u','l','t','i','t','a','p','_','U','S','B' // SegaMultitap_USB
+//#define MOUSE_PROD_STRING	'S','N','E','S','M','o','u','s','e','_','t','o','_','U','S','B' // SNESMouse_to_USB
+//#define TG16_PROD_STRING	'N','e','c','-','P','c',' ','e','n','g','i','n','e',' ',' ',' '
 
 #define USB_CFG_DESCR_PROPS_STRING_PRODUCT          (USB_PROP_LENGTH(((DEVICE_STRING_LENGTH+2)*2)) | USB_PROP_IS_RAM)
 

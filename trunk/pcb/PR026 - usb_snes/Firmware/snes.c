@@ -115,23 +115,7 @@ static char snesInit(void)
         16              none (always high)
  *
  */
- 
- /*
- *
-XBOX 360 Controller
-A = Button 1
-B = Button 2
-X = Button 3
-Y = Button 4
 
-Left Bumper = Button 5
-Right Bumper = Button 6
-
-Back = Button 7
-Start = Button 8
- *
- */
- 
 static void snesUpdate(void)
 {
 	int i;
@@ -216,18 +200,14 @@ static char snesBuildReport(unsigned char *reportBuffer, char id)
 		reportBuffer[1]=y;
 
 		reportBuffer[2] =	(lrcb1&0x80)>>7; //Clock 1 = B //USB = 1
-		reportBuffer[2] |=	(lrcb1&0x40)>>5; //Clock 2 = Y //USB = 2
-		reportBuffer[2] |=	(lrcb1&0x20)>>3; //Clock 3 = Select //USB = 3
-		reportBuffer[2] |=	(lrcb1&0x10)>>1; //Clock 4 = Start //USB = 4
-
-		if (!nes_mode)
-		{			
-			//Clock 9 = A //USB = 5
-			//Clock 10 = X //USB = 6
-			//Clock 11 = L //USB = 7
-			//Clock 12 = R //USB = 8
-			reportBuffer[2] |=	(lrcb2&0x0f)<<4;	
-		}
+        reportBuffer[2] |=	(lrcb2&0x80)>>6; //Clock 9 = A //USB = 2
+		reportBuffer[2] |=	(lrcb1&0x40)>>4; //Clock 2 = Y //USB = 3
+        reportBuffer[2] |=	(lrcb2&0x40)>>3; //Clock 10 = X //USB = 4
+        
+        reportBuffer[2] |=	(lrcb2&0x20)>>1; //Clock 11 = L //USB = 5
+        reportBuffer[2] |=	(lrcb2&0x10)<<1; //Clock 12 = R //USB = 6
+		reportBuffer[2] |=	(lrcb1&0x20)<<1; //Clock 3 = Select //USB = 7
+		reportBuffer[2] |=	(lrcb1&0x10)<<3; //Clock 4 = Start //USB = 8
 	}
 	memcpy(last_reported_controller_bytes, 
 			last_read_controller_bytes, 
