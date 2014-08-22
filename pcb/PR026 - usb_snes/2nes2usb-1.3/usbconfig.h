@@ -244,8 +244,8 @@ rename it to "usbconfig.h". Then edit it accordingly.
  * Conveniently all 16 characters long so we can use fixed length. 
  * USB strings use two bytes per character.
  */
-#define DEVICE_STRING_LENGTH	12 /* 12 characters */
-#define DEFAULT_PROD_STRING	'S','t','h','e','f','a','n','e','i','r','a','s' // Sthefaneiras
+#define DEVICE_STRING_LENGTH	5 /* 12 characters */
+#define DEFAULT_PROD_STRING	'P','e','s','s','e' // Pesse
 
 #define USB_CFG_DESCR_PROPS_STRING_PRODUCT          (USB_PROP_LENGTH(((DEVICE_STRING_LENGTH+2)*2)) | USB_PROP_IS_RAM)
 
