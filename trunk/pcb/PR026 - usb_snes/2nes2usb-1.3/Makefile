@@ -1,20 +1,14 @@
 CC=avr-gcc
-AS=$(CC)
 LD=$(CC)
-PROGNAME=2nes2usb-m168
-CPU=atmega168
-
-CFLAGS=-Wall -Os -Iusbdrv -I. -mmcu=$(CPU) -DF_CPU=12000000L #-DDEBUG_LEVEL=1
-LDFLAGS=-Wl,-Map=$(PROGNAME).map -mmcu=$(CPU) 
-AVRDUDE=avrdude -p m168 -P usb -c avrispmkII
-
-OBJS=usbdrv/usbdrv.o usbdrv/usbdrvasm.o usbdrv/oddebug.o main.o 2nsnes.o devdesc.o
-
-HEXFILE=$(PROGNAME).hex
-ELFFILE=$(PROGNAME).elf
+CFLAGS=-Wall -Os -Iusbdrv -I. -mmcu=atmega8 -DF_CPU=12000000L
+LDFLAGS=-mmcu=atmega8
+UISP= uisp -dprog=stk500 -dpart=atmega8 -dserial=/dev/avr
+COMMON_OBJS = usbdrv/usbdrv.o usbdrv/usbdrvasm.o usbdrv/oddebug.o main.o
+OBJECTS = usbdrv/usbdrv.o usbdrv/usbdrvasm.o usbdrv/oddebug.o main.o 2nsnes.o devdesc.o
+HEXFILE=main.hex
 
 # symbolic targets:
-all: $(HEXFILE)
+all:	$(HEXFILE)
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -29,57 +23,46 @@ all: $(HEXFILE)
 .c.s:
 	$(CC) $(CFLAGS) -S $< -o $@
 
+main.o: main.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(HEXFILE) main.lst main.obj main.cof main.list main.map main.eep.hex main.bin *.o usbdrv/*.o main.s usbdrv/oddebug.s usbdrv/usbdrv.s
 
 # file targets:
-$(ELFFILE): $(OBJS)
-	$(LD) $(LDFLAGS) -o $(ELFFILE) $(OBJS)
-
-$(HEXFILE):	$(ELFFILE)
-	rm -f $(HEXFILE) 
-	avr-objcopy -j .text -j .data -O ihex $(ELFFILE) $(HEXFILE)
-	./checksize $(ELFFILE)
+main.bin:	$(COMMON_OBJS) 2nsnes.o devdesc.o
+	$(LD) $(LDFLAGS) -o main.bin $(OBJECTS) -Wl,-Map=main.map
 
 
-flash: $(HEXFILE)
-	$(AVRDUDE) -Uflash:w:$(HEXFILE) -B 1.0
+$(HEXFILE):	main.bin
+	rm -f $(HEXFILE) main.eep.hex
+	avr-objcopy -j .text -j .data -O ihex main.bin $(HEXFILE)
+	./checksize main.bin
 
-# Extended fuse byte (Datasheet Table 28-5)
-#
-#  -  -  -  -  -  BOOTSZ1  BOOTSZ0  BOOTRST
-#  0  0  0  0  0     0        0        1
-#
-EFUSE=0x01
+flash:
+	avrdude -p m8 -P usb -c avrispmkII -Uflash:w:$(HEXFILE) -B 2.0
 
-# Fuse high byte (Datasheet Table 28-6)
-#
-# RSTDISBL  DWEN  SPIEN   WDTON  EESAVE  BODLEVEL2  BODLEVEL1  BODLEVEL0
-#    1        1      0      1      0         1          0          1
-#
-HFUSE=0xd5
-
-# Fuse low byte (Datasheet Table 28-7)
-#
-# CKDIV8   CKOUT   SUT1  SUT0  CKSEL3  CKSEL2  CKSEL1  CKSEL0
-#    1        1      0     1      0      1       1       1
-#
-# Full swing crystal oscillator
-# 0.4 - 20 MHz : CKSEL3..1  011
-#
-# Crystal Oscillator, BOD enabled (Table 9-6)
-# CKSEL0  : 1
-# SUT1..0 : 01
-#
-LFUSE=0xD7
-
+# Fuse high byte:
+# 0xc9 = 1 1 0 0   1 0 0 1 <-- BOOTRST (boot reset vector at 0x0000)
+#        ^ ^ ^ ^   ^ ^ ^------ BOOTSZ0
+#        | | | |   | +-------- BOOTSZ1
+#        | | | |   + --------- EESAVE (don't preserve EEPROM over chip erase)
+#        | | | +-------------- CKOPT (full output swing)
+#        | | +---------------- SPIEN (allow serial programming)
+#        | +------------------ WDTON (WDT not always on)
+#        +-------------------- RSTDISBL (reset pin is enabled)
+# Fuse low byte:
+# 0x9f = 1 0 0 1   1 1 1 1
+#        ^ ^ \ /   \--+--/
+#        | |  |       +------- CKSEL 3..0 (external >8M crystal)
+#        | |  +--------------- SUT 1..0 (crystal osc, BOD enabled)
+#        | +------------------ BODEN (BrownOut Detector enabled)
+#        +-------------------- BODLEVEL (2.7V)
 fuse:
-	$(AVRDUDE) -e -Uefuse:w:$(EFUSE):m -Uhfuse:w:$(HFUSE):m -Ulfuse:w:$(LFUSE):m -B 20.0 -v
-
-chip_erase:
-	$(AVRDUDE) -e -B 1.0 -F
+	avrdude -p m8 -P usb -c avrispmkII -Uhfuse:w:0xc9:m -Ulfuse:w:0x9f:m -B 10.0
 
 reset:
-	$(AVRDUDE) -B 1.0 -F
-	
+	avrdude -p m8 -P usb -c avrispmkII -B 10.0
+
+erase:
+	avrdude -p m8 -P usb -c avrispmkII -e -B 10.0
