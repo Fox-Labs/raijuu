@@ -1,14 +1,10 @@
 // AudioPlug Plug(PORTLOW);     // uses JeePorts P1 and P2 or the T4A ExpandPlug
 
 /*
-AudioPlug Plug(PORTHIGH);  // uses JeePorts P3 and P4
-Wiring Connections
-- Pwr Relay - D4 Orange
-- CS - D7 Blue Pin 2
-- Clk - A2 Grey Pin 6
-- Data - D6 Orange Pin 3
-- Mute -  A3 White Pin 8
-- IR - A1 Port 2
+#define CLK_PIN  4
+#define DATA_PIN 5
+#define MUTE_PIN 6
+#define CS_PIN   7
 */
 
 #include <AudioPlug.h>
