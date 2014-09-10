@@ -1,18 +1,17 @@
-// AudioPlug Plug(PORTLOW);     // uses JeePorts P1 and P2 or the T4A ExpandPlug
-
-/*
 #define CLK_PIN  4
 #define DATA_PIN 5
 #define MUTE_PIN 6
 #define CS_PIN   7
-*/
+#define CS_DISPLAY_PIN 12
 
 #include <AudioPlug.h>
 #include <Encoder.h>
 #include <Wire.h>
+#include <LiquidCrystal.h>
 
 AudioPlug Plug(PORTLOW);
 Encoder encoder(2, 3);
+LiquidCrystal lcd(DATA_PIN, CLK_PIN, CS_DISPLAY_PIN);
 int volume = 0;
 
 unsigned char frequencyH = 0;
@@ -23,13 +22,17 @@ double frequency = 89.1; //starting frequency
 
 void setup()
 {
-	Serial.begin(57600);
-	Serial.println("[AudioPlug test]");
+	Serial.begin(9600);
 	Plug.addBoard(TWOCHANNELS);
         Plug.setMute(MUTEOFF);
         
 	Wire.begin();
 	setFrequency();
+
+        lcd.begin(16, 2);
+        
+        lcd.setCursor(0, 0);
+        lcd.print("PRE-AMP");
 }
 
 void loop()
@@ -55,6 +58,12 @@ void loop()
 	  encoder.write(0);
 	}
 	Serial.println(volume);
+
+        lcd.setCursor(0, 1);
+        lcd.print("VOL: ");
+        lcd.print(volume);
+        
+        delay(100);
 }
 
 void setFrequency()
