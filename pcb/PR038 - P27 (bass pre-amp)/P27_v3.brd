@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="7.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -247,6 +247,9 @@
 <wire x1="15.24" y1="12.065" x2="15.24" y2="26.035" width="0.4064" layer="25"/>
 <wire x1="15.24" y1="26.035" x2="20.32" y2="26.035" width="0.4064" layer="25"/>
 <wire x1="20.32" y1="26.035" x2="20.32" y2="12.065" width="0.4064" layer="25"/>
+<text x="39.37" y="26.67" size="1.778" layer="21" font="vector" ratio="10">+</text>
+<text x="36.83" y="26.67" size="1.778" layer="21" font="vector" ratio="10">+</text>
+<text x="29.21" y="49.53" size="1.778" layer="21" font="vector" ratio="10">+</text>
 </plain>
 <libraries>
 <library name="P27">
@@ -6975,6 +6978,9 @@ design rules under a new name.</description>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="20mil"/>
+<param name="AutoGrid" value="1"/>
+<param name="Efforts" value="0"/>
+<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="0"/>
 <param name="PrefDir.2" value="0"/>
@@ -7116,10 +7122,10 @@ design rules under a new name.</description>
 <element name="C8" library="P27" package="C050-025X075" value="120pF" x="29.21" y="44.45" smashed="yes" rot="R90"/>
 <element name="C9" library="P27" package="C050-025X075" value="2.2uF" x="29.21" y="54.61" smashed="yes" rot="R90"/>
 <element name="R12" library="P27" package="0207/7" value="4k7" x="31.75" y="54.61" smashed="yes" rot="R270">
-<attribute name="NAME" x="33.782" y="56.515" size="1.27" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="NAME" x="31.242" y="56.515" size="1.27" layer="25" font="vector" ratio="10" rot="R270"/>
 </element>
 <element name="R13" library="P27" package="0207/7" value="220" x="34.29" y="54.61" smashed="yes" rot="R90">
-<attribute name="NAME" x="31.242" y="56.515" size="1.27" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="NAME" x="33.782" y="56.515" size="1.27" layer="25" font="vector" ratio="10" rot="R270"/>
 </element>
 <element name="D1" library="P27" package="DO41-7" value="1N4148" x="36.83" y="44.45" smashed="yes" rot="R90"/>
 <element name="D2" library="P27" package="DO41-7" value="1N4148" x="36.83" y="54.61" smashed="yes" rot="R90"/>
