@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1657,7 +1657,7 @@ Copal</description>
 <part name="P+9" library="SPI LCD Backpack" deviceset="+5V" device=""/>
 <part name="GND10" library="SPI LCD Backpack" deviceset="GND" device=""/>
 <part name="GND11" library="SPI LCD Backpack" deviceset="GND" device=""/>
-<part name="X1" library="SPI LCD Backpack" deviceset="22-23-2081" device="" value="22-23-2081"/>
+<part name="X1" library="SPI LCD Backpack" deviceset="22-23-2081" device="" value=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1980,7 +1980,7 @@ Copal</description>
 <wire x1="104.14" y1="73.66" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="LED_1" class="0">
+<net name="RED" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="33.02" y1="66.04" x2="25.4" y2="66.04" width="0.1524" layer="91"/>
@@ -1992,7 +1992,7 @@ Copal</description>
 <pinref part="X1" gate="G$1" pin="6"/>
 </segment>
 </net>
-<net name="LED_2" class="0">
+<net name="GREEN" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="63.5" y1="66.04" x2="53.34" y2="66.04" width="0.1524" layer="91"/>
@@ -2004,7 +2004,7 @@ Copal</description>
 <pinref part="X1" gate="G$1" pin="7"/>
 </segment>
 </net>
-<net name="LED_3" class="0">
+<net name="BLUE" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="88.9" y1="66.04" x2="81.28" y2="66.04" width="0.1524" layer="91"/>
