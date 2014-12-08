@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="7.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1624,8 +1624,8 @@ Copal</description>
 </classes>
 <parts>
 <part name="P+1" library="SPI LCD Backpack" deviceset="+5V" device=""/>
-<part name="C1" library="SPI LCD Backpack" deviceset="C-EU" device="C0805K"/>
-<part name="R1" library="SPI LCD Backpack" deviceset="R-EU_" device="0805"/>
+<part name="C1" library="SPI LCD Backpack" deviceset="C-EU" device="C0805K" value="1uF"/>
+<part name="R1" library="SPI LCD Backpack" deviceset="R-EU_" device="0805" value="1k"/>
 <part name="IC1" library="SPI LCD Backpack" deviceset="74*595" device="D" technology="HC"/>
 <part name="GND1" library="SPI LCD Backpack" deviceset="GND" device=""/>
 <part name="P+2" library="SPI LCD Backpack" deviceset="+5V" device=""/>
@@ -1638,18 +1638,18 @@ Copal</description>
 <part name="P+5" library="SPI LCD Backpack" deviceset="+5V" device=""/>
 <part name="GND4" library="SPI LCD Backpack" deviceset="GND" device=""/>
 <part name="P+6" library="SPI LCD Backpack" deviceset="+5V" device=""/>
-<part name="C2" library="SPI LCD Backpack" deviceset="C-EU" device="C0805K"/>
+<part name="C2" library="SPI LCD Backpack" deviceset="C-EU" device="C0805K" value="100nF"/>
 <part name="GND5" library="SPI LCD Backpack" deviceset="GND" device=""/>
 <part name="P+7" library="SPI LCD Backpack" deviceset="+5V" device=""/>
 <part name="R2" library="SPI LCD Backpack" deviceset="POTENTIOMETER_" device="3386F"/>
 <part name="GND6" library="SPI LCD Backpack" deviceset="GND" device=""/>
-<part name="R3" library="SPI LCD Backpack" deviceset="R-EU_" device="0805"/>
+<part name="R3" library="SPI LCD Backpack" deviceset="R-EU_" device="0805" value="10k"/>
 <part name="T1" library="SPI LCD Backpack" deviceset="BC847" device=""/>
 <part name="GND7" library="SPI LCD Backpack" deviceset="GND" device=""/>
-<part name="R4" library="SPI LCD Backpack" deviceset="R-EU_" device="0805"/>
+<part name="R4" library="SPI LCD Backpack" deviceset="R-EU_" device="0805" value="10k"/>
 <part name="T2" library="SPI LCD Backpack" deviceset="BC847" device=""/>
 <part name="GND8" library="SPI LCD Backpack" deviceset="GND" device=""/>
-<part name="R5" library="SPI LCD Backpack" deviceset="R-EU_" device="0805"/>
+<part name="R5" library="SPI LCD Backpack" deviceset="R-EU_" device="0805" value="10k"/>
 <part name="T3" library="SPI LCD Backpack" deviceset="BC847" device=""/>
 <part name="GND9" library="SPI LCD Backpack" deviceset="GND" device=""/>
 <part name="JP2" library="SPI LCD Backpack" deviceset="PINHD-1X4" device=""/>
